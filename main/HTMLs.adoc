@@ -1,1 +1,4 @@
-* https://commoncriteria.github.io/PSD-KM/main/*.html[*.html]
+* https://commoncriteria.github.io/PSD-KM/main/PSD-KM-release-linkable.html[PSD-KM-release-linkable.html]
+* https://commoncriteria.github.io/PSD-KM/main/PSD-KM-release.html[PSD-KM-release.html]
+* https://commoncriteria.github.io/PSD-KM/main/PSD-KM-sd.html[PSD-KM-sd.html]
+* https://commoncriteria.github.io/PSD-KM/main/PSD-KM.html[PSD-KM.html]
