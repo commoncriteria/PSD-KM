@@ -267,33 +267,7 @@
   </sec:spd>
 
   <sec:Security_Objectives>
-    <section title="Security Objectives for the TOE" id="SecurityObjectivesTOE">
-      A TOE conforming to this PP‐Module must address the O.COMPUTER_INTERFACE_ISOLATION,
-      O.COMPUTER_INTERFACE_ISOLATION_TOE_UNPOWERED, O.USER_DATA_ISOLATION,
-      O.PERIPHERAL_PORTS_ISOLATION, and O.REJECT_UNAUTHORIZED_ENDPOINTS, and
-      O.REJECT_UNAUTHORIZED_PERIPHERAL objectives from the PSD 
-      PP specifically for keyboard and mouse peripherals. In addition to the SFRs mapped in the PSD PP, the following
-      SFRs defined in this PP‐Module or modified from their PSD PP definition contribute to supporting these
-      objectives for audio output devices:<h:ul>
-        <h:li>FDP_APC_EXT.1 (modified from PSD PP definition), FDP_FIL_EXT.1/KM (optional), FDP_PDC_EXT.1 (modified from PSD PP
-      definition), FDP_RDR_EXT.1 (optional), and FDP_SWI_EXT.3 (selection-based)</h:li>
-      </h:ul>
-      If the TOE supports configurable device filtration as specified in FDP_FIL_EXT.1/KM, it must address the
-      O.AUTHORIZED_USAGE objective for the administrative capability to configure device filtration at
-      minimum.<h:br/><h:br/>
-      A TOE conforming to this PP‐Module must address the O.REJECT_UNAUTHORIZED_PERIPHERAL objective
-      from the PSD PP specifically for keyboard/mouse peripherals and protocols. In addition to the SFRs
-      mapped in the PSD PP, the following SFRs contribute to supporting these objectives for keyboard/mouse
-      devices:<h:ul>
-        <h:li>FDP_PDC_EXT.2/KM, FDP_PDC_EXT.3/KM</h:li>
-      </h:ul>       
-      If the TOE supports keyboard peripheral types, it must address O.NO_USER_DATA_RETENTION from the
-      PSD PP specifically for keyboard data. In addition to the SFRs in the PSD PP, the following SFRs defined in
-      this PP‐Module or modified from their PSD PP definition contribute to supporting these objectives for
-      keyboard/mouse input devices:<h:ul>
-        <h:li>FDP_RIP.1/KM (selection‐based)</h:li>
-      </h:ul>
-    </section>    
+    <section title="Security Objectives for the TOE" id="SecurityObjectivesTOE"/>      
     
     <section title="Security Objectives for the Operational Environment" id="SecurityObjectivesTOEorEnvironment">
       All environmental security objectives from the PSD PP also apply to the TOE’s environment when it
@@ -332,7 +306,8 @@
             </consistency-rationale>
             This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
-            if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional SFR as selectionbased.
+            if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
+            SFR as selection-based.
             It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
           </f-component>
         </sec:mod_fau>
@@ -374,7 +349,7 @@
                 </Isolation>
                 <TSS/>                  
                 <Guidance/>
-                <Test>
+                <Tests>
                   For tests that use the USB sniffer or USB analyzer software, the evaluator verifies whether traffic is sent
                   or not sent by inspection of the passing USB transactions and ensuring they do not contain USB data
                   payloads other than any expected traffic, as well as USB NAK transactions or system messages. To avoid
@@ -573,7 +548,7 @@
                       </h:ol>
                     </test>
                   </testlist>
-                </Test>
+                </Tests>
               </aactivity>              
             </f-element>
           </f-component>
@@ -693,11 +668,11 @@
                 the steps the user must take as required by the guard to switch between connected computers using a
                 connected peripheral pointing device.
               </Guidance>
-              <Test>
+              <Tests>
                 The evaluator shall ensure that switching is always initiated through express user action using the selected
                 mechanisms throughout testing for FDP_APC_EXT.1 above.<h:br/><h:br/>
                 Additional tests for this SFR are performed in FDP_APC_EXT.1 test 1‐KM above.
-              </Test>
+              </Tests>
             </aactivity>
           </f-component>
         </sec:mod_fdp>
@@ -724,7 +699,8 @@
             </consistency-rationale>
             This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
-            if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional SFR as selectionbased.
+            if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
+            SFR as selection-based.
             It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
           </f-component>
         </sec:mod_fia>
@@ -739,7 +715,8 @@
         </consistency-rationale>
         This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
         requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
-        if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional SFR as selectionbased.
+        if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional SFR
+        as selection-based.
         It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
       </f-component>
           <f-component cc-id="fmt_smf.1" name="Specification of Management Functions">
@@ -751,7 +728,8 @@
             </consistency-rationale>
             This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
-            if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional SFR as selectionbased.
+            if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
+            SFR as selection-based.
             It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
           </f-component>
           <f-component cc-id="fmt_smr.1" name="Security Roles">
@@ -763,7 +741,8 @@
             </consistency-rationale>
             This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
-            if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional SFR as selectionbased.
+            if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
+            SFR as selection-based.
             It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
           </f-component>
           </sec:mod_fmt>
@@ -778,7 +757,8 @@
             </consistency-rationale>
             This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
-            if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional SFR as selectionbased.
+            if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
+            SFR as selection-based.
             It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
           </f-component>
         </sec:mod_fpt>
@@ -799,9 +779,7 @@
         no inconsistency between this PP‐Module and the PSD with respect to the security problem definition.</con-sec-prob>
       
       <!-- 6.1.3 Consistency of Objectives -->
-      <con-obj>
-        This PP‐Module defines TOE objectives that supplement those the PSD PP defines as follows:
-      </con-obj>
+      <con-obj/>
       <con-op-en/>
     </base-pp>
     
@@ -884,6 +862,18 @@
               </selectables>
               upon TOE power up and connection of a peripheral device to a powered-on TOE.              
             </title>
+            
+            <ext-comp-def-title>
+              <title>
+                The TSF shall allow connections with authorized devices presenting authorized
+                interface protocols as defined in <assignable>devices specified in the PP or PP-Module
+                  in which this SFR is defined</assignable> and <assignable>devices specified in another
+                    PP or PP‐Module that shares a PP‐Configuration with the PP or PP‐Module in
+                    which this SFR is defined</assignable> upon TOE power up and upon connection of a
+                peripheral device to a powered‐on TOE.
+              </title>
+            </ext-comp-def-title>
+            
             <note role="application">
               The TSF must claim conformance to a PP‐Configuration that includes each PPModule
               contained in any selections. The ST author should select all devices and
@@ -898,10 +888,10 @@
               <Isolation/>
               <TSS/>
               <Guidance/>
-              <Test>
+              <Tests>
                 Testing of this component is performed through evaluation of FDP_PDC_EXT.1 Test 2 as specified in
                 section 2.2.2.2 above.
-              </Test>
+              </Tests>
             </aactivity>
             
             <ext-comp-def-title>
@@ -1142,7 +1132,7 @@
               guidance documentation and verify that it describes the process of configuring the TOE for allowlisting
               and denylisting KM peripheral devices and the administrative privileges required to do this.
             </Guidance>
-            <Test>
+            <Tests>
               <testlist>
                 <test>
                   Perform the test steps in FDP_PDC_EXT.1 with all devices on the PSD KM denylist and verify that they are
@@ -1167,7 +1157,7 @@
                   </h:ol>                  
                 </test>
               </testlist>
-            </Test>
+            </Tests>
           </aactivity>
           
           <ext-comp-def-title>
