@@ -171,7 +171,7 @@
       <threats>
         <threat name="T.DATA_LEAK">
           <from base="bpp-psd"/>          
-          <description>This threat from the PDD PP also applies to the functionality defined in this PP-Module.</description>
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_APC_EXT.1 (modified)</addressed-by><rationale>Mitigates this threat by
             ensuring only user-selected data is routed to an interface.</rationale>
           <addressed-by>FDP_PDC_EXT.1 (modified)</addressed-by><rationale>Mitigates this threat by
@@ -187,7 +187,7 @@
         </threat>
         <threat name="T.LOGICAL_TAMPER">
           <from base="bpp-psd"/>
-          <description>This threat from the PDD PP also applies to the functionality defined in this PP-Module.</description>
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by only
             allowing specified authorized devices and functions to be connected during power up or
             connection of a peripheral device.</rationale>
@@ -196,7 +196,7 @@
         </threat>
         <threat name="T.RESIDUAL_LEAK">
           <from base="bpp-psd"/>
-          <description>This threat from the PDD PP also applies to the functionality defined in this PP-Module.</description>
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_UDF_EXT.1/KM</addressed-by><rationale>Mitigates this threat by ensuring
             connected peripheral's data is transited unidirectionally between interfaces.</rationale>
           <addressed-by>FDP_RIP.1/KM (selection‐based)</addressed-by><rationale>Mitigates this
@@ -204,7 +204,7 @@
         </threat>
         <threat name="T.SIGNAL_LEAK">
           <from base="bpp-psd"/>
-          <description>This threat from the PDD PP also applies to the functionality defined in this PP-Module.</description>
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_APC_EXT.1 (modified)</addressed-by><rationale>Mitigates this threat by
             requiring only user-selected data to be routed and ensuring no data or electrical
             signals flow.</rationale>
@@ -221,7 +221,7 @@
         </threat>
         <threat name="T.UNAUTHORIZED_DEVICES">
           <from base="bpp-psd"/>          
-          <description>This threat from the PDD PP also applies to the functionality defined in this PP-Module.</description>          
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>          
           <addressed-by>FDP_APC_EXT.1 (modified)</addressed-by><rationale>Mitigates this threat by
             requiring only user-selected data to be routed and ensuring no data or electrical
             signals flow.</rationale>
@@ -243,7 +243,7 @@
         </threat>
         <threat name="T.UNINTENDED_USE">
           <from base="bpp-psd"/>
-          <description>This threat from the PDD PP also applies to the functionality defined in this PP-Module.</description>
+          <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_FIL_EXT.1/KM (optional)</addressed-by><rationale>Mitigates this threat
             by requiring device filtering for selected interfaces and only allow authorized devices
             to connect.</rationale>
@@ -1053,7 +1053,7 @@
         claimed or the functionality disabled:<h:ul>
           <h:li>FDP_FIL_EXT.1/KM – The TSF must perform at least one of fixed or configurable device filtration,
             such that denylisted devices are rejected by the TSF and allowlisted devices are accepted by the
-            TSF unless the device is also blacklisted, in which case the blacklist takes precedent.</h:li>          
+            TSF unless the device is also denylisted, in which case the denylist takes precedent.</h:li>          
         </h:ul>
         
         <f-component cc-id="fdp_fil_ext.1" name="Device Filtering (Keyboard/Mouse)" iteration="KM" id="fdp-fil-ext-1-km">
@@ -1132,20 +1132,20 @@
               The evaluator shall examine the TSS and verify that it describes whether the PSD has configurable or fixed
               device filtering.<h:br/><h:br/>
               [Conditional ‐ If “configurable” is selected in FDP_FIL_EXT.1.1/KM, then:] the evaluator shall examine the
-              TSS and verify that it describes the process of configuring the TOE for whitelisting and blacklisting KM
+              TSS and verify that it describes the process of configuring the TOE for allowlisting and denylisting KM
               peripheral devices, including information on how this function is restricted to administrators. The
               evaluator shall verify that the TSS does not allow TOE device filtering configurations that permit
               unauthorized devices on KM interfaces.
             </TSS>
             <Guidance>
               [Conditional ‐ If “configurable” is selected in FDP_FIL_EXT.1.1/KM, then:] the evaluator shall examine the
-              guidance documentation and verify that it describes the process of configuring the TOE for whitelisting
-              and blacklisting KM peripheral devices and the administrative privileges required to do this.
+              guidance documentation and verify that it describes the process of configuring the TOE for allowlisting
+              and denylisting KM peripheral devices and the administrative privileges required to do this.
             </Guidance>
             <Test>
               <testlist>
                 <test>
-                  Perform the test steps in FDP_PDC_EXT.1 with all devices on the PSD KM blacklist and verify that they are
+                  Perform the test steps in FDP_PDC_EXT.1 with all devices on the PSD KM denylist and verify that they are
                   rejected as expected.
                 </test>
                 
