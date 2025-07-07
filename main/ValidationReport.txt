@@ -1,1 +1,0 @@
-/home/runner/work/PSD-KM/PSD-KM/input/PSD-KM.xml:6:44: error: element "PP" not allowed here; expected element "Module"
