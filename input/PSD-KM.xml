@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../transforms/pp2html.xsl"?>
+<?xml-stylesheet type="text/xsl" href="..\transforms\module2html.xsl"?>
+<?xml-model href="../transforms/schemas/CCModule.rng" type="application/xml"?>
 
-<PP xmlns="https://niap-ccevs.org/cc/v1"
-    xmlns:sec="https://niap-ccevs.org/cc/v1/section"
-    xmlns:h="http://www.w3.org/1999/xhtml" boilerplate="yes">  
+<Module
+  name="Keyboard/Mouse Devices"
+  xmlns="https://niap-ccevs.org/cc/v1"
+  xmlns:h="http://www.w3.org/1999/xhtml"
+  xmlns:sec="https://niap-ccevs.org/cc/v1/section"
+  target-product="Keyboard/Mouse Device"
+  target-products="Keyboard/Mouse Devices"
+  boilerplate="yes"
+  short="KM">  
   <!-- <inline-comment color='green'>Initial PSD-KM Template on 5/8.</inline-comment> -->
   <!-- <inline-comment color='blue' linebreak='yes'> Hello World QQQQ </inline-comment> -->
  
   <PPReference>
     <ReferenceTable>
-      <PPTitle>PP-Module for Keyboard/Mouse Devices</PPTitle>
+      
       <PPVersion>2.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
       <PPPubDate>2025-07-11</PPPubDate>
@@ -25,9 +32,11 @@
     </entry>
   </RevisionHistory>
   <RevisionHistory>
-    <version>2.0</version>
-    <date>2025-07-11</date>
-    <subject>Updates for CC:2022</subject>
+    <entry>
+      <version>2.0</version>
+      <date>2025-07-11</date>
+      <subject>Updates for CC:2022</subject>
+    </entry>
   </RevisionHistory>
 
   <sec:Introduction>
@@ -160,7 +169,7 @@
     </CClaimsInfo>
   </section>
   
-  <sec:spd title="Security Problem Description">    
+  <sec:Security_Problem_Definition>   
     This PP‐Module describes the security problem in terms of the threats the TOE is expected to address,
     assumptions about its operational environment, and any organizational security policies (OSPs) that the
     TOE is expected to enforce.<h:br/><h:br/>
@@ -251,7 +260,7 @@
       </threats> 
     </sec:Threats>
     
-    <section title="Assumptions" id="assumptions">
+    <sec:Assumptions>
       This PP‐Module defines no additional assumptions. Note however that the A.NO_TEMPEST assumption
       from the PSD PP has the following additional interpretation when the TOE claims conformance to
       this PP-Module:<h:ul>
@@ -259,31 +268,36 @@
       USB ground). The Operational Environment is assumed not to support TEMPEST red‐black ground
       isolation.</h:li>
       </h:ul>
-    </section>
+      <assumptions/>
+    </sec:Assumptions>
     
-    <sec:Organizational_Security_Polcies>
+    
+    <sec:Organizational_Security_Policies>
       <OSPs/>
-    </sec:Organizational_Security_Polcies>
-  </sec:spd>
+    </sec:Organizational_Security_Policies> 
+  </sec:Security_Problem_Definition>
 
   <sec:Security_Objectives>
-    <section title="Security Objectives for the TOE" id="SecurityObjectivesTOE"/>      
+    <sec:Security_Objectives_for_the_TOE>
+      <SOs/>
+    </sec:Security_Objectives_for_the_TOE>      
     
-    <section title="Security Objectives for the Operational Environment" id="SecurityObjectivesTOEorEnvironment">
+    <sec:Security_Objectives_for_the_Operational_Environment>
       All environmental security objectives from the PSD PP also apply to the TOE’s environment when it
       includes this PP‐Module in its conformance claims.
-      </section>    
-    <section title="Security Objectives Rationale" id="SOR"/>
+    </sec:Security_Objectives_for_the_Operational_Environment>
+    
+    <sec:Security_Objectives_Rationale/>
   </sec:Security_Objectives>
 
   <sec:Security_Requirements>
-    
+    <comment>Need to add URLs once created</comment>
     <base-pp id="bpp-psd" name="Peripheral Sharing Device" product="Device" short="PSD" version="5.0">
       <git>
-        <url><comment>Need to add URL once created</comment></url>
+        <url>https://github.com/commoncriteria/km</url>
         <branch>release-5.0</branch>
       </git>
-      <url><comment>Need to add URL once created</comment></url>
+      <url>https://github.com/commoncriteria/psd</url>
       
       <sec-func-req-dir>
         When a TOE claims conformance to this PP‐Module, it is necessary to make claims in the PSD PP
@@ -304,11 +318,13 @@
               boundary, the SFR is treated as selection‐based when this PP‐Module is
               claimed.
             </consistency-rationale>
+            <description>
             This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
             if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
             SFR as selection-based.
             It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            </description>
           </f-component>
         </sec:mod_fau>
         
@@ -318,12 +334,12 @@
               This SFR adds a requirement to block electrical signals that strengthens but
               does not conflict with the requirement in the PSD PP.
             </consistency-rationale>
-            <f-element id="fdp-apc-ext.1e1">
+            <f-element id="fdp-apc-ext-1e1">
               <title> The TSF shall route user data only to <h:s>or from</h:s> the interfaces selected by the
                 user. 
               </title>
             </f-element>
-            <f-element id="fdp-apc-ext.1e2">
+            <f-element id="fdp-apc-ext-1e2">
               <title>The TSF shall ensure that no data <h:b>or electrical signals</h:b>flow between connected computers whether the
                 TOE is powered on or powered off.
               </title>
@@ -343,12 +359,13 @@
                 must be included in this iteration, not just the ones that are modified by this PPModule.                
               </note>              
               <aactivity>                
-                <Isolation>
-                  The evaluator shall examine the Isolation Document and verify it describes how the TOE ensures that no
-                  data or electrical signals flow between connected computers in both cases (powered on, powered off).
-                </Isolation>
+                
                 <TSS/>                  
                 <Guidance/>
+                <CustomEA name="Isolation">
+                  The evaluator shall examine the Isolation Document and verify it describes how the TOE ensures that no
+                  data or electrical signals flow between connected computers in both cases (powered on, powered off).
+                </CustomEA>
                 <Tests>
                   For tests that use the USB sniffer or USB analyzer software, the evaluator verifies whether traffic is sent
                   or not sent by inspection of the passing USB transactions and ensuring they do not contain USB data
@@ -554,9 +571,18 @@
           </f-component>
           
           <f-component cc-id="fdp_pdc_ext.1" name="Peripheral Device Connection">
+            <consistency-rationale>
+              This SFR is not modified by the PP‐Module. It adds keyboard/mouse devices
+              to the set of authorized devices, which are specific types of peripherals not
+              specified in the PSD PP.
+            </consistency-rationale>
+            <description>
             There is no modification to this SFR in this PP‐Module. However, there are additions to the Peripheral
             Device Connections (see Appendix E) associated with this SFR, modifications of the application note, and
-            additional Evaluation Activities. The application note from the PSD PP is changed to the following:<h:br/><h:br/>
+            additional Evaluation Activities. The application note from the PSD PP is changed to the following:
+            </description>
+            <f-element>
+              <title/>                       
             <note role="application">
               The Peripheral Device Connections section is in Appendix E of both the PSD PP and
               this PP‐Module. Keyboard and mouse peripheral device ports may be specific to
@@ -569,15 +595,12 @@
               classes as unauthorized devices, even though the HID device classes are
               authorized.
             </note>            
-            <consistency-rational>
-              This SFR is not modified by the PP‐Module. It adds keyboard/mouse devices
-              to the set of authorized devices, which are specific types of peripherals not
-              specified in the PSD PP.
-            </consistency-rational>
+            
             <aactivity>
-              <Isolation/>
+              
               <TSS/>                
               <Guidance/>                
+              <CustomEA name="Isolation"/>
               <Tests>
                 <testlist>
                   <test>
@@ -641,6 +664,7 @@
                 </testlist>
               </Tests>
             </aactivity>
+            </f-element>
           </f-component> 
           <f-component cc-id="fdp_swi_ext.2" name="PSD Switching">
             <consistency-rationale>
@@ -648,16 +672,19 @@
               additional Evaluation Activities for this SFR that are specific to keyboard and
               mouse devices.
             </consistency-rationale>
-            There is no modification to this SFR in this PP‐Module. However, if selecting “peripheral devices using a
+            <description>There is no modification to this SFR in this PP‐Module. However, if selecting “peripheral devices using a
             guard,” in FDP_SWI_EXT.2.2 in the PSD PP, there are additional Evaluation Activities defined in the
             Supporting Document Mandatory Technical Document PP‐Module for Keyboard/Mouse Input Devices.<h:br/><h:br/>
             A connected peripheral, such as a mouse or other pointing device, may be used for user selection of the
             connected computer if the TOE makes sure the user has taken multiple, simultaneous express actions a
             guard requires. An example would be if the user moved the pointing device cursor through the border
             between computer display areas and at the same time, the user pressed a pre‐defined keyboard key or a
-            dedicated TOE button.
+            dedicated TOE button.</description>
+            <f-element>
+              <title/>
+            
             <aactivity>
-              <Isolation/>
+            
               <TSS>
                 If “peripheral devices using a guard” is selected, the evaluator shall verify that the TSS describes the
                 implementation of the guard function, and verify that multiple, simultaneous express user action is
@@ -668,12 +695,14 @@
                 the steps the user must take as required by the guard to switch between connected computers using a
                 connected peripheral pointing device.
               </Guidance>
+              <CustomEA name="Isolation"/>
               <Tests>
                 The evaluator shall ensure that switching is always initiated through express user action using the selected
                 mechanisms throughout testing for FDP_APC_EXT.1 above.<h:br/><h:br/>
                 Additional tests for this SFR are performed in FDP_APC_EXT.1 test 1‐KM above.
               </Tests>
             </aactivity>
+            </f-element>
           </f-component>
         </sec:mod_fdp>
         
@@ -685,10 +714,10 @@
               boundary, the SFR is treated as selection‐based when this PP‐Module is
               claimed.
             </consistency-rationale>
-            This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
+            <description>This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
             if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
-            SFR as selection-based. It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            SFR as selection-based. It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</description>
           </f-component>
           <f-component cc-id="fia_uid.2" name="User Identification Before Any Action">
             <consistency-rationale>
@@ -697,11 +726,11 @@
               boundary, the SFR is treated as selection‐based when this PP‐Module is
               claimed.
             </consistency-rationale>
-            This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
+            <description>This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
             if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
-            SFR as selection-based.
-            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            SFR as selection-based.<h:br/><h:br/>
+            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</description>
           </f-component>
         </sec:mod_fia>
         
@@ -713,11 +742,11 @@
           boundary, the SFR is treated as selection‐based when this PP‐Module is
           claimed.
         </consistency-rationale>
-        This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
+        <description>This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
         requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
         if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional SFR
-        as selection-based.
-        It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+        as selection-based.<h:br/><h:br/>
+        It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</description>
       </f-component>
           <f-component cc-id="fmt_smf.1" name="Specification of Management Functions">
             <consistency-rationale>
@@ -726,11 +755,11 @@
               boundary, the SFR is treated as selection‐based when this PP‐Module is
               claimed.
             </consistency-rationale>
-            This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
+            <description>This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
             if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
-            SFR as selection-based.
-            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            SFR as selection-based.<h:br/><h:br/>
+            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</description>
           </f-component>
           <f-component cc-id="fmt_smr.1" name="Security Roles">
             <consistency-rationale>
@@ -739,11 +768,11 @@
               boundary, the SFR is treated as selection‐based when this PP‐Module is
               claimed.
             </consistency-rationale>
-            This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
+            <description>This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
             if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
-            SFR as selection-based.
-            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            SFR as selection-based.<h:br/><h:br/>
+            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</description>
           </f-component>
           </sec:mod_fmt>
         
@@ -755,11 +784,11 @@
               boundary, the SFR is treated as selection‐based when this PP‐Module is
               claimed.
             </consistency-rationale>
-            This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
+            <description>This SFR is unchanged when the TOE claim includes this PP‐Module. However, this SFR is an optional
             requirement in the PSD PP. This PP‐Module defines functionality that would require this SFR to be claimed
             if a certain selection is made. Therefore, this PP‐Module re‐categorizes this optional
-            SFR as selection-based.
-            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.
+            SFR as selection-based.<h:br/><h:br/>
+            It shall be included in the TSF if ‘configurable’ is selected in FDP_FIL_EXT.1.1/KM.</description>
           </f-component>
         </sec:mod_fpt>
       </modified-sfrs>
@@ -806,17 +835,17 @@
             component leveling are shown below; reference the PSD PP for all other definitions for this family.</fam-behavior>
         </ext-comp-def>
         
-        <ext-comp-def fam-id="FDP_UDF_EXT.1" title="Unidirectional Data Flow">
+        <ext-comp-def fam-id="FDP_UDF_EXT" title="Unidirectional Data Flow">
           <fam-behavior>Components in this family define unidirectional transmission of user data.</fam-behavior>
         </ext-comp-def>
         
         <f-component cc-id="fdp_pdc_ext.2" name="Authorized Devices (Keyboard/Mouse)" iteration="KM" id="fdp-pdc-ext-2-km">
-          <consistecny-rationale>
+          <consistency-rationale>
             This SFR defines the devices that are authorized by this PP‐Module. This is
             dependent on the other PP‐Modules that are claimed in the TOE’s ST. The
             Base‐PP is written specifically not to discuss the supported device types,
             instead leaving it to the various PP‐Modules to define what they support.
-          </consistecny-rationale>
+          </consistency-rationale>
           
           <comp-lev>defines the types of physical devices that the TSF will permit to
             connect to it.</comp-lev>
@@ -885,25 +914,17 @@
               Type‐C with DisplayPort as alternate function.
             </note>            
             <aactivity>
-              <Isolation/>
+              
               <TSS/>
               <Guidance/>
+              <CustomEA name="Isolation"/>
               <Tests>
                 Testing of this component is performed through evaluation of FDP_PDC_EXT.1 Test 2 as specified in
                 section 2.2.2.2 above.
               </Tests>
             </aactivity>
             
-            <ext-comp-def-title>
-              <title>
-                The TSF shall allow connections with authorized devices presenting authorized
-                interface protocols as defined in
-                <assignable> devices specified in the PP or PP‐Module in which this SFR is defined</assignable>
-                and <assignable> devices specified in another PP or PP‐Module that shares a PP-Configuration
-                  with the PP or PP‐Module in which this SFR is defined</assignable> upon TOE
-                power up and connection of a peripheral device to a powered‐on TOE.
-              </title>
-            </ext-comp-def-title>            
+                        
           </f-element>          
         </f-component>
         
@@ -942,6 +963,14 @@
                 emulate any keyboard or mouse device functions from the TOE to the connected
                 computer</h:i>].
             </title>
+            <ext-comp-def-title>
+              <title>
+                The TSF shall apply the following rules to the supported protocols: <assignable>
+                rules defining the handling for communications over this protocol (e.g., any
+                processing that must be done by the TSF prior to transmitting it through the TOE,
+                circumstances or frequency with which the protocol is invoked)</assignable>.
+              </title>
+            </ext-comp-def-title>
             
             <note role="application">
               It is expected that the ST author will make all selections in FDP_PDC_EXT.3.1/KM
@@ -956,7 +985,7 @@
             </note>
             
             <aactivity>
-              <Isolation/>
+              
               <TSS>
                 The evaluator shall examine the TSS and verify it describes which types of peripheral devices that the PSD
                 supports.<h:br/><h:br/>
@@ -964,17 +993,11 @@
                 the TOE to the connected computer.
               </TSS>                
               <Guidance/>                
+              <CustomEA name="Isolation"/>
               <Tests/>
             </aactivity>
             
-            <ext-comp-def-title>
-              <title>
-                The TSF shall apply the following rules to the supported protocols: <assignable>
-                rules defining the handling for communications over this protocol (e.g., any
-                processing that must be done by the TSF prior to transmitting it through the TOE,
-                circumstances or frequency with which the protocol is invoked)</assignable>.
-              </title>
-            </ext-comp-def-title>
+            
           </f-element>
         </f-component>
         
@@ -991,7 +1014,7 @@
           <audit>There are no auditable events foreseen.</audit>
           <dependencies>FDP_APC_EXT.1 Active PSD Connections</dependencies>  
           
-          <f-element id="fdp-udf-ext.1e1-km">
+          <f-element id="fdp-udf-ext-1e1-km">
             <title>
               The TSF shall ensure <selectables>
                 <selectable>keyboard</selectable>
@@ -1017,8 +1040,8 @@
               Caps Lock, Num Lock, and Scroll Lock indications may be displayed by the TOE
               while still not passing that information to the keyboard.
             </note>
-            <aactivity>
-              <Isolation/>                
+            <aactivity>              
+              
               <TSS>
                 The evaluator shall examine the TSS to verify that it describes if and how keyboard Caps Lock, Num Lock,
                 and Scroll Lock indications are displayed by the TOE and to verify that keyboard internal LEDs are not
@@ -1027,6 +1050,7 @@
                 the TOE keyboard/mouse peripheral interface to the TOE keyboard/mouse computer interface.
               </TSS>
               <Guidance/>
+              <CustomEA name="Isolation"/>
               <Tests>
                 Test activities for this SFR are covered under FDP_APC_EXT.1 test 3-KM.                
               </Tests>
@@ -1036,6 +1060,56 @@
       </section>      
     </man-sfrs>  
     <opt-sfrs/>
+    
+    <sel-sfrs>
+      <section title="User Data Protection (FDP)">
+        <f-component cc-id="fdp_rip.1" name="Residual Information Protection (Keyboard Data)" iteration="KM" id="fdp-rip-1-km">
+          <f-element id="fdp-rip-1e1-km">
+            <title>
+            The TSF shall ensure that any <h:b>keyboard data in volatile memory</h:b> is
+            <h:b>purged</h:b> upon <h:b>switching computers.</h:b>
+          </title>
+          <note role="application">
+            This SFR must be claimed if “switching can be initiated only through express user
+            action” is chosen as a selection for FDP_SWI_EXT.1.1 in the PSD PP and if “USB
+            (keyboard)" is chosen as a selection in FDP_PDC_EXT.2.1/KM.
+          </note>
+          <aactivity>
+            
+            <TSS>
+              The evaluator shall verify that the TSS indicates whether or not the TOE has user data
+              buffers.<h:br/><h:br/>
+              The evaluator shall verify that the TSS describes how all keyboard data stored in volatile memory is deleted
+              upon switching computers.
+            </TSS>
+            <Guidance/>
+            <CustomEA name="Isolation"/>
+            <Tests/>
+          </aactivity>
+          </f-element>
+        </f-component>
+        <f-component cc-id="fdp_swi_ext.3" name="Tied Switching">
+          <f-element id="fdp-swi-ext-3e1">
+            <title>
+              The TSF shall ensure that [<h:i>connected keyboard and mouse peripheral devices</h:i>]
+              are always switched together to the same connected computer.
+            </title>
+            <ext-comp-def-title>
+              <title>
+                The TSF shall ensure that <assignable>two or more tied peripheral
+                  devices</assignable> are always switched together to the same connected computer.
+              </title>
+            </ext-comp-def-title>
+            <note role="application">
+              This SFR must be claimed if “switching can be initiated only through express user
+              action” is chosen as a selection for FDP_SWI_EXT.1.1 in the PSD PP and if both
+              “USB (keyboard)” and “USB (mouse)” are chosen as selections in
+              FDP_PDC_EXT.2.1/KM.
+            </note>
+          </f-element>
+        </f-component>
+      </section>
+    </sel-sfrs>
     <obj-sfrs/>
     <impl-dep-sfrs>
       <section title="TOE Capability for Device Filtering">
@@ -1045,15 +1119,14 @@
             such that denylisted devices are rejected by the TSF and allowlisted devices are accepted by the
             TSF unless the device is also denylisted, in which case the denylist takes precedent.</h:li>          
         </h:ul>
+        <ext-comp-def fam-id="FDP_FIL_EXT" title="Device Filtering (Keyboard/Mouse)">
+            <fam-behavior>Components in this family define the requirements for device filtering.</fam-behavior>
+          </ext-comp-def>
         
         <f-component cc-id="fdp_fil_ext.1" name="Device Filtering (Keyboard/Mouse)" iteration="KM" id="fdp-fil-ext-1-km">
-          <consistecny-rationale>This SFR defines specific handling for keyboard/mouse peripheral devices.
+          <consistency-rationale>This SFR defines specific handling for keyboard/mouse peripheral devices.
             This does not prevent the enforcement of any PSD PP SFRs.
-          </consistecny-rationale>
-          
-          <ext-comp-def fam-id="FDP_FIL_EXT.1" title="Device Filtering (Keyboard/Mouse)">
-            <fam-behavior>Components in this family define the requirements for device filtering.</fam-behavior>
-        </ext-comp-def>
+          </consistency-rationale>
           
           <comp-lev>defines the types of physical devices that the TSF will permit to
             connect to it.</comp-lev>
@@ -1112,12 +1185,20 @@
             </selectables> interfaces in</h:b> peripheral device connections only if they are not on the
             [<h:i>PSD KM</h:i>] denylist or otherwise unauthorized.
           </title>
+          <ext-comp-def-title>
+            <title>
+              The TSF shall consider all <assignable>allowlist name</assignable> allowlisted devices as
+              authorized devices for peripheral device connections only if they are not on the
+              <assignable>denylist name</assignable> denylist or otherwise unauthorized.
+            </title>
+          </ext-comp-def-title>
+          
           <note role="application">
             The ST author must make the selections for the device which the TOE has: configurable,
             fixed, or both; and keyboard, mouse, or both.
           </note>
           <aactivity>
-            <Isolation/>
+            
             <TSS>
               The evaluator shall examine the TSS and verify that it describes whether the PSD has configurable or fixed
               device filtering.<h:br/><h:br/>
@@ -1132,6 +1213,7 @@
               guidance documentation and verify that it describes the process of configuring the TOE for allowlisting
               and denylisting KM peripheral devices and the administrative privileges required to do this.
             </Guidance>
+            <CustomEA name="Isolation"/>
             <Tests>
               <testlist>
                 <test>
@@ -1160,13 +1242,7 @@
             </Tests>
           </aactivity>
           
-          <ext-comp-def-title>
-            <title>
-              The TSF shall consider all <assignable>allowlist name</assignable> allowlisted devices as
-              authorized devices for peripheral device connections only if they are not on the
-              <assignable>denylist name</assignable> denylist or otherwise unauthorized.
-            </title>
-          </ext-comp-def-title>
+          
           
         </f-element>
         </f-component>
@@ -1179,15 +1255,17 @@
         different type of device.</h:li>
         </h:ul>
         
-        <f-component cc-id="fdp_rdr_ext.1" name="Re-Enumeration Device Rejection">
-          <consistecny-rationale>This SFR defines specific handling for keyboard/mouse peripheral devices.
-            This does not prevent the enforcement of any PSD PP SFRs.
-          </consistecny-rationale>
-          
-          <ext-comp-def fam-id="FDP_RDR_EXT.1" title="Re-Enumeration Device Rejection">
+        <ext-comp-def fam-id="FDP_RDR_EXT" title="Re-Enumeration Device Rejection">
             <fam-behavior>Components in this family define requirements to reject device spoofing
               attempts through re-enumeration.</fam-behavior>
           </ext-comp-def>
+        
+        <f-component cc-id="fdp_rdr_ext.1" name="Re-Enumeration Device Rejection">
+          <consistency-rationale>This SFR defines specific handling for keyboard/mouse peripheral devices.
+            This does not prevent the enforcement of any PSD PP SFRs.
+          </consistency-rationale>
+          
+          
           
           <comp-lev>requires the TSF to reject re‐enumeration as an
             unauthorized device.</comp-lev>
@@ -1205,12 +1283,13 @@
               unauthorized, but cannot prevent malicious devices that use an authorized HID-class.
             </note>
             <aactivity>
-              <Isolation/>
+              
               <TSS>
                 The evaluator shall examine the TSS to verify that it describes how the TSF identifies and rejects a device
                 that attempts to enumerate again as a different device.
               </TSS>
               <Guidance/>
+              <CustomEA name="Isolation"/>
               <Tests>
                 The evaluator shall use a BadUSB, programmable keyboard, and/or USB Rubber Ducky as a malicious USB
                 device to perform the following test:<h:ol>
@@ -1236,54 +1315,7 @@
       </f-component>
       </section>
     </impl-dep-sfrs>
-    <sel-sfrs>
-      <section title="User Data Protection (FDP)">
-        <f-component cc-id="fdp_rip.1" name="Residual Information Protection (Keyboard Data)" iteration="KM" id="fdp-rip-1-km">
-          <f-element id="fdp-rip-1e1-km">
-            <title>
-            The TSF shall ensure that any <h:b>keyboard data in volatile memory</h:b> is
-            <h:b>purged</h:b> upon <h:b>switching computers.</h:b>
-          </title>
-          <note role="application">
-            This SFR must be claimed if “switching can be initiated only through express user
-            action” is chosen as a selection for FDP_SWI_EXT.1.1 in the PSD PP and if “USB
-            (keyboard)" is chosen as a selection in FDP_PDC_EXT.2.1/KM.
-          </note>
-          <aactivity>
-            <Isolation/>
-            <TSS>
-              The evaluator shall verify that the TSS indicates whether or not the TOE has user data
-              buffers.<h:br/><h:br/>
-              The evaluator shall verify that the TSS describes how all keyboard data stored in volatile memory is deleted
-              upon switching computers.
-            </TSS>
-            <Guidance/>
-            <Tests/>
-          </aactivity>
-          </f-element>
-        </f-component>
-        <f-component cc-id="fdp_swi_ext.3" name="Tied Switching">
-          <f-element id="fdp-swi-ext.3e1">
-            <title>
-              The TSF shall ensure that [<h:i>connected keyboard and mouse peripheral devices</h:i>]
-              are always switched together to the same connected computer.
-            </title>
-            <ext-comp-def-title>
-              <title>
-                The TSF shall ensure that <assignable>two or more tied peripheral
-                  devices</assignable> are always switched together to the same connected computer.
-              </title>
-            </ext-comp-def-title>
-            <note role="application">
-              This SFR must be claimed if “switching can be initiated only through express user
-              action” is chosen as a selection for FDP_SWI_EXT.1.1 in the PSD PP and if both
-              “USB (keyboard)” and “USB (mouse)” are chosen as selections in
-              FDP_PDC_EXT.2.1/KM.
-            </note>
-          </f-element>
-        </f-component>
-      </section>
-    </sel-sfrs>
+    
     
   </sec:Security_Requirements>
 
@@ -1295,7 +1327,7 @@
     the functionality required by the PSD PP.
   </appendix>
   
-  <appendix title="Peripheral Device Connections">
+  <appendix title="Peripheral Device Connections" id="perdevcon">
     <section title="General">
       This appendix expands the PSD PP Peripheral Device Connections appendix, and offers additional direction
       on peripheral devices and interface protocols with TOEs claiming compliance with this PP‐Module. This
@@ -1340,7 +1372,7 @@
     </section>
   </appendix> 
   
-  <appendix title="Interactions between PP-Modules">
+  <appendix title="Interactions between PP-Modules" id="interactbetmod">
     This appendix provides any additional guidance required to address interactions between multiple PPModules
     when they are both contained within a PP‐Configuration.
     <section title="PP-Module for Audio Output Devices">
@@ -1385,9 +1417,10 @@
   </appendix>    
   
   <bibliography>    
-    <entry>
+    <entry id="base-pp">
       <tag>PP_PSD_V5.0 or PSD PP</tag>
-      <h:a href=""><comment>Need to add URL once published.</comment>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</h:a>
+      <description><h:a href=""><comment>Need to add URL once published.</comment>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</h:a>
+      </description>    
     </entry>
   </bibliography>
-    </PP>
+</Module>
