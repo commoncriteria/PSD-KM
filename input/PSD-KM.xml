@@ -272,6 +272,7 @@
       All environmental security objectives from the PSD PP also apply to the TOE’s environment when it
       includes this PP‐Module in its conformance claims.
     </sec:Security_Objectives_for_the_Operational_Environment>
+    
   </sec:Security_Objectives>
 
   <sec:Security_Requirements>
@@ -806,7 +807,7 @@
       <con-mod ref="T.DATA_LEAK">
         This threat is from the PSD PP, thus no conflict exists.
       </con-mod>
-      <con-mod ref="T.LOGICAL_TAMPER (">
+      <con-mod ref="T.LOGICAL_TAMPER">
         This threat is from the PSD PP, thus no conflict exists.
       </con-mod>
       <con-mod ref="T.RESIDUAL_LEAK">
@@ -1073,6 +1074,10 @@
             <external-doc ref="bpp-psd"/>
           </depends>
           <depends on-sel="fdp-pdc-ext-3e1-km"/>
+          <consistency-rationale>
+            This SFR defines specific handling for keyboard peripheral devices. This does
+            not prevent the enforcement of any PSD PP SFRs.
+          </consistency-rationale>
           <f-element id="fdp-rip-1e1-km">
             <title>
             The TSF shall ensure that any <h:b>keyboard data in volatile memory</h:b> is
@@ -1102,6 +1107,10 @@
             <external-doc ref="bpp-psd"/>
           </depends>
           <depends on-sel="fdp-pdc-ext-3e1-km"/>
+          <consistency-rationale>
+            This SFR defines specific handling for keyboard/mouse peripheral devices.
+            This does not prevent the enforcement of any PSD PP SFRs.
+          </consistency-rationale>
           <f-element id="fdp-swi-ext-3e1">
             <title>
               The TSF shall ensure that [<h:i>connected keyboard and mouse peripheral devices</h:i>]
@@ -1128,6 +1137,7 @@
                 The evaluator shall verify that the guidance does not describe how to switch the keyboard and mouse
                 devices independently to different connected computers.
               </Guidance>
+              <CustomEA name="Isolation"/>
               <Tests>
                 The evaluator shall verify that the keyboard and mouse devices are always switched together to the same
                 connected computer throughout testing in <xref to="fdp_apc_ext.1"/>.
@@ -1280,7 +1290,7 @@
         </f-component>
       </section>
       
-      <section title="TOE Capability for Rejection of Re-Enumerated Devices">
+      <section title="User Data Protection (FDP)" id="FDP">
         If the TSF supports rejection of re‐enumerated devices, the following SFRs must all be claimed or the
         functionality disabled:<h:ul>
           <h:li>FDP_RDR_EXT.1 – The TSF must be able to reject any devices that attempt to re‐enumerate as a
