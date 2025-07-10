@@ -808,7 +808,7 @@
         This threat is from the PSD PP, thus no conflict exists.
       </con-mod>
       <con-mod ref="T.LOGICAL_TAMPER">
-        This threat is from the PSD PP, thus no conflict exists.
+        This threat is from the PSD PP, thus no conflict exists. 
       </con-mod>
       <con-mod ref="T.RESIDUAL_LEAK">
         This threat is from the PSD PP, thus no conflict exists.
@@ -1157,9 +1157,6 @@
             such that denylisted devices are rejected by the TSF and allowlisted devices are accepted by the
             TSF unless the device is also denylisted, in which case the denylist takes precedent.</h:li>          
         </h:ul>
-        <ext-comp-def fam-id="FDP_FIL_EXT" title="Device Filtering (Keyboard/Mouse)">
-            <fam-behavior>Components in this family define the requirements for device filtering.</fam-behavior>
-          </ext-comp-def>
         
         <f-component name="Device Filtering" cc-id="fdp_fil_ext.1" status="invisible">
           <comp-lev>defines the types of physical devices that the TSF will permit to
@@ -1296,11 +1293,6 @@
           <h:li>FDP_RDR_EXT.1 – The TSF must be able to reject any devices that attempt to re‐enumerate as a
         different type of device.</h:li>
         </h:ul>
-        
-        <ext-comp-def fam-id="FDP_RDR_EXT" title="Re-Enumeration Device Rejection">
-            <fam-behavior>Components in this family define requirements to reject device spoofing
-              attempts through re-enumeration.</fam-behavior>
-          </ext-comp-def>
         
         <f-component cc-id="fdp_rdr_ext.1" name="Re-Enumeration Device Rejection">
           <consistency-rationale>This SFR defines specific handling for keyboard/mouse peripheral devices.
