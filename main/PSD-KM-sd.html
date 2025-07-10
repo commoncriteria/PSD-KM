@@ -294,7 +294,7 @@
       Technical Community members, with representatives from industry, government 
       agencies, Common Criteria Test Laboratories, and members of academia.
       </p></div><h1>Table of Contents</h1><div id="toc"><a href="#introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#scope" style="text-indent:10px">1.1<span>Technology Area and Scope of Supporting Document</span></a><a href="#structure" style="text-indent:10px">1.2<span>Structure of the Document</span></a><a href="#glossary" style="text-indent:10px">1.3<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.3.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.3.2<span>Technical Terms</span></a><a href="#sfr" style="text-indent:0px">2<span>Evaluation Activities for SFRs</span></a><a href="#aa-bpp-psd" style="text-indent:10px">2.1<span>Peripheral Sharing Device</span></a><a href="#qq-sfrs-bpp-psd-Modified" style="text-indent:20px">2.1.1<span>Modified SFRs
-        </span></a><a href="#mod_fau" style="text-indent:30px">2.1.1.1<span>Security Audit (FAU)</span></a><a href="#mod_fdp" style="text-indent:30px">2.1.1.2<span>User Data Protection (FDP)</span></a><a href="#mod_fia" style="text-indent:30px">2.1.1.3<span>Identification and Authentication (FIA)</span></a><a href="#mod_fmt" style="text-indent:30px">2.1.1.4<span>Security Management (FMT)</span></a><a href="#mod_fpt" style="text-indent:30px">2.1.1.5<span>Protection of the TSF (FPT)</span></a><a href="#man-sfrs" style="text-indent:10px">2.2<span>TOE SFR Evaluation Activities</span></a><a href="#FDP" style="text-indent:20px">2.2.1<span>User Data Protection (FDP)</span></a><a href="#opt-sfrs" style="text-indent:10px">2.3<span>Evaluation Activities for Optional SFRs</span></a><a href="#sel-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#_sec_7" style="text-indent:20px">2.4.1<span>User Data Protection (FDP)</span></a><a href="#obj-sfrs" style="text-indent:10px">2.5<span>Evaluation Activities for Objective SFRs</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.6<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#_sec_8" style="text-indent:20px">2.6.1<span>TOE Capability for Device Filtering</span></a><a href="#_sec_9" style="text-indent:20px">2.6.2<span>TOE Capability for Rejection of Re-Enumerated Devices</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the 
+        </span></a><a href="#mod_fau" style="text-indent:30px">2.1.1.1<span>Security Audit (FAU)</span></a><a href="#mod_fdp" style="text-indent:30px">2.1.1.2<span>User Data Protection (FDP)</span></a><a href="#mod_fia" style="text-indent:30px">2.1.1.3<span>Identification and Authentication (FIA)</span></a><a href="#mod_fmt" style="text-indent:30px">2.1.1.4<span>Security Management (FMT)</span></a><a href="#mod_fpt" style="text-indent:30px">2.1.1.5<span>Protection of the TSF (FPT)</span></a><a href="#man-sfrs" style="text-indent:10px">2.2<span>TOE SFR Evaluation Activities</span></a><a href="#FDP" style="text-indent:20px">2.2.1<span>User Data Protection (FDP)</span></a><a href="#opt-sfrs" style="text-indent:10px">2.3<span>Evaluation Activities for Optional SFRs</span></a><a href="#sel-sfrs" style="text-indent:10px">2.4<span>Evaluation Activities for Selection-Based SFRs</span></a><a href="#_sec_7" style="text-indent:20px">2.4.1<span>User Data Protection (FDP)</span></a><a href="#obj-sfrs" style="text-indent:10px">2.5<span>Evaluation Activities for Objective SFRs</span></a><a href="#impl-sfrs-" style="text-indent:10px">2.6<span>Evaluation Activities for Implementation-dependent SFRs</span></a><a href="#FDP" style="text-indent:20px">2.6.1<span>User Data Protection (FDP)</span></a><a href="#_sec_9" style="text-indent:20px">2.6.2<span>TOE Capability for Rejection of Re-Enumerated Devices</span></a><a href="#sar_aas" style="text-indent:0px">3<span>Evaluation Activities for SARs</span></a><a href="#sup-info" style="text-indent:0px">4<span>Required Supplementary Information</span></a><a href="#biblio" style="text-indent:0px">Appendix A - <span>References</span></a></div><h1 id="introduction" class="indexable" data-level="0">1 Introduction</h1><h2 id="scope" class="indexable" data-level="1">1.1 Technology Area and Scope of Supporting Document</h2><p>The scope of the 
     PP-Module for Keyboard/Mouse Device is
     to describe the security functionality of 
     Keyboard/Mouse Device
@@ -465,8 +465,8 @@ The following sections list Common Criteria and technology terms used in this do
                   clutter during USB traffic capture, the evaluator may filter NAK transactions and system messages.<br/><br/>
                   The evaluator shall perform the following tests:
                   <span class="testlist-"><ul>
-                    <li class="test-"><a id="_t_1" class="defined" href="#_t_1">Test FDP_APC_EXT.1:1</a>:
-      
+                    <li class="test-"><a id="fdp_apc_ext.1-kmswimeth" class="defined" href="#fdp_apc_ext.1-kmswimeth">Test FDP_APC_EXT.1:1</a>:
+      <br/><br/>
                       <b>KM Switching Methods</b><br/><br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
                       in FDP_SWI_EXT.1.1 in the PSD PP]<br/><br/>
@@ -502,10 +502,10 @@ The following sections list Common Criteria and technology terms used in this do
                           to switch to other connected computers using the peripheral device and guard by only performing some
                           of the steps outlined in the operational user guidance, and verify that it does not succeed.</li>                        
                       </ol>                      
-                    </li>
+                    </li><br/><br/>
                     
                     <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FDP_APC_EXT.1:2</a>:
-      
+      <br/><br/>
                       <b>Positive and Negative Keyboard and Mouse Data Flow Rules Testing</b><br/><br/>                      
                       This test verifies the functionality for correct data flows of a mouse and keyboard during different power
                       states of the selected computer.
@@ -531,7 +531,8 @@ The following sections list Common Criteria and technology terms used in this do
                           that no traffic is sent.</li>
                         <li>Disconnect and reconnect the TOE interface cables connected to the selected computer. Examine
                           the USB protocol analyzers on each one of the non‐selected computers and verify that no traffic is sent.</li>
-                        <li>Reboot the selected computer. Examine the USB protocol analyzers on each one of the nonselected
+                        <li>Reboot the selected computer. Examine the USB protocol analyzers on
+                          each one of the non-selected
                           computers and verify that no traffic is sent.</li>
                         <li>Enter sleep or suspend mode in the selected computer. Examine the USB protocol analyzers on
                           each one of the non‐selected computers to verify that no traffic is sent.</li>
@@ -543,10 +544,10 @@ The following sections list Common Criteria and technology terms used in this do
                           that no results are observed on the selected computer and that no traffic is captured using the USB
                           analyzer.</li>
                       </ol>
-                    </li>
+                    </li><br/><br/>
                     
                     <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FDP_APC_EXT.1:3</a>:
-      
+      <br/><br/>
                       <b>Flow Isolation and Unidirectional Rule</b><br/><br/>
                       This test verifies that the TOE properly enforces unidirectional flow and
                       isolation.
@@ -598,10 +599,10 @@ The following sections list Common Criteria and technology terms used in this do
                               the device enumeration.</li>
                           </ul></li>
                       </ol>
-                    </li>
+                    </li><br/><br/>
                     
                     <li class="test-"><a id="_t_4" class="defined" href="#_t_4">Test FDP_APC_EXT.1:4</a>:
-      
+      <br/><br/>
                       <b>No Flow between Computer Interfaces</b><br/><br/>
                           [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
                           in FDP_SWI_EXT.1.1 in the PSD PP]<br/><br/>
@@ -624,16 +625,16 @@ The following sections list Common Criteria and technology terms used in this do
                         <li>Connect a USB dummy load into the TOE KM peripheral device interface. Verify that no new USB
                           traffic is captured on all non‐selected computer USB protocol analyzers. Remove the plug after the step is
                           completed.</li>
-                        <li>Connect a switchable 5 volt power supply with a USB Type‐B plug into the TOE KM peripheral
+                        <li>Connect a switchable 5 volt power supply with any compatible USB plug into the TOE KM peripheral
                           device interface. Modulate the 5 volt supply (i.e., cycle on and off) manually at various speeds from
                           approximately one cycle per five seconds to one cycle per second. Verify that no new USB traffic is
                           captured on all non‐selected computer USB analyzers.</li>
                         <li>Turn off the TOE. Verify that no new traffic is captured.</li>                                                
                       </ol>
-                    </li>
+                    </li><br/><br/>
                     
                     <li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_APC_EXT.1:5</a>:
-      
+      <br/><br/>
                       <b>No Flow between Connected Computers over Time</b><br/><br/>
                       This test verifies that the TOE does not send data to different computers connected to the same interface
                       at different times. Repeat this test for each TOE KM computer port.
@@ -828,7 +829,21 @@ The following sections list Common Criteria and technology terms used in this do
             </div></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
-			There are no test activities for this component.<br/></div></span></div><div class="comp" id=""><h4>FDP_SWI_EXT.3 Tied Switching</h4><span class="activity_pane_body"></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.5 Evaluation Activities for Objective SFRs</h2>The PP-Module does not define any objective requirements.<h2 class="indexable" data-level="1" id="impl-sfrs-">2.6 Evaluation Activities for Implementation-dependent SFRs</h2><h2 class="indexable" data-level="2" id="_sec_8">2.6.1 TOE Capability for Device Filtering</h2><div class="comp" id="FDP-FIL-EXT-1-KM"><h4>FDP_FIL_EXT.1/KM Device Filtering (Keyboard/Mouse)</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_FIL_EXT.1/KM</div>
+			There are no test activities for this component.<br/></div></span></div><div class="comp" id=""><h4>FDP_SWI_EXT.3 Tied Switching</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_SWI_EXT.3</div>
+              
+              
+              
+            <div class="eacategory">TSS</div><div class="ea"><div class="ea">
+                The evaluator shall verify that the TSS does not indicate that keyboard and mouse devices may be
+                switched independently to different connected computers.
+              </div></div><div class="eacategory">Guidance</div><div class="ea"><div class="ea">
+                The evaluator shall verify that the guidance does not describe how to switch the keyboard and mouse
+                devices independently to different connected computers.
+              </div></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
+                The evaluator shall verify that the keyboard and mouse devices are always switched together to the same
+                connected computer throughout testing in <span href="#fdp_apc_ext.1" class="dynref" data-format=""></span>.
+                Tests for this SFR are performed in <a href="#fdp_apc_ext.1-kmswimeth" class="dynref">Test FDP_APC_EXT.1:1</a>.
+              </div></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.5 Evaluation Activities for Objective SFRs</h2>The PP-Module does not define any objective requirements.<h2 class="indexable" data-level="1" id="impl-sfrs-">2.6 Evaluation Activities for Implementation-dependent SFRs</h2><h2 class="indexable" data-level="2" id="FDP">2.6.1 User Data Protection (FDP)</h2><div class="comp" id="FDP-FIL-EXT-1-KM"><h4>FDP_FIL_EXT.1/KM Device Filtering (Keyboard/Mouse)</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_FIL_EXT.1/KM</div>
             
             
             
@@ -853,10 +868,10 @@ The following sections list Common Criteria and technology terms used in this do
       
                   Perform the test steps in FDP_PDC_EXT.1 with all devices on the PSD KM denylist and verify that they are
                   rejected as expected.
-                </li>
+                </li><br/><br/>
                 
                 <li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/KM:2</a>:
-      
+      <br/><br/>
                   [Conditional: Perform this only if “configurable” is selected in FDP_FIL_EXT.1.1/KM]<br/><br/>
                   In the following steps the evaluator shall verify that allowlisted and denylisted devices are treated
                   correctly.<ol>
@@ -886,8 +901,11 @@ The following sections list Common Criteria and technology terms used in this do
               </div></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                The evaluator shall use a BadUSB, programmable keyboard, and/or USB Rubber Ducky as a malicious USB
-                device to perform the following test:<ol>
+                The evaluator shall use a BadUSB, programmable keyboard, or USB Rubber Ducky as a malicious USB
+                device to perform the following test:
+                <span class="testlist-"><ul>
+                  <li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_RDR_EXT.1:1</a>:
+      <ol>
                   <li>Ensure the TOE and the Operational Environment are configured in accordance with the
                 operational guidance. Ensure the TOE is powered off and connect a USB sniffer between the TOE and a
                 computer. Open the real‐time hardware information console.</li>
@@ -904,6 +922,8 @@ The following sections list Common Criteria and technology terms used in this do
                   <li>Verify device rejection per TOE guidance, the cessation of traffic passed in the USB sniffer, and the
                 absence of the device and any new devices in the information console.</li>
                 </ol>
+                  </li>
+                </ul></span>
               </div></div></span></div><h1 id="sar_aas" class="indexable" data-level="0">3 Evaluation Activities for SARs</h1><p>The PP-Module does not define any SARs beyond those defined within the
     
 	base PSD PP to which it must claim conformance.
@@ -918,7 +938,7 @@ The following sections list Common Criteria and technology terms used in this do
     and supplement that evaluation with the necessary SFRs that are taken from the PP-Module.
     </p><h1 id="sup-info" class="indexable" data-level="0">4 Required Supplementary Information</h1><p>This Supporting Document has no required supplementary information beyond the ST, operational
 guidance, and testing.</p><h1 id="biblio" class="indexable" data-level="A">Appendix A -  References</h1><table><tr class="header"><th>Identifier</th><th>Title</th></tr>    
-    <tr><td><span id="base-pp"></span>[PP_PSD_V5.0 or PSD PP]</td><td><a href=""><span style="" class="comment " id="Comment-2-">Need to add URL once published.</span>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</a>
+    <tr><td><span id="bpp-psd"></span>[PP_PSD_V5.0 or PSD PP]</td><td><a href=""><span style="" class="comment " id="Comment-2-">Need to add URL once published.</span>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</a>
       </td></tr>
 
   </table></body></html>
