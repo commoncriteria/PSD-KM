@@ -651,6 +651,7 @@
             </aactivity>
             </f-element>
           </f-component> 
+          
           <f-component cc-id="fdp_swi_ext.2" name="PSD Switching">
             <consistency-rationale>
               There is no modification to this SFR in this PP‐Module. However, there are
@@ -1102,15 +1103,23 @@
           </aactivity>
           </f-element>
         </f-component>
+        
         <f-component cc-id="fdp_swi_ext.3" name="Tied Switching">
           <depends on="fdp-swi-ext-1e1">
             <external-doc ref="bpp-psd"/>
           </depends>
-          <depends on-sel="fdp-pdc-ext-3e1-km"/>
+          <depends on-sel="fdp-swi-ext-3e1-km"/>
           <consistency-rationale>
             This SFR defines specific handling for keyboard/mouse peripheral devices.
             This does not prevent the enforcement of any PSD PP SFRs.
           </consistency-rationale>
+          
+          <comp-lev>requires the TSF to ensure that multiple connected peripherals are always
+            switched to the same connected computer.</comp-lev>
+          <management>No specific management functions are identified.</management>
+          <audit>There are no auditable events foreseen.</audit>
+          <dependencies>FDP_SWI_EXT.1 PSD Switching</dependencies>
+          
           <f-element id="fdp-swi-ext-3e1">
             <title>
               The TSF shall ensure that [<h:i>connected keyboard and mouse peripheral devices</h:i>]
