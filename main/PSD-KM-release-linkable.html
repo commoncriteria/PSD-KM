@@ -1203,6 +1203,7 @@ The following sections list Common Criteria and technology terms used in this do
                   </li>                  
                 </ul></span>
               </div></div></div></div></div> 
+          
           <div class="comp" id="FDP_SWI_EXT.2"><h4>FDP_SWI_EXT.2 PSD Switching</h4>
             
             
@@ -1748,11 +1749,18 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no additional Guidance evaluation activities for this component<a id="period_428" href="#period_428">. </a><br></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component<a id="period_429" href="#period_429">. </a><br></div><div class="eacategory">Tests</div><div class="ea">
 			There are no test activities for this component<a id="period_430" href="#period_430">. </a><br></div></div></div></div>
+        
         <div class="comp" id="FDP_SWI_EXT.3"><h4>FDP_SWI_EXT.3 Tied Switching</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FDP_PDC_EXT.3.1/KM">FDP_PDC_EXT.3.1/KM</a>
+           
              from <a href="https://github.com/commoncriteria/psd">,
         version 
         </a><a id="period_431" href="#period_431">. </a>           </i></b></div>
+          
+          
+          
+          
+          
+          
           
           
           
@@ -1838,24 +1846,30 @@ The following sections list Common Criteria and technology terms used in this do
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall reject any device that attempts to enumerate again as a different
               unauthorized device<a id="period_467" href="#period_467">. </a>            </div></div><h3 id="ext-comp-FDP_SWI_EXT" class="indexable" data-level="4">C.2.1.4 FDP_SWI_EXT PSD Switching</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>This family is defined in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_468" href="#period_468">. </a>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Module augments the extended family by adding one
             additional component, <a href="#FDP_SWI_EXT.3">FDP_SWI_EXT.3</a><a id="period_469" href="#period_469">. </a>This new component and its impact on the extended family&#8217;s
-            component leveling are shown below; reference the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> for all other definitions for this family<a id="period_470" href="#period_470">. </a></div><h4>Component Leveling</h4><svg style="max-height: 10px;"><text x="4" fill="black" font-size="15" y="24">FDP_SWI_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect></svg></div><h3 id="ext-comp-FDP_UDF_EXT" class="indexable" data-level="4">C.2.1.5 FDP_UDF_EXT Unidirectional Data Flow</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>Components in this family define unidirectional transmission of user data<a id="period_471" href="#period_471">. </a></div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FDP_UDF_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p>FDP_UDF_EXT.1,
+            component leveling are shown below; reference the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> for all other definitions for this family<a id="period_470" href="#period_470">. </a></div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FDP_SWI_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">3</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p><a href="#FDP_SWI_EXT.3">FDP_SWI_EXT.3</a>,
+             Tied Switching,
+             requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to ensure that multiple connected peripherals are always
+            switched to the same connected computer<a id="period_471" href="#period_471">. </a></p><h4>Management: FDP_SWI_EXT.3</h4><p>No specific management functions are identified<a id="period_472" href="#period_472">. </a></p><h4>Audit: FDP_SWI_EXT.3</h4><p>There are no auditable events foreseen<a id="period_473" href="#period_473">. </a></p><h4>FDP_SWI_EXT.3 Tied Switching</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components<a id="period_474" href="#period_474">. </a></td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td>FDP_SWI_EXT.1 <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> Switching</td></tr></table><h4 id="ext-comp-FDP_SWI_EXT.3.1">FDP_SWI_EXT.3.1</h4>
+                The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall ensure that [<b>assignment</b>: 
+     <span class="assignable-content">two or more tied peripheral
+                  devices</span>] are always switched together to the same connected computer<a id="period_475" href="#period_475">. </a>              </div></div><h3 id="ext-comp-FDP_UDF_EXT" class="indexable" data-level="4">C.2.1.5 FDP_UDF_EXT Unidirectional Data Flow</h3><div style="margin-left: 1em;"><h4>Family Behavior</h4><div>Components in this family define unidirectional transmission of user data<a id="period_476" href="#period_476">. </a></div><h4>Component Leveling</h4><svg style="max-height: 30px;"><text x="4" fill="black" font-size="15" y="24">FDP_UDF_EXT</text><rect x="2" y="11" width="150" height="16" fill="none" stroke="black"></rect><text x="234" fill="black" font-size="15" y="24">1</text><rect x="232" y="11" width="12" height="16" fill="none" stroke="black"></rect><line x1="152" y1="17" x2="231" y2="17" stroke="black"></line></svg><p>FDP_UDF_EXT.1,
              Unidirectional Data Flow,
              requires the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> to provide unidirectional (one&#8208;way)
-            communications between a given pair of interface types<a id="period_472" href="#period_472">. </a></p><h4>Management: FDP_UDF_EXT.1</h4><p>No specific management functions are identified<a id="period_473" href="#period_473">. </a></p><h4>Audit: FDP_UDF_EXT.1</h4><p>There are no auditable events foreseen<a id="period_474" href="#period_474">. </a></p><h4>FDP_UDF_EXT.1 Unidirectional Data Flow</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components<a id="period_475" href="#period_475">. </a></td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td><a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> Active <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> Connections</td></tr></table><h4 id="ext-comp-FDP_UDF_EXT.1.1">FDP_UDF_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall ensure [<b>assignment</b>: 
+            communications between a given pair of interface types<a id="period_477" href="#period_477">. </a></p><h4>Management: FDP_UDF_EXT.1</h4><p>No specific management functions are identified<a id="period_478" href="#period_478">. </a></p><h4>Audit: FDP_UDF_EXT.1</h4><p>There are no auditable events foreseen<a id="period_479" href="#period_479">. </a></p><h4>FDP_UDF_EXT.1 Unidirectional Data Flow</h4><div style="margin-left: 1em;"><table class="ecd_heir_dep" style="width: 100%"><tr><td style="whitespace: nowrap">Hierarchical to:</td><td style="width: 100%">No other components<a id="period_480" href="#period_480">. </a></td></tr><tr style="background-color: inherit"><td>Dependencies to:</td><td><a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> Active <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> Connections</td></tr></table><h4 id="ext-comp-FDP_UDF_EXT.1.1">FDP_UDF_EXT.1.1</h4>The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall ensure [<b>assignment</b>: 
      <span class="assignable-content">type of data</span>] data transits the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>
                 unidirectionally from the [<b>assignment</b>: 
      <span class="assignable-content">origin point of data</span>] interface to the
                 [<b>assignment</b>: 
-     <span class="assignable-content">destination point of data</span>] interface<a id="period_476" href="#period_476">. </a></div></div></span></span><h1 id="iso-doc-assess" class="indexable" data-level="A">Appendix D -  Isolation Documentation and Assessment</h1>
+     <span class="assignable-content">destination point of data</span>] interface<a id="period_481" href="#period_481">. </a></div></div></span></span><h1 id="iso-doc-assess" class="indexable" data-level="A">Appendix D -  Isolation Documentation and Assessment</h1>
     The <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not require any additional supplementary information to describe its isolation concepts
     beyond the requirements outlined in the &#8216;Isolation Documentation and Assessment&#8217; sections in Appendix
-    D of the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_477" href="#period_477">. </a>As with other <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> requirements, the only additional requirement is that the isolation
+    D of the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_482" href="#period_482">. </a>As with other <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> requirements, the only additional requirement is that the isolation
     documentation also applies to the specific isolation and data flow <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> in this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;module in addition to
-    the functionality required by the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_478" href="#period_478">. </a>  <h1 id="perdevcon" class="indexable" data-level="A">Appendix E -  Peripheral Device Connections</h1>
+    the functionality required by the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr><a id="period_483" href="#period_483">. </a>  <h1 id="perdevcon" class="indexable" data-level="A">Appendix E -  Peripheral Device Connections</h1>
     <h2 class="indexable" data-level="2" id="_sec_10">E.1 General</h2>
       This appendix expands the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> Peripheral Device Connections appendix, and offers additional direction
-      on peripheral devices and interface protocols with <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> claiming compliance with this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Module<a id="period_479" href="#period_479">. </a>This
-      appendix is in conjunction with the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8217;s appendix and does not replace it<a id="period_480" href="#period_480">. </a>    
+      on peripheral devices and interface protocols with <abbr class="dyn-abbr"><a href="#abbr_TOE">TOEs</a></abbr> claiming compliance with this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Module<a id="period_484" href="#period_484">. </a>This
+      appendix is in conjunction with the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8217;s appendix and does not replace it<a id="period_485" href="#period_485">. </a>    
     
     <h2 class="indexable" data-level="2" id="_sec_11">E.2 Unauthorized Peripheral Devices</h2>
       The following are unauthorized devices and device classes:<ul>
@@ -1896,42 +1910,42 @@ The following sections list Common Criteria and technology terms used in this do
   <h1 id="interactbetmod" class="indexable" data-level="A">Appendix F -  Interactions between PP-Modules</h1>
     This appendix provides any additional guidance required to address interactions between multiple
     <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules
-    when they are both contained within a <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Configuration<a id="period_481" href="#period_481">. </a>    <h2 class="indexable" data-level="2" id="_sec_15">F.1 PP-Module for Audio Output Devices</h2>
+    when they are both contained within a <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Configuration<a id="period_486" href="#period_486">. </a>    <h2 class="indexable" data-level="2" id="_sec_15">F.1 PP-Module for Audio Output Devices</h2>
       Unauthorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules are considered unauthorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as
-      per <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a><a id="period_482" href="#period_482">. </a><br><br>
+      per <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a><a id="period_487" href="#period_487">. </a><br><br>
       Authorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules are considered authorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as per
-      the claimed iterations of FDP_PDC_EXT.2<a id="period_483" href="#period_483">. </a><br><br>
+      the claimed iterations of FDP_PDC_EXT.2<a id="period_488" href="#period_488">. </a><br><br>
       Power events at a KM interface for one connected computer cannot impact power events at an analog
-      audio output interface for another connected computer and vice versa, as per <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a><a id="period_484" href="#period_484">. </a>This
-      evaluation activity is tested in Test 3&#8208;AO in the Supporting Document for Audio Output<a id="period_485" href="#period_485">. </a><br><br>
-      Both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules modify the Base&#8208;<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> in ways that are specific to their respective
-      peripheral types<a id="period_486" href="#period_486">. </a>The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should make two iterations of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>, <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/KM and
-      <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/AO, to show the different modifications made for each specific peripheral type<a id="period_487" href="#period_487">. </a>    
-    <h2 class="indexable" data-level="2" id="_sec_16">F.2 PP-Module for User Authentication Devices</h2>
-      Unauthorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules are considered unauthorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as
-      per <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a><a id="period_488" href="#period_488">. </a><br><br>
-      Authorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules are considered authorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as per
-      the claimed iterations of FDP_PDC_EXT.2<a id="period_489" href="#period_489">. </a><br><br>
-      KM functionality must be isolated from user authentication functionality and vice versa as per
-      FDP_UAI_EXT.1<a id="period_490" href="#period_490">. </a><br><br>
+      audio output interface for another connected computer and vice versa, as per <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a><a id="period_489" href="#period_489">. </a>This
+      evaluation activity is tested in Test 3&#8208;AO in the Supporting Document for Audio Output<a id="period_490" href="#period_490">. </a><br><br>
       Both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules modify the Base&#8208;<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> in ways that are specific to their respective
       peripheral types<a id="period_491" href="#period_491">. </a>The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should make two iterations of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>, <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/KM and
-      <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/UA, to show the different modifications made for each specific peripheral type<a id="period_492" href="#period_492">. </a>    
-    <h2 class="indexable" data-level="2" id="_sec_17">F.3 PP-Module for Video/Display Devices</h2>
+      <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/AO, to show the different modifications made for each specific peripheral type<a id="period_492" href="#period_492">. </a>    
+    <h2 class="indexable" data-level="2" id="_sec_16">F.2 PP-Module for User Authentication Devices</h2>
       Unauthorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules are considered unauthorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as
       per <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a><a id="period_493" href="#period_493">. </a><br><br>
       Authorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules are considered authorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as per
       the claimed iterations of FDP_PDC_EXT.2<a id="period_494" href="#period_494">. </a><br><br>
+      KM functionality must be isolated from user authentication functionality and vice versa as per
+      FDP_UAI_EXT.1<a id="period_495" href="#period_495">. </a><br><br>
+      Both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules modify the Base&#8208;<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> in ways that are specific to their respective
+      peripheral types<a id="period_496" href="#period_496">. </a>The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should make two iterations of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>, <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/KM and
+      <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/UA, to show the different modifications made for each specific peripheral type<a id="period_497" href="#period_497">. </a>    
+    <h2 class="indexable" data-level="2" id="_sec_17">F.3 PP-Module for Video/Display Devices</h2>
+      Unauthorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules are considered unauthorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as
+      per <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a><a id="period_498" href="#period_498">. </a><br><br>
+      Authorized devices identified in both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules are considered authorized devices for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> as per
+      the claimed iterations of FDP_PDC_EXT.2<a id="period_499" href="#period_499">. </a><br><br>
       Video devices with an interface for <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> Type&#8208;C with DisplayPort as alternate function may not be
       connected to a KM interface, and KM devices may not be connected to a video interface for <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> Type&#8208;C
-      with DisplayPort as alternate function, even though both devices are authorized devices<a id="period_495" href="#period_495">. </a><br><br>
+      with DisplayPort as alternate function, even though both devices are authorized devices<a id="period_500" href="#period_500">. </a><br><br>
       Video devices with an interface for <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> Type&#8208;C with DisplayPort as alternate function may not be used in
-      conjunction with a touchscreen peripheral device, as per <a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a> and FDP_PDC_EXT.3.1/Vid<a id="period_496" href="#period_496">. </a><br><br>
+      conjunction with a touchscreen peripheral device, as per <a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a> and FDP_PDC_EXT.3.1/Vid<a id="period_501" href="#period_501">. </a><br><br>
       KM devices may be used with a guard in conjunction with multiple video devices, as per FDP_CDS_EXT.1
-      and <a href="#FDP_SWI_EXT.2">FDP_SWI_EXT.2</a><a id="period_497" href="#period_497">. </a><br><br>
+      and <a href="#FDP_SWI_EXT.2">FDP_SWI_EXT.2</a><a id="period_502" href="#period_502">. </a><br><br>
       Both <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Modules modify the Base&#8208;<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a> in ways that are specific to their respective
-      peripheral types<a id="period_498" href="#period_498">. </a>The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should make two iterations of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>, <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/KM and
-      <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/VI, to show the different modifications made for each specific peripheral type<a id="period_499" href="#period_499">. </a>    
+      peripheral types<a id="period_503" href="#period_503">. </a>The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should make two iterations of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>, <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/KM and
+      <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/VI, to show the different modifications made for each specific peripheral type<a id="period_504" href="#period_504">. </a>    
   <h1 id="acronyms" class="indexable" data-level="A">Appendix G -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">5</span></span>: Acronyms
 		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
@@ -1960,17 +1974,17 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><span class="term" id="abbr_USB"><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr></span></td><td><span id="long_abbr_USB">Universal Serial Bus</span></td></tr>
 </table><h1 id="appendix-bibliography" class="indexable" data-level="A">Appendix H -  Bibliography</h1><table><caption><span class="ctr" data-myid="t-biblio" data-counter-type="ct-Table" id="t-biblio">Table <span class="counter">6</span></span>: Bibliography</caption><tr class="header"><th>Identifier</th><th>Title</th></tr><tr><td><span id="bibCC">[<abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>]</span></td><td><span class="description">Common Criteria for Information Technology Security Evaluation - <ul>
             <li><a href="https://www.commoncriteriaportal.org/files/ccfiles/CC2022PART1R1.pdf">Part 1: 
-				Introduction and general model</a>, CCMB-2022-11-001, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_500" href="#period_500">. </a></li>
+				Introduction and general model</a>, CCMB-2022-11-001, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_505" href="#period_505">. </a></li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART2R1.pdf">Part 2: 
-				Security functional requirements</a>, CCMB-2022-11-002, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_501" href="#period_501">. </a></li>
+				Security functional requirements</a>, CCMB-2022-11-002, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_506" href="#period_506">. </a></li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART3R1.pdf">Part 3: 
-                Security assurance requirements</a>, CCMB-2022-11-003, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_502" href="#period_502">. </a></li>
+                Security assurance requirements</a>, CCMB-2022-11-003, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_507" href="#period_507">. </a></li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART4R1.pdf">Part 4: 
-                Framework for the specification of evaluation methods and activities</a>, CCMB-2022-11-004, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_503" href="#period_503">. </a></li>
+                Framework for the specification of evaluation methods and activities</a>, CCMB-2022-11-004, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_508" href="#period_508">. </a></li>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CC2022PART5R1.pdf">Part 5: 
-                 Pre-defined packages of security requirements</a>, CCMB-2022-11-005, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_504" href="#period_504">. </a></li>
+                 Pre-defined packages of security requirements</a>, CCMB-2022-11-005, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_509" href="#period_509">. </a></li>
           </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">
-                 Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_505" href="#period_505">. </a></li>
+                 Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_510" href="#period_510">. </a></li>
           </ul></span></td></tr><tr><td><span id="bpp-psd">[PP_PSD_V5.0 or <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]</span></td><td><span class="description"><a href=""><span style="" class="comment " id="Comment-2-">Need to add URL once published.</span>Protection Profile for Peripheral Sharing Device, Version 5.0, 2025-07-11</a>
       </span></td></tr></table></body></html>

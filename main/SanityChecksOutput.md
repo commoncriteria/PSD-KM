@@ -1,4 +1,6 @@
 * Warning: This document still has at least one comment.
+* Error: Detected dangling id-reference to fdp-swi-ext-3e1-km from attribute
+        on-sel/Module[1]""/sec:Security_Requirements[1]""/sel-sfrs[1]""/section[1]""/f-component[2]""/depends[2]""/on-sel[1]""
 * Error: Detected multiple elements with an id of 'bpp-psd'.
 * Error: Detected multiple elements with an id of 'FDP'.
 * Error: Detected multiple elements with an id of 'FDP'.
