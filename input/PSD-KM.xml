@@ -796,7 +796,7 @@
       
       
       <!-- 6.1.3 Consistency of Objectives -->
-      <con-obj/>        
+              
       <con-op-en/>
       
       <con-mod ref="T.DATA_LEAK">
@@ -1065,10 +1065,11 @@
       <section title="User Data Protection (FDP)">
         
         <f-component cc-id="fdp_rip.1" name="Residual Information Protection (Keyboard Data)" iteration="KM" id="fdp-rip-1-km">
+          <depends on-sel="fdp-pdc-ext-3e1-km"/>
           <depends on="fdp-swi-ext-1e1">
             <external-doc ref="bpp-psd"/>
           </depends>
-          <depends on-sel="fdp-pdc-ext-3e1-km"/>
+          
           <consistency-rationale>
             This SFR defines specific handling for keyboard peripheral devices. This does
             not prevent the enforcement of any PSD PP SFRs.
@@ -1099,10 +1100,11 @@
         </f-component>
         
         <f-component cc-id="fdp_swi_ext.3" name="Tied Switching">
+          <depends on-sel="fdp-pdc-ext-2e1-km"/>
           <depends on="fdp-swi-ext-1e1">
             <external-doc ref="bpp-psd"/>
           </depends>
-          <depends on-sel="fdp-swi-ext-3e1-km"/>
+          
           <consistency-rationale>
             This SFR defines specific handling for keyboard/mouse peripheral devices.
             This does not prevent the enforcement of any PSD PP SFRs.
