@@ -400,7 +400,7 @@
                       This test verifies the functionality for correct data flows of a mouse and keyboard during different power
                       states of the selected computer.
                       <h:ol>
-                        <h:li>Continue with the test setup from <xref to="Test_1-KM"/> and for each connected computer, connect a USB sniffer
+                        <h:li>Continue with the test setup from <xref to="APC_Test_1-KM"/> and for each connected computer, connect a USB sniffer
                           between it and the TOE or open the USB analyzer software. Perform steps 2‐12 with each connected
                           computer as the selected computer.</h:li>
                         <h:li>Exercise the functions of the peripheral device type selected in FDP_PDC_EXT.3.1/KM and verify
