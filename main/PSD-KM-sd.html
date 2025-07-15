@@ -465,7 +465,7 @@ The following sections list Common Criteria and technology terms used in this do
                   clutter during USB traffic capture, the evaluator may filter NAK transactions and system messages.<br/><br/>
                   The evaluator shall perform the following tests:
                   <span class="testlist-"><ul>
-                    <li class="test-"><a id="fdp_apc_ext.1-kmswimeth" class="defined" href="#fdp_apc_ext.1-kmswimeth">Test FDP_APC_EXT.1:1</a>:
+                    <li class="test-"><a id="APC_Test_1-KM" class="defined" href="#APC_Test_1-KM">Test FDP_APC_EXT.1:1</a>:
       <br/><br/>
                       <b>KM Switching Methods</b><br/><br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
@@ -504,13 +504,13 @@ The following sections list Common Criteria and technology terms used in this do
                       </ol>                      
                     </li><br/><br/>
                     
-                    <li class="test-"><a id="_t_2" class="defined" href="#_t_2">Test FDP_APC_EXT.1:2</a>:
+                    <li class="test-"><a id="APC_Test_2-KM" class="defined" href="#APC_Test_2-KM">Test FDP_APC_EXT.1:2</a>:
       <br/><br/>
                       <b>Positive and Negative Keyboard and Mouse Data Flow Rules Testing</b><br/><br/>                      
                       This test verifies the functionality for correct data flows of a mouse and keyboard during different power
                       states of the selected computer.
                       <ol>
-                        <li>Continue with the test setup from Test 1 and for each connected computer, connect a USB sniffer
+                        <li>Continue with the test setup from <span href="#Test_1-KM" class="dynref" data-format=""></span> and for each connected computer, connect a USB sniffer
                           between it and the TOE or open the USB analyzer software. Perform steps 2‐12 with each connected
                           computer as the selected computer.</li>
                         <li>Exercise the functions of the peripheral device type selected in FDP_PDC_EXT.3.1/KM and verify
@@ -546,7 +546,7 @@ The following sections list Common Criteria and technology terms used in this do
                       </ol>
                     </li><br/><br/>
                     
-                    <li class="test-"><a id="_t_3" class="defined" href="#_t_3">Test FDP_APC_EXT.1:3</a>:
+                    <li class="test-"><a id="APC_Test_3-KM" class="defined" href="#APC_Test_3-KM">Test FDP_APC_EXT.1:3</a>:
       <br/><br/>
                       <b>Flow Isolation and Unidirectional Rule</b><br/><br/>
                       This test verifies that the TOE properly enforces unidirectional flow and
@@ -601,7 +601,7 @@ The following sections list Common Criteria and technology terms used in this do
                       </ol>
                     </li><br/><br/>
                     
-                    <li class="test-"><a id="_t_4" class="defined" href="#_t_4">Test FDP_APC_EXT.1:4</a>:
+                    <li class="test-"><a id="APC_Test_4-KM" class="defined" href="#APC_Test_4-KM">Test FDP_APC_EXT.1:4</a>:
       <br/><br/>
                       <b>No Flow between Computer Interfaces</b><br/><br/>
                           [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
@@ -633,7 +633,7 @@ The following sections list Common Criteria and technology terms used in this do
                       </ol>
                     </li><br/><br/>
                     
-                    <li class="test-"><a id="_t_5" class="defined" href="#_t_5">Test FDP_APC_EXT.1:5</a>:
+                    <li class="test-"><a id="APC_Test_5-KM" class="defined" href="#APC_Test_5-KM">Test FDP_APC_EXT.1:5</a>:
       <br/><br/>
                       <b>No Flow between Connected Computers over Time</b><br/><br/>
                       This test verifies that the TOE does not send data to different computers connected to the same interface
@@ -674,7 +674,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_6" class="defined" href="#_t_6">Test FDP_PDC_EXT.1:1</a>:
+                  <li class="test-"><a id="PDC_Test_1-KM" class="defined" href="#PDC_Test_1-KM">Test FDP_PDC_EXT.1:1</a>:
       
                     The evaluator shall verify that the TOE ports properly reject unauthorized devices and devices with
                     unauthorized protocols as per the unauthorized peripheral device connections.<br/><br/>
@@ -709,7 +709,7 @@ The following sections list Common Criteria and technology terms used in this do
                         functions are rejected or the entire device is rejected.</li>                      
                     </ol>
                   </li>
-                  <li class="test-"><a id="_t_7" class="defined" href="#_t_7">Test FDP_PDC_EXT.1:2</a>:
+                  <li class="test-"><a id="PDC_Test_2-KM" class="defined" href="#PDC_Test_2-KM">Test FDP_PDC_EXT.1:2</a>:
       
                     The evaluator shall verify that the TOE KM ports do not reject authorized devices and devices with
                     authorized protocols as per the authorized peripheral device connections.<br/><br/>
@@ -753,7 +753,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 The evaluator shall ensure that switching is always initiated through express user action using the selected
                 mechanisms throughout testing for FDP_APC_EXT.1 above.<br/><br/>
-                Additional tests for this SFR are performed in FDP_APC_EXT.1 test 1‐KM above.
+                Additional tests for this SFR are performed in <span href="#Test_1-KM" class="dynref" data-format=""></span>.
               </div></div></span></div>
         
         <h3 class="indexable" data-level="3" id="mod_fia">2.1.1.3 Identification and Authentication (FIA)</h3><div class="comp" id=""><h4>FIA_UAU.2 User Authentication Before Any Action</h4>
@@ -783,8 +783,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                Testing of this component is performed through evaluation of FDP_PDC_EXT.1 Test 2 as specified in
-                section 2.2.2.2 above.
+                Testing of this component is performed through evaluation of <a href="#PDC_Test_2-KM" class="dynref">Test FDP_PDC_EXT.1:2</a>.
               </div></div></span></div><div class="comp" id="FDP-PDC-EXT-3-KM"><h4>FDP_PDC_EXT.3/KM Authorized Connection Protocols (Keyboard/Mouse)</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_PDC_EXT.3/KM</div>
               
                               
@@ -814,7 +813,7 @@ The following sections list Common Criteria and technology terms used in this do
               </div></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                Test activities for this SFR are covered under FDP_APC_EXT.1 test 3-KM.                
+                Test activities for this SFR are covered under <a href="#APC_Test_3-KM" class="dynref">Test FDP_APC_EXT.1:3</a>.                
               </div></div></span></div><h2 class="indexable" data-level="1" id="opt-sfrs">2.3 Evaluation Activities for Optional SFRs</h2>The PP-Module does not define any optional requirements.<h2 class="indexable" data-level="1" id="sel-sfrs">2.4 Evaluation Activities for Selection-Based SFRs</h2><h2 class="indexable" data-level="2" id="_sec_8">2.4.1 User Data Protection (FDP)</h2><div class="comp" id="FDP-RIP-1-KM"><h4>FDP_RIP.1/KM Residual Information Protection (Keyboard Data)</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_RIP.1/KM</div>
             
             
@@ -844,7 +843,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 The evaluator shall verify that the keyboard and mouse devices are always switched together to the same
                 connected computer throughout testing in <span href="#fdp_apc_ext.1" class="dynref" data-format=""></span>.
-                Tests for this SFR are performed in <a href="#fdp_apc_ext.1-kmswimeth" class="dynref">Test FDP_APC_EXT.1:1</a>.
+                Tests for this SFR are performed in <span href="#fdp_apc_ext.1-kmswimeth" class="dynref" data-format=""></span>.
               </div></div></span></div><h2 class="indexable" data-level="1" id="obj-sfrs">2.5 Evaluation Activities for Objective SFRs</h2>The PP-Module does not define any objective requirements.<h2 class="indexable" data-level="1" id="impl-sfrs-">2.6 Evaluation Activities for Implementation-dependent SFRs</h2><h2 class="indexable" data-level="2" id="FDP">2.6.1 User Data Protection (FDP)</h2><div class="comp" id="FDP-FIL-EXT-1-KM"><h4>FDP_FIL_EXT.1/KM Device Filtering (Keyboard/Mouse)</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_FIL_EXT.1/KM</div>
             
             
