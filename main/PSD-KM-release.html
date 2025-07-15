@@ -632,7 +632,7 @@ function showTarget(id){
     </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/><a href="#Comment-2-">Comment: Comment-2-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for Keyboard/Mouse Device</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
       Version: 2.0<br/>2025-07-11<br/><b>National Information Assurance Partnership</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2019-07-19</td><td>Initial draft</td></tr>
 <tr><td>2.0</td><td>2025-07-11</td><td>Updates for <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022</td></tr>
-</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#ppoverview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOEboundary" style="text-indent:10px">1.4<span>TOE Boundary</span></a><a href="#usecases" style="text-indent:10px">1.5<span>Use Cases</span></a><a href="#sec-cclaims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-bpp-psd" style="text-indent:10px">5.1<span>
+</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#ppoverview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOEboundary" style="text-indent:10px">1.4<span>TOE Boundary</span></a><a href="#usecases" style="text-indent:10px">1.5<span>Use Cases</span></a><a href="#sec-features" style="text-indent:10px">1.6<span>Implementation-Based Features</span></a><a href="#filtration" style="text-indent:20px">1.6.1<span>Device Filtration</span></a><a href="#rejectreenumeration" style="text-indent:20px">1.6.2<span>Rejection of Re-Enumeration</span></a><a href="#sec-cclaims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-bpp-psd" style="text-indent:10px">5.1<span>
     Protection Profile for Peripheral Sharing Device
        Security Functional Requirements Direction
     </span></a><a href="#modsfr-bpp-psd" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#mod_fau" style="text-indent:30px">5.1.1.1<span>Security Audit (FAU)</span></a><a href="#mod_fdp" style="text-indent:30px">5.1.1.2<span>User Data Protection (FDP)</span></a><a href="#mod_fia" style="text-indent:30px">5.1.1.3<span>Identification and Authentication (FIA)</span></a><a href="#mod_fmt" style="text-indent:30px">5.1.1.4<span>Security Management (FMT)</span></a><a href="#mod_fpt" style="text-indent:30px">5.1.1.5<span>Protection of the TSF (FPT)</span></a><a href="#man-sfrs" style="text-indent:10px">5.2<span>TOE Security Functional Requirements</span></a><a href="#FDP" style="text-indent:20px">5.2.1<span>User Data Protection (FDP)</span></a><a href="#obj-req-map" style="text-indent:10px">5.3<span>TOE Security Functional Requirements Rationale</span></a><a href="#mod-conrat" style="text-indent:0px">6<span>Consistency Rationale</span></a><a href="#conrat-bpp-psd" style="text-indent:10px">6.1<span>
@@ -647,7 +647,7 @@ function showTarget(id){
       </span></a><a href="#opt-sfrs" style="text-indent:0px">Appendix A - <span>Optional SFRs</span></a><a href="#opt-sfrs" style="text-indent:10px">A.1<span>Strictly Optional Requirements
     </span></a><a href="#obj-sfrs" style="text-indent:10px">A.2<span>Objective Requirements
     </span></a><a href="#impl-dep-sfrs" style="text-indent:10px">A.3<span>Implementation-dependent Requirements
-    </span></a><a href="#FDP" style="text-indent:20px">A.3.1<span>User Data Protection (FDP)</span></a><a href="#FDP" style="text-indent:20px">A.3.2<span>User Data Protection (FDP)</span></a><a href="#sel-sfrs" style="text-indent:0px">Appendix B - <span>Selection-based Requirements
+    </span></a><a href="#FDP" style="text-indent:20px">A.3.1<span>User Data Protection (FDP)</span></a><a href="#sel-sfrs" style="text-indent:0px">Appendix B - <span>Selection-based Requirements
     </span></a><a href="#" style="text-indent:10px">B.1<span>User Data Protection (FDP)</span></a><a href="#ext-comp-defs" style="text-indent:0px">Appendix C - <span>Extended Component Definitions</span></a><a href="#ext-comp-defs-bg" style="text-indent:10px">C.1<span>Extended Components Table</span></a><a href="#ext-comp-defs-bg" style="text-indent:10px">C.2<span>Extended Component Definitions</span></a><a href="#ext-comp-FDP" style="text-indent:20px">C.2.1<span>User Data Protection (FDP)</span></a><a href="#ext-comp-FDP_FIL_EXT" style="text-indent:30px">C.2.1.1<span>FDP_FIL_EXT Device Filtering</span></a><a href="#ext-comp-FDP_PDC_EXT" style="text-indent:30px">C.2.1.2<span>FDP_PDC_EXT Peripheral Device Connection</span></a><a href="#ext-comp-FDP_RDR_EXT" style="text-indent:30px">C.2.1.3<span>FDP_RDR_EXT Re-Enumeration Device Rejection</span></a><a href="#ext-comp-FDP_SWI_EXT" style="text-indent:30px">C.2.1.4<span>FDP_SWI_EXT PSD Switching</span></a><a href="#ext-comp-FDP_UDF_EXT" style="text-indent:30px">C.2.1.5<span>FDP_UDF_EXT Unidirectional Data Flow</span></a><a href="#iso-doc-assess" style="text-indent:0px">Appendix D - <span>Isolation Documentation and Assessment</span></a><a href="#perdevcon" style="text-indent:0px">Appendix E - <span>Peripheral Device Connections</span></a><a href="#_sec_10" style="text-indent:10px">E.1<span>General</span></a><a href="#_sec_11" style="text-indent:10px">E.2<span>Unauthorized Peripheral Devices</span></a><a href="#_sec_12" style="text-indent:10px">E.3<span>Unauthorized Interface Protocols</span></a><a href="#_sec_13" style="text-indent:10px">E.4<span>Authorized Peripheral Devices</span></a><a href="#_sec_14" style="text-indent:10px">E.5<span>Authorized Interface Protocols</span></a><a href="#interactbetmod" style="text-indent:0px">Appendix F - <span>Interactions between PP-Modules</span></a><a href="#_sec_15" style="text-indent:10px">F.1<span>PP-Module for Audio Output Devices</span></a><a href="#_sec_16" style="text-indent:10px">F.2<span>PP-Module for User Authentication Devices</span></a><a href="#_sec_17" style="text-indent:10px">F.3<span>PP-Module for Video/Display Devices</span></a><a href="#acronyms" style="text-indent:0px">Appendix G - <span>Acronyms</span></a><a href="#appendix-bibliography" style="text-indent:0px">Appendix H - <span>Bibliography</span></a></div><h1 class="indexable" data-level="1" id="Introduction">1 Introduction</h1>
     <h2 class="indexable" data-level="2" id="ppoverview">1.1 Overview</h2>
       The scope of this Protection Profile (<abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)‐Module is to describe the security functionality of a specific type
@@ -785,6 +785,16 @@ The following sections list Common Criteria and technology terms used in this do
       security requirements related to security of the physical and logical interfaces for supporting keyboard and
       mouse devices.
         
+
+ <h2 class="indexable" data-level="2" id="sec-features">1.6 Implementation-Based Features</h2>
+      A conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> may implement certain features that are not strictly necessary in order to achieve the desired level of security, but if these features are implemented, it is expected that they conform to certain requirements governing their behavior.
+      <h3 class="indexable" data-level="3" id="filtration">1.6.1 Device Filtration</h3><span class="description">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> implements a filtration mechanism above and beyond only allowing the authorized peripheral device types that are defined in Appendix E. This may be a fixed mechanism (e.g., a device may be bundled with a purpose-built keyboard that is the only keyboard recognized by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s peripheral keyboard port) or a configurable one.</span><br/><p>
+	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
+            <ul><li><b><a href="#FDP_FIL_EXT.1/KM">FDP_FIL_EXT.1/KM</a></b></li></ul></p><h3 class="indexable" data-level="3" id="rejectreenumeration">1.6.2 Rejection of Re-Enumeration</h3><span class="description">The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> automatically rejects any <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> device that attempts to re-enumerate as a different device.</span><br/><p>
+	  If this feature is implemented by the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, the following requirements must be claimed in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>:
+            <ul><li><b><a href="#FDP_RDR_EXT.1">FDP_RDR_EXT.1</a></b></li></ul></p>			
+       
+    
   <h1 class="indexable" data-level="1" id="sec-cclaims">2 Conformance Claims</h1>
     <dl><dt>Conformance Statement</dt><p></p><dd>An <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> must claim exact conformance 
 		 to this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</dd><p></p><dd>The evaluation methods used for evaluating the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> are a combination of the workunits 
@@ -1085,7 +1095,7 @@ The following sections list Common Criteria and technology terms used in this do
           
           
           <div class="element"><div class="reqid" id="FDP_PDC_EXT.3.1/KM"><a href="#FDP_PDC_EXT.3.1/KM" class="abbr">FDP_PDC_EXT.3.1/KM</a></div><div class="reqdesc">
-              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall have interfaces for the [<b>selection</b>: <span class="selectable-content" id="keyboardsupport"><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> (keyboard)</span>, <span class="selectable-content" id="_s_10"><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> (mouse)</span>] protocols.
+              The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall have interfaces for the [<b>selection</b>: <span class="selectable-content" id="keyboardsupport"><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> (keyboard)</span>, <span class="selectable-content" id="mousesupport"><abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> (mouse)</span>] protocols.
             </div></div>
           <div class="element"><div class="reqid" id="FDP_PDC_EXT.3.2/KM"><a href="#FDP_PDC_EXT.3.2/KM" class="abbr">FDP_PDC_EXT.3.2/KM</a></div><div class="reqdesc">
               The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall apply the following rules to the supported protocols: [<i>the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> shall
@@ -1125,55 +1135,40 @@ The following sections list Common Criteria and technology terms used in this do
     <h2 id="obj-req-map" class="indexable" data-level="2">5.3 TOE Security Functional Requirements Rationale</h2><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
     showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">1</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="4"><a href="#T.DATA_LEAK">T.DATA_​LEAK</a>
 		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
-	</td><td><a href="#FDP_UDF_EXT.1/KM">FDP_UDF_EXT.1/KM</a></td><td>Mitigates this threat by ensuring
-            unidirectional data transits between interfaces.</td></tr>
-<tr><td><a href="#FDP_FIL_EXT.1/KM">FDP_FIL_EXT.1/KM</a> (optional)</td><td>Mitigates this threat
-            by ensuring device filtering for peripheral interfaces.</td></tr>
-<tr><td><a href="#FDP_RDR_EXT.1">FDP_RDR_EXT.1</a> (optional)</td><td>Mitigates this threat by
-            preventing devices from alternating classes from authorized to unauthorized.</td></tr>
-<tr><td><a href="#FDP_SWI_EXT.3">FDP_SWI_EXT.3</a> (selection‐based)</td><td>Mitigates this
-            threat by ensuring all peripherals are switched together for the same connection.</td></tr>
-<tr class="major-row"><td rowspan="2"><a href="#T.LOGICAL_TAMPER">T.LOGICAL_​TAMPER</a>
-		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
-	</td><td><a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a></td><td>Mitigates this threat by only
-            allowing specified authorized devices and functions to be connected during power up or
-            connection of a peripheral device.</td></tr>
+	</td><td><a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a></td><td>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to leak data through the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</td></tr>
 <tr><td><a href="#FDP_PDC_EXT.3/KM">FDP_PDC_EXT.3/KM</a></td><td>Mitigates this threat by
-            requiring interfaces from connected protocols that shall follow specified rules.</td></tr>
+            emulating devices on connected computers so that any functionality used to attempt to leak data would not be recognized by a connected computer.</td></tr>
+<tr><td><a href="#FDP_UDF_EXT.1/KM">FDP_UDF_EXT.1/KM</a></td><td>Mitigates this threat by ensuring
+            unidirectional data flow from the peripherals to connected computers, such that data cannot leak from a connected computer to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</td></tr>
+<tr><td><a href="#FDP_FIL_EXT.1/KM">FDP_FIL_EXT.1/KM</a> (implementation-dependent)</td><td>Mitigates this threat
+            by blocking the use of untrusted devices that could be used to attempt data leakage.</td></tr>
+<tr class="major-row"><td rowspan="1"><a href="#T.LOGICAL_TAMPER">T.LOGICAL_​TAMPER</a>
+		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+	</td><td><a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a></td><td>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to logically tamper with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</td></tr>
 <tr class="major-row"><td rowspan="2"><a href="#T.RESIDUAL_LEAK">T.RESIDUAL_​LEAK</a>
 		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
-	</td><td><a href="#FDP_UDF_EXT.1/KM">FDP_UDF_EXT.1/KM</a></td><td>Mitigates this threat by ensuring
-            connected peripheral's data is transited unidirectionally between interfaces.</td></tr>
+	</td><td><a href="#FDP_UDF_EXT.1/KM">FDP_UDF_EXT.1/KM</a></td><td>Mitigates this threat by ensuring that data flow is unidirectional such that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not receive data from a connected computer.</td></tr>
 <tr><td><a href="#FDP_RIP.1/KM">FDP_RIP.1/KM</a> (selection‐based)</td><td>Mitigates this
-            threat by ensuring data in volatile memory is purged when switching computers.</td></tr>
+            threat by ensuring that any data in volatile memory is purged when switching computers.</td></tr>
 <tr class="major-row"><td rowspan="3"><a href="#T.SIGNAL_LEAK">T.SIGNAL_​LEAK</a>
 		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
-	</td><td><a href="#FDP_FIL_EXT.1/KM">FDP_FIL_EXT.1/KM</a> (optional)</td><td>Mitigates this threat
-            by requiring device filtering and only allowing authorized device for peripheral
-            interfaces.</td></tr>
-<tr><td><a href="#FDP_RDR_EXT.1">FDP_RDR_EXT.1</a> (optional)</td><td>Mitigates this threat by preventing devices
-            from alternating classes from authorized to unauthorized.</td></tr>
-<tr><td><a href="#FDP_SWI_EXT.3">FDP_SWI_EXT.3</a> (selection‐based)</td><td>Mitigates this
-            threat by ensuring connected peripherals are switched together.</td></tr>
-<tr class="major-row"><td rowspan="5"><a href="#T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_​DEVICES</a>
+	</td><td><a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a></td><td>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to leak data through the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> via a signaling mechanism.</td></tr>
+<tr><td><a href="#FDP_UDF_EXT.1/KM">FDP_UDF_EXT.1/KM</a></td><td>Mitigates this threat by ensuring
+            unidirectional data flow from the peripherals to connected computers, such that data cannot leak from a connected computer to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</td></tr>
+<tr><td><a href="#FDP_FIL_EXT.1/KM">FDP_FIL_EXT.1/KM</a> (implementation-dependent)</td><td>Mitigates this threat
+            by blocking the use of untrusted devices that could be used to attempt data leakage.</td></tr>
+<tr class="major-row"><td rowspan="4"><a href="#T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_​DEVICES</a>
 		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
-	</td><td><a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a></td><td>Mitigates this threat by only
-            allowing specified authorized devices and functions to be connected during power up or
-            connection of a peripheral device.</td></tr>
+	</td><td><a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a></td><td>Mitigates this threat by enforcing the recognition of only authorized devices.</td></tr>
 <tr><td><a href="#FDP_PDC_EXT.3/KM">FDP_PDC_EXT.3/KM</a></td><td>Mitigates this threat by
-            requiring interfaces from connected protocols that shall follow specified rules.</td></tr>
-<tr><td><a href="#FDP_FIL_EXT.1/KM">FDP_FIL_EXT.1/KM</a> (optional)</td><td>Mitigates this threat
-            by requiring device filtering and only allowing authorized device for peripheral
-            interfaces.</td></tr>
-<tr><td><a href="#FDP_RDR_EXT.1">FDP_RDR_EXT.1</a> (optional)</td><td>Mitigates this threat by preventing devices
-            from alternating classes from authorized to unauthorized.</td></tr>
-<tr><td><a href="#FDP_SWI_EXT.3">FDP_SWI_EXT.3</a> (selection‐based)</td><td>Mitigates this
-            threat by ensuring connected peripherals are switched together.</td></tr>
+            emulating connected devices so that unauthorized functionality of any peripherals is not recognized by a connected computer.</td></tr>
+<tr><td><a href="#FDP_FIL_EXT.1/KM">FDP_FIL_EXT.1/KM</a> (implementation-dependent)</td><td>Mitigates this threat
+            by implmenting a filtration mechanism to further tailor the set of authorized devices.</td></tr>
+<tr><td><a href="#FDP_RDR_EXT.1">FDP_RDR_EXT.1</a> (implementation-dependent)</td><td>Mitigates this threat by preventing an unathorized device from re-enumerating as an authorzied one.</td></tr>
 <tr class="major-row"><td rowspan="1"><a href="#T.UNINTENDED_USE">T.UNINTENDED_​USE</a>
 		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
-	</td><td><a href="#FDP_FIL_EXT.1/KM">FDP_FIL_EXT.1/KM</a> (optional)</td><td>Mitigates this threat
-            by requiring device filtering for selected interfaces and only allow authorized devices
-            to connect.</td></tr>
+	</td><td><a href="#FDP_SWI_EXT.3">FDP_SWI_EXT.3</a> (selection‐based)</td><td>Mitigates this
+            threat by ensuring all peripherals are switched to the same selected computer.</td></tr>
 </table></p><h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1><h2 id="conrat-bpp-psd" class="indexable" data-level="2">6.1 
     Protection Profile for Peripheral Sharing Device</h2><h3 id="contoe-bpp-psd" class="indexable" data-level="3">6.1.1 
 	Consistency of TOE Type
@@ -1304,13 +1299,7 @@ The following sections list Common Criteria and technology terms used in this do
        Objective       <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>.</p><h2 id="impl-dep-sfrs" class="indexable" data-level="2">A.3 Implementation-dependent Requirements
     </h2>
       <h3 id="FDP" class="indexable" data-level="3">A.3.1 User Data Protection (FDP)</h3>
-        If the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> supports fixed or configurable device filtration, the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> must all be
-        claimed or the functionality disabled:<ul>
-          <li><a href="#FDP_FIL_EXT.1/KM">FDP_FIL_EXT.1/KM</a> – The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> must perform at least one of fixed or configurable device filtration,
-            such that denylisted devices are rejected by the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> and allowlisted devices are accepted by the
-            <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> unless the device is also denylisted, in which case the denylist takes precedent.</li>          
-        </ul>
-        
+
         <div class="comp" id="FDP_FIL_EXT.1"><h4>FDP_FIL_EXT.1 Device Filtering</h4>
           
           
@@ -1341,7 +1330,8 @@ The following sections list Common Criteria and technology terms used in this do
           
         </div>
         
-        <div class="comp" id="FDP_FIL_EXT.1/KM"><h4>FDP_FIL_EXT.1/KM Device Filtering (Keyboard/Mouse)</h4>
+        <div class="comp" id="FDP_FIL_EXT.1/KM"><h4>FDP_FIL_EXT.1/KM Device Filtering (Keyboard/Mouse)</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#filtration">Device Filtration</a></i></b></li></ul></div>
+          
           
           
           <div class="element"><div class="reqid" id="FDP_FIL_EXT.1.1/KM"><a href="#FDP_FIL_EXT.1.1/KM" class="abbr">FDP_FIL_EXT.1.1/KM</a></div><div class="reqdesc">
@@ -1366,16 +1356,9 @@ The following sections list Common Criteria and technology terms used in this do
             fixed, or both; and keyboard, mouse, or both.
           </span></div></div></div>
         </div>
-      
-      
-      <h3 id="FDP" class="indexable" data-level="3">A.3.2 User Data Protection (FDP)</h3>
-        If the <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> supports rejection of re‐enumerated devices, the following <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> must all be claimed or the
-        functionality disabled:<ul>
-          <li><a href="#FDP_RDR_EXT.1">FDP_RDR_EXT.1</a> – The <abbr class="dyn-abbr"><a href="#abbr_TSF">TSF</a></abbr> must be able to reject any devices that attempt to re‐enumerate as a
-        different type of device.</li>
-        </ul>
         
-        <div class="comp" id="FDP_RDR_EXT.1"><h4>FDP_RDR_EXT.1 Re-Enumeration Device Rejection</h4>
+        <div class="comp" id="FDP_RDR_EXT.1"><h4>FDP_RDR_EXT.1 Re-Enumeration Device Rejection</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#rejectreenumeration">Rejection of Re-Enumeration</a></i></b></li></ul></div>
+            
           
           
           
@@ -1421,11 +1404,12 @@ The following sections list Common Criteria and technology terms used in this do
         </div>
         
         <div class="comp" id="FDP_SWI_EXT.3"><h4>FDP_SWI_EXT.3 Tied Switching</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FDP_PDC_EXT.2.1/KM">FDP_PDC_EXT.2.1/KM</a>
+           <a href="#FDP_PDC_EXT.3.1/KM">FDP_PDC_EXT.3.1/KM</a>
              from <a href="https://commoncriteria.github.io/PSD/main/PSD-release.html">,
         version 
         </a>.
            </i></b></div>
+          
           
           
           
