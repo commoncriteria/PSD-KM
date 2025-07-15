@@ -1101,7 +1101,7 @@
         
         <f-component cc-id="fdp_swi_ext.3" name="Tied Switching">
           <depends on-sel="keyboardsupport/>
-          <on-sel="mousesupport"/>
+          <depends on-sel="mousesupport"/>
           <depends on="notisolator">
             <external-doc ref="bpp-psd"/>
           </depends>
