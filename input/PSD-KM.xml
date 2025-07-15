@@ -686,7 +686,7 @@
               <Tests>
                 The evaluator shall ensure that switching is always initiated through express user action using the selected
                 mechanisms throughout testing for FDP_APC_EXT.1 above.<h:br/><h:br/>
-                Additional tests for this SFR are performed in <xref to="Test_1-KM"/>.
+                Additional tests for this SFR are performed in <xref to="APC_Test_1-KM"/>.
               </Tests>
             </aactivity>
             </f-element>
