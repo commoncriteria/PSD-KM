@@ -276,7 +276,7 @@
     <comment>Need to add URLs once created</comment>
     <base-pp id="bpp-psd" name="Peripheral Sharing Device" product="Device" short="PSD" version="5.0">
       <git>
-        <url>https://github.com/commoncriteria/psd</url>
+        <url>https://github.com/commoncriteria/PSD</url>
         <branch>main</branch>
       </git>
       <url>https://commoncriteria.github.io/PSD/main/PSD-release.html</url>
@@ -961,7 +961,7 @@
             <title>
               The TSF shall have interfaces for the <selectables>
                   <selectable id="keyboardsupport">USB (keyboard)</selectable>
-                  <selectable>USB (mouse)</selectable>                  
+                  <selectable id="mousesupport">USB (mouse)</selectable>                  
                 </selectables> protocols.
             </title>
             
@@ -1100,8 +1100,9 @@
         </f-component>
         
         <f-component cc-id="fdp_swi_ext.3" name="Tied Switching">
-          <depends on-sel="fdp-pdc-ext-2e1-km"/>
-          <depends on="fdp-swi-ext-1e1">
+          <depends on-sel="keyboardsupport/>
+          <on-sel="mousesupport"/>
+          <depends on="notisolator">
             <external-doc ref="bpp-psd"/>
           </depends>
           
