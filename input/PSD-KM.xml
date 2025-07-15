@@ -149,6 +149,19 @@
       security requirements related to security of the physical and logical interfaces for supporting keyboard and
       mouse devices.
     </section>    
+
+ <section title="Implementation-Based Features" id="sec-features">
+      A conformant TOE may implement certain features that are not strictly necessary in order to achieve the desired level of security, but if these features are implemented, it is expected that they conform to certain requirements governing their behavior.
+      <implements>
+        <feature id="filtration" title="Device Filtration">
+          <description>The TSF implements a filtration mechanism above and beyond only allowing the authorized peripheral device types that are defined in Appendix E. This may be a fixed mechanism (e.g., a device may be bundled with a purpose-built keyboard that is the only keyboard recognized by the TOE's peripheral keyboard port) or a configurable one.</description>
+        </feature>
+        <feature id="rejectreenumeration" title="Rejection of Re-Enumeration">
+          <description>The TSF automatically rejects any USB device that attempts to re-enumerate as a different device.</description>
+        </feature>
+      </implements>			
+    </section>   
+    
   </sec:Introduction>
 
   <section title="Conformance Claims" id="sec-cclaims" boilerplate="no">
@@ -184,9 +197,9 @@
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_UDF_EXT.1/KM</addressed-by><rationale>Mitigates this threat by ensuring
             unidirectional data transits between interfaces.</rationale>
-          <addressed-by>FDP_FIL_EXT.1/KM (optional)</addressed-by><rationale>Mitigates this threat
+          <addressed-by>FDP_FIL_EXT.1/KM (implementation-dependent)</addressed-by><rationale>Mitigates this threat
             by ensuring device filtering for peripheral interfaces.</rationale>
-          <addressed-by>FDP_RDR_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by
+          <addressed-by>FDP_RDR_EXT.1 (implementation-dependent)</addressed-by><rationale>Mitigates this threat by
             preventing devices from alternating classes from authorized to unauthorized.</rationale>
           <addressed-by>FDP_SWI_EXT.3 (selection‐based)</addressed-by><rationale>Mitigates this
             threat by ensuring all peripherals are switched together for the same connection.</rationale>
@@ -212,10 +225,10 @@
         <threat name="T.SIGNAL_LEAK">
           <from base="bpp-psd"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
-          <addressed-by>FDP_FIL_EXT.1/KM (optional)</addressed-by><rationale>Mitigates this threat
+          <addressed-by>FDP_FIL_EXT.1/KM (implementation-dependent)</addressed-by><rationale>Mitigates this threat
             by requiring device filtering and only allowing authorized device for peripheral
             interfaces.</rationale>
-          <addressed-by>FDP_RDR_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by preventing devices
+          <addressed-by>FDP_RDR_EXT.1 (implementation-dependent)</addressed-by><rationale>Mitigates this threat by preventing devices
             from alternating classes from authorized to unauthorized.</rationale>
           <addressed-by>FDP_SWI_EXT.3 (selection‐based)</addressed-by><rationale>Mitigates this
             threat by ensuring connected peripherals are switched together.</rationale> 
@@ -228,10 +241,10 @@
             connection of a peripheral device.</rationale>
           <addressed-by>FDP_PDC_EXT.3/KM</addressed-by><rationale>Mitigates this threat by
             requiring interfaces from connected protocols that shall follow specified rules.</rationale>
-          <addressed-by>FDP_FIL_EXT.1/KM (optional)</addressed-by><rationale>Mitigates this threat
+          <addressed-by>FDP_FIL_EXT.1/KM (implementation-dependent)</addressed-by><rationale>Mitigates this threat
             by requiring device filtering and only allowing authorized device for peripheral
             interfaces.</rationale>
-          <addressed-by>FDP_RDR_EXT.1 (optional)</addressed-by><rationale>Mitigates this threat by preventing devices
+          <addressed-by>FDP_RDR_EXT.1 (implementation-dependent)</addressed-by><rationale>Mitigates this threat by preventing devices
             from alternating classes from authorized to unauthorized.</rationale>
           <addressed-by>FDP_SWI_EXT.3 (selection‐based)</addressed-by><rationale>Mitigates this
             threat by ensuring connected peripherals are switched together.</rationale> 
@@ -239,7 +252,7 @@
         <threat name="T.UNINTENDED_USE">
           <from base="bpp-psd"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
-          <addressed-by>FDP_FIL_EXT.1/KM (optional)</addressed-by><rationale>Mitigates this threat
+          <addressed-by>FDP_FIL_EXT.1/KM (implementation-dependent)</addressed-by><rationale>Mitigates this threat
             by requiring device filtering for selected interfaces and only allow authorized devices
             to connect.</rationale>
         </threat>
@@ -1157,13 +1170,7 @@
     <obj-sfrs/>
     <impl-dep-sfrs>
       <section title="User Data Protection (FDP)" id="FDP">
-        If the TSF supports fixed or configurable device filtration, the following SFRs must all be
-        claimed or the functionality disabled:<h:ul>
-          <h:li>FDP_FIL_EXT.1/KM – The TSF must perform at least one of fixed or configurable device filtration,
-            such that denylisted devices are rejected by the TSF and allowlisted devices are accepted by the
-            TSF unless the device is also denylisted, in which case the denylist takes precedent.</h:li>          
-        </h:ul>
-        
+
         <f-component name="Device Filtering" cc-id="fdp_fil_ext.1" status="invisible">
           <comp-lev>defines the types of physical devices that the TSF will permit to
             connect to it.</comp-lev>
@@ -1200,6 +1207,7 @@
         </f-component>
         
         <f-component cc-id="fdp_fil_ext.1" name="Device Filtering (Keyboard/Mouse)" iteration="KM" id="fdp-fil-ext-1-km">
+          <depends on="filtration"/>
           <consistency-rationale>This SFR defines specific handling for keyboard/mouse peripheral devices.
             This does not prevent the enforcement of any PSD PP SFRs.
           </consistency-rationale>
@@ -1291,16 +1299,9 @@
           
         </f-element>
         </f-component>
-      </section>
-      
-      <section title="User Data Protection (FDP)" id="FDP">
-        If the TSF supports rejection of re‐enumerated devices, the following SFRs must all be claimed or the
-        functionality disabled:<h:ul>
-          <h:li>FDP_RDR_EXT.1 – The TSF must be able to reject any devices that attempt to re‐enumerate as a
-        different type of device.</h:li>
-        </h:ul>
         
         <f-component cc-id="fdp_rdr_ext.1" name="Re-Enumeration Device Rejection">
+            <depends on="rejectreenumeration"/>
           <consistency-rationale>This SFR defines specific handling for keyboard/mouse peripheral devices.
             This does not prevent the enforcement of any PSD PP SFRs.
           </consistency-rationale>
