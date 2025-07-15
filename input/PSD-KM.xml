@@ -357,7 +357,7 @@
                   clutter during USB traffic capture, the evaluator may filter NAK transactions and system messages.<h:br/><h:br/>
                   The evaluator shall perform the following tests:
                   <testlist>
-                    <test id="fdp_apc_ext.1-kmswimeth"><h:br/><h:br/>
+                    <test id="APC_Test_1-KM"><h:br/><h:br/>
                       <h:b>KM Switching Methods</h:b><h:br/><h:br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
                       in FDP_SWI_EXT.1.1 in the PSD PP]<h:br/><h:br/>
@@ -395,12 +395,12 @@
                       </h:ol>                      
                     </test><h:br/><h:br/>
                     
-                    <test><h:br/><h:br/>
+                    <test id="APC_Test_2-KM"><h:br/><h:br/>
                       <h:b>Positive and Negative Keyboard and Mouse Data Flow Rules Testing</h:b><h:br/><h:br/>                      
                       This test verifies the functionality for correct data flows of a mouse and keyboard during different power
                       states of the selected computer.
                       <h:ol>
-                        <h:li>Continue with the test setup from Test 1 and for each connected computer, connect a USB sniffer
+                        <h:li>Continue with the test setup from <xref to="Test_1-KM"/> and for each connected computer, connect a USB sniffer
                           between it and the TOE or open the USB analyzer software. Perform steps 2‐12 with each connected
                           computer as the selected computer.</h:li>
                         <h:li>Exercise the functions of the peripheral device type selected in FDP_PDC_EXT.3.1/KM and verify
@@ -436,7 +436,7 @@
                       </h:ol>
                     </test><h:br/><h:br/>
                     
-                    <test><h:br/><h:br/>
+                    <test id="APC_Test_3-KM"><h:br/><h:br/>
                       <h:b>Flow Isolation and Unidirectional Rule</h:b><h:br/><h:br/>
                       This test verifies that the TOE properly enforces unidirectional flow and
                       isolation.
@@ -490,7 +490,7 @@
                       </h:ol>
                     </test><h:br/><h:br/>
                     
-                    <test><h:br/><h:br/>
+                    <test id="APC_Test_4-KM"><h:br/><h:br/>
                       <h:b>No Flow between Computer Interfaces</h:b><h:br/><h:br/>
                           [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
                           in FDP_SWI_EXT.1.1 in the PSD PP]<h:br/><h:br/>
@@ -521,7 +521,7 @@
                       </h:ol>
                     </test><h:br/><h:br/>
                     
-                    <test><h:br/><h:br/>
+                    <test id="APC_Test_5-KM"><h:br/><h:br/>
                       <h:b>No Flow between Connected Computers over Time</h:b><h:br/><h:br/>
                       This test verifies that the TOE does not send data to different computers connected to the same interface
                       at different times. Repeat this test for each TOE KM computer port.
@@ -587,7 +587,7 @@
               <CustomEA name="Isolation"/>
               <Tests>
                 <testlist>
-                  <test>
+                  <test id="PDC_Test_1-KM">
                     The evaluator shall verify that the TOE ports properly reject unauthorized devices and devices with
                     unauthorized protocols as per the unauthorized peripheral device connections.<h:br/><h:br/>
                     For this test, verify device rejection through TOE user indication in accordance with the operational user
@@ -621,7 +621,7 @@
                         functions are rejected or the entire device is rejected.</h:li>                      
                     </h:ol>
                   </test>
-                  <test>
+                  <test id="PDC_Test_2-KM">
                     The evaluator shall verify that the TOE KM ports do not reject authorized devices and devices with
                     authorized protocols as per the authorized peripheral device connections.<h:br/><h:br/>
                     Repeat this test for each of the following four device types:<h:ul>
@@ -686,7 +686,7 @@
               <Tests>
                 The evaluator shall ensure that switching is always initiated through express user action using the selected
                 mechanisms throughout testing for FDP_APC_EXT.1 above.<h:br/><h:br/>
-                Additional tests for this SFR are performed in FDP_APC_EXT.1 test 1‐KM above.
+                Additional tests for this SFR are performed in <xref to="Test_1-KM"/>.
               </Tests>
             </aactivity>
             </f-element>
@@ -926,8 +926,7 @@
               <Guidance/>
               <CustomEA name="Isolation"/>
               <Tests>
-                Testing of this component is performed through evaluation of FDP_PDC_EXT.1 Test 2 as specified in
-                section 2.2.2.2 above.
+                Testing of this component is performed through evaluation of <xref to="PDC_Test_2-KM"/>.
               </Tests>
             </aactivity>
           </f-element>          
@@ -1054,7 +1053,7 @@
               <Guidance/>
               <CustomEA name="Isolation"/>
               <Tests>
-                Test activities for this SFR are covered under FDP_APC_EXT.1 test 3-KM.                
+                Test activities for this SFR are covered under <xref to="APC_Test_3-KM"/>.                
               </Tests>
             </aactivity>
           </f-element>  
@@ -1415,7 +1414,7 @@
       the claimed iterations of FDP_PDC_EXT.2.<h:br/><h:br/>
       Power events at a KM interface for one connected computer cannot impact power events at an analog
       audio output interface for another connected computer and vice versa, as per FDP_APC_EXT.1. This
-      evaluation activity is tested in Test 3‐AO in the Supporting Document for Audio Output.<h:br/><h:br/>
+      evaluation activity is tested in FDP_APC_EXT.1:3 in the PP-Module for Audio Output.<h:br/><h:br/>
       Both PP‐Modules modify the Base‐PP SFR FDP_APC_EXT.1 in ways that are specific to their respective
       peripheral types. The ST author should make two iterations of this SFR, FDP_APC_EXT.1/KM and
       FDP_APC_EXT.1/AO, to show the different modifications made for each specific peripheral type.
