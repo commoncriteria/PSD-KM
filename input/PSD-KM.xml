@@ -195,66 +195,55 @@
         <threat name="T.DATA_LEAK">
           <from base="bpp-psd"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
+           <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to leak data through the TOE.</rationale>
+   <addressed-by>FDP_PDC_EXT.3/KM</addressed-by><rationale>Mitigates this threat by
+            emulating devices on connected computers so that any functionality used to attempt to leak data would not be recognized by a connected computer.</rationale>
+          
           <addressed-by>FDP_UDF_EXT.1/KM</addressed-by><rationale>Mitigates this threat by ensuring
-            unidirectional data transits between interfaces.</rationale>
+            unidirectional data flow from the peripherals to connected computers, such that data cannot leak from a connected computer to the TOE.</rationale>
           <addressed-by>FDP_FIL_EXT.1/KM (implementation-dependent)</addressed-by><rationale>Mitigates this threat
-            by ensuring device filtering for peripheral interfaces.</rationale>
-          <addressed-by>FDP_RDR_EXT.1 (implementation-dependent)</addressed-by><rationale>Mitigates this threat by
-            preventing devices from alternating classes from authorized to unauthorized.</rationale>
-          <addressed-by>FDP_SWI_EXT.3 (selection‐based)</addressed-by><rationale>Mitigates this
-            threat by ensuring all peripherals are switched together for the same connection.</rationale>
+            by blocking the use of untrusted devices that could be used to attempt data leakage.</rationale>
+    
           
         </threat>
         <threat name="T.LOGICAL_TAMPER">
           <from base="bpp-psd"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
-          <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by only
-            allowing specified authorized devices and functions to be connected during power up or
-            connection of a peripheral device.</rationale>
-          <addressed-by>FDP_PDC_EXT.3/KM</addressed-by><rationale>Mitigates this threat by
-            requiring interfaces from connected protocols that shall follow specified rules.</rationale>
+          <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to logically tamper with the TOE.</rationale>
         </threat>
         <threat name="T.RESIDUAL_LEAK">
           <from base="bpp-psd"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
-          <addressed-by>FDP_UDF_EXT.1/KM</addressed-by><rationale>Mitigates this threat by ensuring
-            connected peripheral's data is transited unidirectionally between interfaces.</rationale>
+          <addressed-by>FDP_UDF_EXT.1/KM</addressed-by><rationale>Mitigates this threat by ensuring that data flow is unidirectional such that the TOE does not receive data from a connected computer.</rationale>
           <addressed-by>FDP_RIP.1/KM (selection‐based)</addressed-by><rationale>Mitigates this
-            threat by ensuring data in volatile memory is purged when switching computers.</rationale>
+            threat by ensuring that any data in volatile memory is purged when switching computers.</rationale>
         </threat>
+        
         <threat name="T.SIGNAL_LEAK">
           <from base="bpp-psd"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
+           <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to leak data through the TOE via a signaling mechanism.</rationale>
+   
+          <addressed-by>FDP_UDF_EXT.1/KM</addressed-by><rationale>Mitigates this threat by ensuring
+            unidirectional data flow from the peripherals to connected computers, such that data cannot leak from a connected computer to the TOE.</rationale>
           <addressed-by>FDP_FIL_EXT.1/KM (implementation-dependent)</addressed-by><rationale>Mitigates this threat
-            by requiring device filtering and only allowing authorized device for peripheral
-            interfaces.</rationale>
-          <addressed-by>FDP_RDR_EXT.1 (implementation-dependent)</addressed-by><rationale>Mitigates this threat by preventing devices
-            from alternating classes from authorized to unauthorized.</rationale>
-          <addressed-by>FDP_SWI_EXT.3 (selection‐based)</addressed-by><rationale>Mitigates this
-            threat by ensuring connected peripherals are switched together.</rationale> 
+            by blocking the use of untrusted devices that could be used to attempt data leakage.</rationale>
         </threat>
         <threat name="T.UNAUTHORIZED_DEVICES">
           <from base="bpp-psd"/>          
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>  
-          <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by only
-            allowing specified authorized devices and functions to be connected during power up or
-            connection of a peripheral device.</rationale>
+          <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by enforcing the recognition of only authorized devices.</rationale>
           <addressed-by>FDP_PDC_EXT.3/KM</addressed-by><rationale>Mitigates this threat by
-            requiring interfaces from connected protocols that shall follow specified rules.</rationale>
+            emulating connected devices so that unauthorized functionality of any peripherals is not recognized by a connected computer.</rationale>
           <addressed-by>FDP_FIL_EXT.1/KM (implementation-dependent)</addressed-by><rationale>Mitigates this threat
-            by requiring device filtering and only allowing authorized device for peripheral
-            interfaces.</rationale>
-          <addressed-by>FDP_RDR_EXT.1 (implementation-dependent)</addressed-by><rationale>Mitigates this threat by preventing devices
-            from alternating classes from authorized to unauthorized.</rationale>
-          <addressed-by>FDP_SWI_EXT.3 (selection‐based)</addressed-by><rationale>Mitigates this
-            threat by ensuring connected peripherals are switched together.</rationale> 
+            by implmenting a filtration mechanism to further tailor the set of authorized devices.</rationale>
+          <addressed-by>FDP_RDR_EXT.1 (implementation-dependent)</addressed-by><rationale>Mitigates this threat by preventing an unathorized device from re-enumerating as an authorzied one.</rationale>
         </threat>
         <threat name="T.UNINTENDED_USE">
           <from base="bpp-psd"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
-          <addressed-by>FDP_FIL_EXT.1/KM (implementation-dependent)</addressed-by><rationale>Mitigates this threat
-            by requiring device filtering for selected interfaces and only allow authorized devices
-            to connect.</rationale>
+          <addressed-by>FDP_SWI_EXT.3 (selection‐based)</addressed-by><rationale>Mitigates this
+            threat by ensuring all peripherals are switched to the same selected computer.</rationale>
         </threat>
       </threats> 
     </sec:Threats>
@@ -1113,7 +1102,7 @@
         </f-component>
         
         <f-component cc-id="fdp_swi_ext.3" name="Tied Switching">
-          <depends on-sel="keyboardsupport/>
+          <depends on-sel="keyboardsupport"/>
           <depends on-sel="mousesupport"/>
           <depends on="notisolator">
             <external-doc ref="bpp-psd"/>
