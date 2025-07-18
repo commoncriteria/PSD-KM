@@ -162,6 +162,39 @@
       </implements>			
     </section>   
     
+    <section title="Test Environment for Evaluation Activities">
+      In order to ensure that the TOE demonstrates the functionality required by the EAs, it is necessary for the
+      evaluator to ensure that they have appropriate equipment to conduct the required testing. In addition to
+      the equipment that is relevant for testing any PSD as defined in the PSD PP, the following additional
+      equipment should be used in testing:<h:ul>
+        <h:li><h:b>Keyboard</h:b> – Used to generate text entry inputs </h:li>
+        <h:li><h:b>Keyboard emulator software application</h:b> – Used to verify unidirectional
+          communication</h:li>
+        <h:li><h:b>Mouse</h:b> – Used to generate pointing device inputs</h:li>
+        <h:li><h:b>Switchable 5 volt power supply with a USB Type-B plug</h:b> – Used to verify electrical signals are not
+          sent to non‐selected computers</h:li>
+        <h:li><h:b>USB audio headset</h:b> – Used to verify the peripheral device connections</h:li>
+        <h:li><h:b>USB camera</h:b> – Used to verify the peripheral device connections</h:li>
+        <h:li><h:b>USB composite device evaluation board</h:b> – Used to verify the peripheral device connections</h:li>
+        <h:li><h:b>USB dummy load</h:b> – Used to verify electrical signals are not sent to non‐selected computers</h:li>
+        <h:li><h:b>USB gaming mouse</h:b> – Used to verify unidirectional communication</h:li>
+        <h:li><h:b>USB generator</h:b> – Used to verify emulation of keyboard and mouse functions</h:li>
+        <h:li><h:b>USB hub</h:b> – Used to verify the peripheral device connections</h:li>
+        <h:li><h:b>USB mass storage device</h:b> – Used to verify the peripheral device connections</h:li>
+        <h:li><h:b>USB printer</h:b> – Used to verify the peripheral device connections</h:li>
+        <h:li><h:b>USB protocol analyzer software</h:b> – Used to verify the presence or absence of USB traffic</h:li>
+        <h:li><h:b>USB rubber ducky, BadUSB, and Programmable Keyboard</h:b> – Used to verify the TOE rejects devices
+          that re‐enumerate as unauthorized devices</h:li>
+        <h:li><h:b>USB sniffer</h:b> – Used to verify the presence or absence of USB traffic</h:li>
+        <h:li><h:b>USB wireless LAN dongle</h:b> – Used to verify the peripheral device connections</h:li>        
+      </h:ul>
+      This equipment is required in addition to that which is relevant for testing any PSD as defined in the PSD
+      PP.<h:br/><h:br/>      
+      When conducting testing, the evaluator must be sure to test all combinations of switch selections. For
+      example, if testing a device with two HID interfaces and eight computer interfaces, the evaluator may use
+      two connected computers, but must change the connected ports several times to be sure to test each of
+      the possible variations of switch positions. Some equivalency arguments between ports are allowed.
+    </section>
   </sec:Introduction>
 
   <section title="Conformance Claims" id="sec-cclaims" boilerplate="no">
