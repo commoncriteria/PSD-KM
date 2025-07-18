@@ -52,7 +52,10 @@
       physical and logical interfaces a PSD includes. Therefore, this PP‐Module defines additional Security
       Functional Requirements (SFRs) for security functionality unique to a PSD that includes the ability to
       manipulate or assign human interface devices (HIDs) (e.g., keyboard and pointing device) to one or more
-      computers connected to the PSD.      
+      computers connected to the PSD. <h:br/><h:br/>
+      This PP-Module is intended for use with the following Base-PPs:<h:ul>
+        <h:li>Peripheral Sharing Devices Protection Profile, Version 5.0</h:li>
+      </h:ul>
     </section>
     
     <tech-terms>      
