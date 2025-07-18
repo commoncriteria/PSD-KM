@@ -24,6 +24,7 @@ output/PSD-KM-release-linkable.html: trackpad
 output/PSD-KM-release-linkable.html: unathorized
 output/PSD-KM-release-linkable.html: unidirectionally
 output/PSD-KM-release.html: Assessment’
+output/PSD-KM-release.html: BadUSB
 output/PSD-KM-release.html: Barcode
 output/PSD-KM-release.html: CDS
 output/PSD-KM-release.html: CEM
