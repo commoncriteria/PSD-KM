@@ -11,7 +11,6 @@ output/PSD-KM-release-linkable.html: Num
 output/PSD-KM-release-linkable.html: SPD
 output/PSD-KM-release-linkable.html: Trackpad
 output/PSD-KM-release-linkable.html: UAI
-output/PSD-KM-release-linkable.html: V5
 output/PSD-KM-release-linkable.html: Vid
 output/PSD-KM-release-linkable.html: allowlisted
 output/PSD-KM-release-linkable.html: denylist
@@ -31,7 +30,6 @@ output/PSD-KM-release.html: HIDs
 output/PSD-KM-release.html: Num
 output/PSD-KM-release.html: SPD
 output/PSD-KM-release.html: UAI
-output/PSD-KM-release.html: V5
 output/PSD-KM-release.html: Vid
 output/PSD-KM-release.html: allowlisted
 output/PSD-KM-release.html: configurable’
@@ -50,7 +48,6 @@ output/PSD-KM-sd.html: NAK
 output/PSD-KM-sd.html: Num
 output/PSD-KM-sd.html: SPD
 output/PSD-KM-sd.html: Trackpad
-output/PSD-KM-sd.html: V5
 output/PSD-KM-sd.html: allowlisted
 output/PSD-KM-sd.html: denylist
 output/PSD-KM-sd.html: denylisted
@@ -74,7 +71,6 @@ output/PSD-KM.html: Num
 output/PSD-KM.html: SPD
 output/PSD-KM.html: Trackpad
 output/PSD-KM.html: UAI
-output/PSD-KM.html: V5
 output/PSD-KM.html: Vid
 output/PSD-KM.html: allowlisted
 output/PSD-KM.html: configurable’
