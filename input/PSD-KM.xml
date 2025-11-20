@@ -66,7 +66,7 @@
       <term full="Composite Device (USB)">
         A peripheral device that supports more than one device class.
       </term>
-      <term abbr="CDF" full="Configurable Device Filtration (CDF)">
+      <term abbr="CDF" full="Configurable Device Filtration">
         PSD function that accepts or rejects peripheral devices based on field‐configurable
         parameters or allowlist and denylist.
       </term>
@@ -85,7 +85,7 @@
         A process that starts as soon as a device connects to the USB host. In this process, the
         host and the device jointly define the communications and power settings.
       </term>
-      <term abbr="FDF" full="Fixed Device Filtration (FDF)">
+      <term abbr="FDF" full="Fixed Device Filtration">
         PSD function that accepts or rejects peripheral devices based on fixed parameters
         loaded during production.
       </term>
@@ -174,13 +174,13 @@
         <h:li><h:b>Keyboard emulator software application</h:b> – Used to verify unidirectional
           communication</h:li>
         <h:li><h:b>Mouse</h:b> – Used to generate pointing device inputs</h:li>
-        <h:li><h:b>Switchable 5 volt power supply with a USB Type-B plug</h:b> – Used to verify electrical signals are not
+        <h:li><h:b>Switchable 5 volt power supply with any compatible USB plug</h:b> – Used to verify electrical signals are not
           sent to non‐selected computers</h:li>
         <h:li><h:b>USB audio headset</h:b> – Used to verify the peripheral device connections</h:li>
         <h:li><h:b>USB camera</h:b> – Used to verify the peripheral device connections</h:li>
         <h:li><h:b>USB composite device evaluation board</h:b> – Used to verify the peripheral device connections</h:li>
         <h:li><h:b>USB dummy load</h:b> – Used to verify electrical signals are not sent to non‐selected computers</h:li>
-        <h:li><h:b>USB gaming mouse</h:b> – Used to verify unidirectional communication</h:li>
+        <h:li><h:b>USB gaming mouse with programmable LEDs</h:b> – Used to verify unidirectional communication</h:li>
         <h:li><h:b>USB generator</h:b> – Used to verify emulation of keyboard and mouse functions</h:li>
         <h:li><h:b>USB hub</h:b> – Used to verify the peripheral device connections</h:li>
         <h:li><h:b>USB mass storage device</h:b> – Used to verify the peripheral device connections</h:li>
@@ -350,7 +350,7 @@
         </sec:mod_fau>
         
         <sec:mod_fdp title="User Data Protection (FDP)">
-          <f-component cc-id="fdp_apc_ext.1" name="Active PSD Connections">
+          <f-component id="fdp_apc_ext.1" cc-id="fdp_apc_ext.1" name="Active PSD Connections">
             <consistency-rationale>
               This SFR adds a requirement to block electrical signals that strengthens but
               does not conflict with the requirement in the PSD PP.
@@ -1188,7 +1188,7 @@
               <Tests>
                 The evaluator shall verify that the keyboard and mouse devices are always switched together to the same
                 connected computer throughout testing in <xref to="fdp_apc_ext.1"/>.
-                Tests for this SFR are performed in <xref to="fdp_apc_ext.1-kmswimeth"/>.
+                Tests for this SFR are performed in <xref to="APC_Test_1-KM"/>.
               </Tests>
             </aactivity>
           </f-element>
