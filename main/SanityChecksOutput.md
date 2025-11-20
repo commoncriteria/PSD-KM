@@ -8,5 +8,3 @@ warning: failed to load external entity "output/bpp-psd.xml"
 warning: failed to load external entity "output/bpp-psd.xml"
 warning: failed to load external entity "output/bpp-psd.xml"
 warning: failed to load external entity "output/bpp-psd.xml"
- Failed to find a reference to fdp_apc_ext.1.
- Failed to find a reference to fdp_apc_ext.1-kmswimeth.

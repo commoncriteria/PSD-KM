@@ -27,6 +27,7 @@ output/PSD-KM-release.html: CEM
 output/PSD-KM-release.html: Denylist
 output/PSD-KM-release.html: DisplayPort
 output/PSD-KM-release.html: HIDs
+output/PSD-KM-release.html: LEDs
 output/PSD-KM-release.html: Num
 output/PSD-KM-release.html: SPD
 output/PSD-KM-release.html: UAI
