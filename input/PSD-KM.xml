@@ -1202,8 +1202,12 @@
         <f-component name="Device Filtering" cc-id="fdp_fil_ext.1" status="invisible">
           <comp-lev>defines the types of physical devices that the TSF will permit to
             connect to it.</comp-lev>
-          <management>No specific management functions are identified.</management>
-          <audit>There are no auditable events foreseen.</audit>
+          <management>The following actions could be considered for the management functions in FMT:
+          <h:ul><h:li>Ability to configure allowlist and denylist members.</h:li></h:ul></management>
+          <audit>The following actions should be auditable if FAU_GEN Security audit data generation is
+            included in the PP, PP-Module, functional package or ST:
+          <h:ul><h:li>Configuration of allowlist and denylist members</h:li></h:ul>
+          </audit>
           <dependencies>FDP_PDC_EXT.1 Peripheral Device Connection</dependencies>
           
           <f-element id="fdp-fil-ext-1e1">
