@@ -1124,7 +1124,7 @@
           <note role="application">
             This SFR must be claimed if “switching can be initiated only through express user
             action” is chosen as a selection for FDP_SWI_EXT.1.1 in the PSD PP and if “USB
-            (keyboard)" is chosen as a selection in FDP_PDC_EXT.2.1/KM.
+            (keyboard)" is chosen as a selection in FDP_PDC_EXT.3.1/KM.
           </note>
           <aactivity>
             
@@ -1174,7 +1174,7 @@
               This SFR must be claimed if “switching can be initiated only through express user
               action” is chosen as a selection for FDP_SWI_EXT.1.1 in the PSD PP and if both
               “USB (keyboard)” and “USB (mouse)” are chosen as selections in
-              FDP_PDC_EXT.2.1/KM.
+              FDP_PDC_EXT.3.1/KM.
             </note>
             <aactivity>
               <TSS>
