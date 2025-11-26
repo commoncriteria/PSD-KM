@@ -15,8 +15,7 @@
   <!-- <inline-comment color='blue' linebreak='yes'> Hello World QQQQ </inline-comment> -->
  
   <PPReference>
-    <ReferenceTable>
-      
+    <ReferenceTable>      
       <PPVersion>2.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
       <PPPubDate>2025-07-11</PPPubDate>
@@ -38,6 +37,8 @@
       <subject>Updates for CC:2022</subject>
     </entry>
   </RevisionHistory>
+  
+
 
   <sec:Introduction>
     <section title="Overview" id="ppoverview">
@@ -1108,7 +1109,7 @@
         <f-component cc-id="fdp_rip.1" name="Residual Information Protection (Keyboard Data)" iteration="KM" id="fdp-rip-1-km">
           <depends on-sel="keyboardsupport"/>
           <depends on="notisolator">
-            <external-doc ref="psd"/>
+            <external-doc ref="base-pp"/>
           </depends>          
           
           <consistency-rationale>
