@@ -1497,7 +1497,9 @@
   <bibliography>    
     <entry id="base-pp">
       <tag>PP_PSD_V5.0 or PSD PP</tag>
-      <description>Protection Profile for Peripheral Sharing Device, Version 5.0
+      <description>
+        <h:a href="https://commoncriteria.github.io/PSD/main/PSD-release-linkable.html">Protection
+          Profile for Peripheral Sharing Device</h:a>
       </description>    
     </entry>
   </bibliography>
