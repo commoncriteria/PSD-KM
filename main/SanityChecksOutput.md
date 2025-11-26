@@ -5,3 +5,6 @@
 warning: failed to load external entity "output/bpp-psd.xml"
 warning: failed to load external entity "output/bpp-psd.xml"
 warning: failed to load external entity "output/bpp-psd.xml"
+warning: failed to load external entity "output/bpp-psd.xml"
+warning: failed to load external entity "output/bpp-psd.xml"
+warning: failed to load external entity "output/bpp-psd.xml"
