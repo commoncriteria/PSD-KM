@@ -54,7 +54,7 @@
       manipulate or assign human interface devices (HIDs) (e.g., keyboard and pointing device) to one or more
       computers connected to the PSD. <h:br/><h:br/>
       This PP-Module is intended for use with the following Base-PPs:<h:ul>
-        <h:li>Protection Profile for Peripheral Sharing Devices, Version 5.0</h:li>
+        <h:li id="PSD">Protection Profile for Peripheral Sharing Devices, Version 5.0</h:li>
       </h:ul>
     </section>
     
@@ -1108,8 +1108,8 @@
         <f-component cc-id="fdp_rip.1" name="Residual Information Protection (Keyboard Data)" iteration="KM" id="fdp-rip-1-km">
           <depends on-sel="keyboardsupport"/>
           <depends on="notisolator">
-            <external-doc ref="bpp-psd"/>
-          </depends>
+            <external-doc ref="psd"/>
+          </depends>          
           
           <consistency-rationale>
             This SFR defines specific handling for keyboard peripheral devices. This does
