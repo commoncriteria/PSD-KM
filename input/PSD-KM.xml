@@ -316,7 +316,7 @@
     <comment>Need to add URLs once created</comment>
     <base-pp id="bpp-psd" name="Peripheral Sharing Devices" product="Device" short="PSD" version="5.0">
       <git>
-        <url>https://github.com/commoncriteria/KM</url>
+        <url>https://github.com/commoncriteria/psd</url>
         <branch>main</branch>
       </git>
       <url>https://commoncriteria.github.io/PSD/main/PSD-release.html</url>
@@ -1109,7 +1109,7 @@
         <f-component cc-id="fdp_rip.1" name="Residual Information Protection (Keyboard Data)" iteration="KM" id="fdp-rip-1-km">
           <depends on-sel="keyboardsupport"/>
           <depends on="notisolator">
-            <external-doc ref="base-pp"/>
+            <external-doc ref="bpp-psd"/>
           </depends>          
           
           <consistency-rationale>
@@ -1124,7 +1124,7 @@
           <note role="application">
             This SFR must be claimed if “switching can be initiated only through express user
             action” is chosen as a selection for FDP_SWI_EXT.1.1 in the PSD PP and if “USB
-            (keyboard)" is chosen as a selection in FDP_PDC_EXT.2.1/KM.
+            (keyboard)" is chosen as a selection in FDP_PDC_EXT.3.1/KM.
           </note>
           <aactivity>
             
@@ -1174,7 +1174,7 @@
               This SFR must be claimed if “switching can be initiated only through express user
               action” is chosen as a selection for FDP_SWI_EXT.1.1 in the PSD PP and if both
               “USB (keyboard)” and “USB (mouse)” are chosen as selections in
-              FDP_PDC_EXT.2.1/KM.
+              FDP_PDC_EXT.3.1/KM.
             </note>
             <aactivity>
               <TSS>
@@ -1497,9 +1497,7 @@
   <bibliography>    
     <entry id="base-pp">
       <tag>PP_PSD_V5.0 or PSD PP</tag>
-      <description>
-        <h:a href="https://commoncriteria.github.io/PSD/main/PSD-release-linkable.html">Protection
-          Profile for Peripheral Sharing Device</h:a>
+      <description>Protection Profile for Peripheral Sharing Device, Version 5.0
       </description>    
     </entry>
   </bibliography>
