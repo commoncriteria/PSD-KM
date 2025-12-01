@@ -632,17 +632,17 @@ function showTarget(id){
     </style></head><body onLoad="init()"><div id="commmentbox-"><a href="#Comment-1-">Comment: Comment-1-</a><br/></div><h1 class="title" style="page-break-before:auto;">PP-Module for Keyboard/Mouse Device</h1><noscript><h1 style="text-align:center; border-style: dashed; border-width: medium; border-color: red;">This page is best viewed with JavaScript enabled!</h1></noscript><div class="center"><img src="images/niaplogo.png" alt="NIAP Logo"></img><br/>
       Version: 2.0<br/>2025-07-11<br/><b>National Information Assurance Partnership</b><br/></div><h2 style="page-break-before:always;">Revision History</h2><table><tr class="header"><th>Version</th><th>Date</th><th>Comment</th></tr><tr><td>1.0</td><td>2019-07-19</td><td>Initial draft</td></tr>
 <tr><td>2.0</td><td>2025-07-11</td><td>Updates for <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022</td></tr>
-</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#ppoverview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOEboundary" style="text-indent:10px">1.4<span>TOE Boundary</span></a><a href="#usecases" style="text-indent:10px">1.5<span>Use Cases</span></a><a href="#sec-features" style="text-indent:10px">1.6<span>Implementation-Based Features</span></a><a href="#filtration" style="text-indent:20px">1.6.1<span>Device Filtration</span></a><a href="#rejectreenumeration" style="text-indent:20px">1.6.2<span>Rejection of Re-Enumeration</span></a><a href="#_sec_6" style="text-indent:10px">1.7<span>Test Environment for Evaluation Activities</span></a><a href="#sec-cclaims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-bpp-psd" style="text-indent:10px">5.1<span>
+</table><h2>Contents</h2><div class="toc" id="toc"><a href="#Introduction" style="text-indent:0px">1<span>Introduction</span></a><a href="#ppoverview" style="text-indent:10px">1.1<span>Overview</span></a><a href="#glossary" style="text-indent:10px">1.2<span>Terms</span></a><a href="#cc-terms" style="text-indent:20px">1.2.1<span>Common Criteria Terms</span></a><a href="#tech-terms" style="text-indent:20px">1.2.2<span>Technical Terms</span></a><a href="#TOEdescription" style="text-indent:10px">1.3<span>Compliant Targets of Evaluation</span></a><a href="#TOEboundary" style="text-indent:10px">1.4<span>TOE Boundary</span></a><a href="#usecases" style="text-indent:10px">1.5<span>Use Cases</span></a><a href="#sec-features" style="text-indent:10px">1.6<span>Implementation-Based Features</span></a><a href="#filtration" style="text-indent:20px">1.6.1<span>Device Filtration</span></a><a href="#rejectreenumeration" style="text-indent:20px">1.6.2<span>Rejection of Re-Enumeration</span></a><a href="#_sec_6" style="text-indent:10px">1.7<span>Test Environment for Evaluation Activities</span></a><a href="#sec-cclaims" style="text-indent:0px">2<span>Conformance Claims</span></a><a href="#Security_Problem_Definition" style="text-indent:0px">3<span>Security Problem Definition</span></a><a href="#Threats" style="text-indent:10px">3.1<span>Threats</span></a><a href="#Assumptions" style="text-indent:10px">3.2<span>Assumptions</span></a><a href="#Organizational_Security_Policies" style="text-indent:10px">3.3<span>Organizational Security Policies</span></a><a href="#Security_Objectives" style="text-indent:0px">4<span>Security Objectives</span></a><a href="#Security_Objectives_for_the_Operational_Environment" style="text-indent:10px">4.1<span>Security Objectives for the Operational Environment</span></a><a href="#Security_Requirements" style="text-indent:0px">5<span>Security Requirements</span></a><a href="#secreq-psd" style="text-indent:10px">5.1<span>
     Protection Profile for Peripheral Sharing Devices
        Security Functional Requirements Direction
-    </span></a><a href="#modsfr-bpp-psd" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#mod_fau" style="text-indent:30px">5.1.1.1<span>Security Audit (FAU)</span></a><a href="#mod_fdp" style="text-indent:30px">5.1.1.2<span>User Data Protection (FDP)</span></a><a href="#mod_fia" style="text-indent:30px">5.1.1.3<span>Identification and Authentication (FIA)</span></a><a href="#mod_fmt" style="text-indent:30px">5.1.1.4<span>Security Management (FMT)</span></a><a href="#mod_fpt" style="text-indent:30px">5.1.1.5<span>Protection of the TSF (FPT)</span></a><a href="#man-sfrs" style="text-indent:10px">5.2<span>TOE Security Functional Requirements</span></a><a href="#FDP" style="text-indent:20px">5.2.1<span>User Data Protection (FDP)</span></a><a href="#obj-req-map" style="text-indent:10px">5.3<span>TOE Security Functional Requirements Rationale</span></a><a href="#mod-conrat" style="text-indent:0px">6<span>Consistency Rationale</span></a><a href="#conrat-bpp-psd" style="text-indent:10px">6.1<span>
-    Protection Profile for Peripheral Sharing Devices</span></a><a href="#contoe-bpp-psd" style="text-indent:20px">6.1.1<span>
+    </span></a><a href="#modsfr-psd" style="text-indent:20px">5.1.1<span> Modified SFRs </span></a><a href="#mod_fau" style="text-indent:30px">5.1.1.1<span>Security Audit (FAU)</span></a><a href="#mod_fdp" style="text-indent:30px">5.1.1.2<span>User Data Protection (FDP)</span></a><a href="#mod_fia" style="text-indent:30px">5.1.1.3<span>Identification and Authentication (FIA)</span></a><a href="#mod_fmt" style="text-indent:30px">5.1.1.4<span>Security Management (FMT)</span></a><a href="#mod_fpt" style="text-indent:30px">5.1.1.5<span>Protection of the TSF (FPT)</span></a><a href="#man-sfrs" style="text-indent:10px">5.2<span>TOE Security Functional Requirements</span></a><a href="#FDP" style="text-indent:20px">5.2.1<span>User Data Protection (FDP)</span></a><a href="#obj-req-map" style="text-indent:10px">5.3<span>TOE Security Functional Requirements Rationale</span></a><a href="#mod-conrat" style="text-indent:0px">6<span>Consistency Rationale</span></a><a href="#conrat-psd" style="text-indent:10px">6.1<span>
+    Protection Profile for Peripheral Sharing Devices</span></a><a href="#contoe-psd" style="text-indent:20px">6.1.1<span>
 	Consistency of TOE Type
-      </span></a><a href="#consecprob-bpp-psd" style="text-indent:20px">6.1.2<span>
+      </span></a><a href="#consecprob-psd" style="text-indent:20px">6.1.2<span>
 	Consistency of Security Problem Definition
-      </span></a><a href="#conobj-bpp-psd" style="text-indent:20px">6.1.3<span>
+      </span></a><a href="#conobj-psd" style="text-indent:20px">6.1.3<span>
 			Consistency of OE Objectives
-		</span></a><a href="#conreq-bpp-psd" style="text-indent:20px">6.1.4<span>
+		</span></a><a href="#conreq-psd" style="text-indent:20px">6.1.4<span>
 	Consistency of Requirements
       </span></a><a href="#opt-sfrs" style="text-indent:0px">Appendix A - <span>Optional SFRs</span></a><a href="#opt-sfrs" style="text-indent:10px">A.1<span>Strictly Optional Requirements
     </span></a><a href="#obj-sfrs" style="text-indent:10px">A.2<span>Objective Requirements
@@ -862,17 +862,17 @@ The following sections list Common Criteria and technology terms used in this do
     
     <h2 class="indexable" data-level="2" id="Threats">3.1 Threats</h2>      
       <dl><dt class="threat defined" id="T.DATA_LEAK">T.DATA_LEAK
-		(from PSD PP)
+		(from )
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.LOGICAL_TAMPER">T.LOGICAL_TAMPER
-		(from PSD PP)
+		(from )
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.RESIDUAL_LEAK">T.RESIDUAL_LEAK
-		(from PSD PP)
+		(from )
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.SIGNAL_LEAK">T.SIGNAL_LEAK
-		(from PSD PP)
+		(from )
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_DEVICES
-		(from PSD PP)
+		(from )
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd><dt class="threat defined" id="T.UNINTENDED_USE">T.UNINTENDED_USE
-		(from PSD PP)
+		(from )
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd></dl> 
     
     
@@ -928,7 +928,7 @@ The following sections list Common Criteria and technology terms used in this do
             suggesting the purpose of the operation, e.g. "/EXAMPLE1."
        </li>
      </ul>
-   <h2 id="secreq-bpp-psd" class="indexable" data-level="2">5.1 
+   <h2 id="secreq-psd" class="indexable" data-level="2">5.1 
     Protection Profile for Peripheral Sharing Devices
        Security Functional Requirements Direction
     </h2>
@@ -939,7 +939,7 @@ The following sections list Common Criteria and technology terms used in this do
         for this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.
         Any <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> elements omitted from the selections below are to be included in a conformant <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr>
         unmodified from their definition in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-      <h3 id="modsfr-bpp-psd" class="indexable" data-level="3">5.1.1  Modified SFRs </h3>
+      <h3 id="modsfr-psd" class="indexable" data-level="3">5.1.1  Modified SFRs </h3>
 
 		The <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> listed in this section are defined in the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> and 
 		relevant to the secure operation of the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.
@@ -1518,7 +1518,7 @@ The following sections list Common Criteria and technology terms used in this do
             
     <h2 id="obj-req-map" class="indexable" data-level="2">5.3 TOE Security Functional Requirements Rationale</h2><p>The following rationale provides justification for each <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> for the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>, 
     showing that the <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> are suitable to address the specified threats:<br/><table><caption><span class="ctr" data-myid="t-obj_map" data-counter-type="ct-Table" id="t-obj_map">Table <span class="counter">1</span></span>: <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr> Rationale</caption><tr><th>Threat</th><th>Addressed by</th><th>Rationale</th></tr><tr class="major-row"><td rowspan="4"><a href="#T.DATA_LEAK">T.DATA_​LEAK</a>
-		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+		(from )
 	</td><td><a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a></td><td>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to leak data through the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</td></tr>
 <tr><td><a href="#FDP_PDC_EXT.3/KM">FDP_PDC_EXT.3/KM</a></td><td>Mitigates this threat by
             emulating devices on connected computers so that any functionality used to attempt to leak data would not be recognized by a connected computer.</td></tr>
@@ -1527,22 +1527,22 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FDP_FIL_EXT.1/KM">FDP_FIL_EXT.1/KM</a> (implementation-dependent)</td><td>Mitigates this threat
             by blocking the use of untrusted devices that could be used to attempt data leakage.</td></tr>
 <tr class="major-row"><td rowspan="1"><a href="#T.LOGICAL_TAMPER">T.LOGICAL_​TAMPER</a>
-		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+		(from )
 	</td><td><a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a></td><td>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to logically tamper with the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</td></tr>
 <tr class="major-row"><td rowspan="2"><a href="#T.RESIDUAL_LEAK">T.RESIDUAL_​LEAK</a>
-		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+		(from )
 	</td><td><a href="#FDP_UDF_EXT.1/KM">FDP_UDF_EXT.1/KM</a></td><td>Mitigates this threat by ensuring that data flow is unidirectional such that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not receive data from a connected computer.</td></tr>
 <tr><td><a href="#FDP_RIP.1/KM">FDP_RIP.1/KM</a> (selection‐based)</td><td>Mitigates this
             threat by ensuring that any data in volatile memory is purged when switching computers.</td></tr>
 <tr class="major-row"><td rowspan="3"><a href="#T.SIGNAL_LEAK">T.SIGNAL_​LEAK</a>
-		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+		(from )
 	</td><td><a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a></td><td>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to leak data through the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> via a signaling mechanism.</td></tr>
 <tr><td><a href="#FDP_UDF_EXT.1/KM">FDP_UDF_EXT.1/KM</a></td><td>Mitigates this threat by ensuring
             unidirectional data flow from the peripherals to connected computers, such that data cannot leak from a connected computer to the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>.</td></tr>
 <tr><td><a href="#FDP_FIL_EXT.1/KM">FDP_FIL_EXT.1/KM</a> (implementation-dependent)</td><td>Mitigates this threat
             by blocking the use of untrusted devices that could be used to attempt data leakage.</td></tr>
 <tr class="major-row"><td rowspan="4"><a href="#T.UNAUTHORIZED_DEVICES">T.UNAUTHORIZED_​DEVICES</a>
-		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+		(from )
 	</td><td><a href="#FDP_PDC_EXT.2/KM">FDP_PDC_EXT.2/KM</a></td><td>Mitigates this threat by enforcing the recognition of only authorized devices.</td></tr>
 <tr><td><a href="#FDP_PDC_EXT.3/KM">FDP_PDC_EXT.3/KM</a></td><td>Mitigates this threat by
             emulating connected devices so that unauthorized functionality of any peripherals is not recognized by a connected computer.</td></tr>
@@ -1551,11 +1551,11 @@ The following sections list Common Criteria and technology terms used in this do
 <tr><td><a href="#FDP_RDR_EXT.1">FDP_RDR_EXT.1</a> (implementation-dependent)</td><td>Mitigates
             this threat by preventing an unauthorized device from re-enumerating as an authorized one.</td></tr>
 <tr class="major-row"><td rowspan="1"><a href="#T.UNINTENDED_USE">T.UNINTENDED_​USE</a>
-		(from <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>)
+		(from )
 	</td><td><a href="#FDP_SWI_EXT.3">FDP_SWI_EXT.3</a> (selection‐based)</td><td>Mitigates this
             threat by ensuring all peripherals are switched to the same selected computer.</td></tr>
-</table></p><h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1><h2 id="conrat-bpp-psd" class="indexable" data-level="2">6.1 
-    Protection Profile for Peripheral Sharing Devices</h2><h3 id="contoe-bpp-psd" class="indexable" data-level="3">6.1.1 
+</table></p><h1 id="mod-conrat" class="indexable" data-level="1">6 Consistency Rationale</h1><h2 id="conrat-psd" class="indexable" data-level="2">6.1 
+    Protection Profile for Peripheral Sharing Devices</h2><h3 id="contoe-psd" class="indexable" data-level="3">6.1.1 
 	Consistency of TOE Type
       </h3>
         The <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines the boundaries of a <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> – a device that offers a mechanism for securely connecting a
@@ -1564,7 +1564,7 @@ The following sections list Common Criteria and technology terms used in this do
         must be the ability for it to support keyboard and/or mouse input devices. The requirements
         of this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>
         do not prevent a conformant <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> from implementing mandatory requirements of the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-      <h3 id="consecprob-bpp-psd" class="indexable" data-level="3">6.1.2 
+      <h3 id="consecprob-psd" class="indexable" data-level="3">6.1.2 
 	Consistency of Security Problem Definition
       </h3>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module does not define additional threats beyond those the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines. Therefore, there is
         no inconsistency between this <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module and the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> with respect to the security problem definition.        
@@ -1581,12 +1581,12 @@ The following sections list Common Criteria and technology terms used in this do
         This threat is from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, thus no conflict exists.
       </td></tr><tr><td><a href="#T.UNINTENDED_USE">T.UNINTENDED_USE</a></td><td>
         This threat is from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>, thus no conflict exists.
-      </td></tr></table><h3 id="conobj-bpp-psd" class="indexable" data-level="3">6.1.3 
+      </td></tr></table><h3 id="conobj-psd" class="indexable" data-level="3">6.1.3 
 			Consistency of OE Objectives
 		</h3><p>
 			This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> defines no environmental security objectives because the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>'s security environment 
 			is identical to that specified by the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>.
-	  </p><h3 id="conreq-bpp-psd" class="indexable" data-level="3">6.1.4 
+	  </p><h3 id="conreq-psd" class="indexable" data-level="3">6.1.4 
 	Consistency of Requirements
       </h3>
       This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> identifies several <abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr> from the
@@ -1830,7 +1830,10 @@ The following sections list Common Criteria and technology terms used in this do
       <h2 id="" class="indexable" data-level="2">B.1 User Data Protection (FDP)</h2>
         
         <div class="comp" id="FDP_RIP.1/KM"><h4>FDP_RIP.1/KM Residual Information Protection (Keyboard Data)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FDP_PDC_EXT.3.1/KM">FDP_PDC_EXT.3.1/KM</a>.
+           <a href="#FDP_PDC_EXT.3.1/KM">FDP_PDC_EXT.3.1/KM</a>
+             from <a href="https://commoncriteria.github.io/PSD/main/PSD-release.html">,
+        version 
+        </a>.
            </i></b></div>
           
                     
@@ -1863,7 +1866,10 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no test activities for this component.<br/></div></div></div></div>
         
         <div class="comp" id="FDP_SWI_EXT.3"><h4>FDP_SWI_EXT.3 Tied Switching</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FDP_PDC_EXT.3.1/KM">FDP_PDC_EXT.3.1/KM</a>.
+           <a href="#FDP_PDC_EXT.3.1/KM">FDP_PDC_EXT.3.1/KM</a>
+             from <a href="https://commoncriteria.github.io/PSD/main/PSD-release.html">,
+        version 
+        </a>.
            </i></b></div>
           
           
