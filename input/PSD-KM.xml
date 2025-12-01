@@ -37,7 +37,6 @@
       <subject>Updates for CC:2022</subject>
     </entry>
   </RevisionHistory>
-  
 
 
   <sec:Introduction>
@@ -1109,7 +1108,7 @@
         <f-component cc-id="fdp_rip.1" name="Residual Information Protection (Keyboard Data)" iteration="KM" id="fdp-rip-1-km">
           <depends on-sel="keyboardsupport"/>
           <depends on="notisolator">
-            <external-doc ref="bpp-psd"/>
+            <external-doc ref="psd"/>
           </depends>          
           
           <consistency-rationale>
@@ -1145,7 +1144,7 @@
           <depends on-sel="keyboardsupport"/>
           <depends on-sel="mousesupport"/>
           <depends on="notisolator">
-            <external-doc ref="bpp-psd"/>
+            <external-doc ref="psd"/>
           </depends>
           
           <consistency-rationale>
