@@ -313,7 +313,7 @@
 
   <sec:Security_Requirements>
     <comment>Need to add URLs once created</comment>
-    <base-pp id="bpp-psd" name="Peripheral Sharing Devices" product="Device" short="PSD" version="5.0">
+    <base-pp id="psd" name="Peripheral Sharing Devices" product="Device" short="PSD" version="5.0">
       <git>
         <url>https://github.com/commoncriteria/psd</url>
         <branch>main</branch>
