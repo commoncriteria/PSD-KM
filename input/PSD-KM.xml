@@ -1103,7 +1103,7 @@
     <opt-sfrs/>
     
     <sel-sfrs>
-      <section title="Class FDP: User Data Protection">
+      <section title="Class FDP: User Data Protection" id="FDP">
         
         <f-component cc-id="fdp_rip.1" name="Residual Information Protection (Keyboard Data)" iteration="KM" id="fdp-rip-1-km">
           <depends on-sel="keyboardsupport"/>
