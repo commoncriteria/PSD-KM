@@ -876,7 +876,7 @@ The following sections list Common Criteria and technology terms used in this do
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>.</span></dd></dl> 
     
     
-    <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2>
+    <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Assumptions beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>(s).</p>
       This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>‐Module defines no additional assumptions. Note however that the A.NO_TEMPEST assumption
       from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> has the following additional interpretation when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claims conformance to
       this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>:<ul>
@@ -885,17 +885,11 @@ The following sections list Common Criteria and technology terms used in this do
       isolation.</li>
       </ul>
       
-      This document does not define any additional assumptions.
     
     
     
-    
-    <h2 class="indexable" data-level="2" id="Organizational_Security_Policies">3.3 Organizational Security Policies</h2><p>An organization deploying the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is
-      expected to satisfy the organizational security policy listed below in addition to all
-      organizational security policies defined by the claimed <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>. </p>
+    <h2 class="indexable" data-level="2" id="Organizational_Security_Policies">3.3 Organizational Security Policies</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Organizational Security Policies beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>(s).</p>
       
-      This document does not define any additional OSPs.
-    
      
   <h1 class="indexable" data-level="1" id="Security_Objectives">4 Security Objectives</h1>
     
@@ -999,8 +993,7 @@ The following sections list Common Criteria and technology terms used in this do
                   payloads other than any expected traffic, as well as <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> NAK transactions or system messages. To avoid
                   clutter during <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> traffic capture, the evaluator may filter NAK transactions and system messages.<br/><br/>
                   The evaluator shall perform the following tests:
-                  <span class="testlist-"><ul>
-                    <li class="test-"><a id="APC_Test_1-KM" class="defined" href="#APC_Test_1-KM">Test FDP_APC_EXT.1:1</a>:
+                  <span class="testlist-"><br/><br/><br/><br/><br/><br/><br/><br/><ul><li class="test-"><a id="APC_Test_1-KM" class="defined" href="#APC_Test_1-KM">Test FDP_APC_EXT.1:1</a>:
       <br/><br/>
                       <b>KM Switching Methods</b><br/><br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
@@ -1037,9 +1030,7 @@ The following sections list Common Criteria and technology terms used in this do
                           to switch to other connected computers using the peripheral device and guard by only performing some
                           of the steps outlined in the operational user guidance, and verify that it does not succeed.</li>                        
                       </ol>                      
-                    </li><br/><br/>
-                    
-                    <li class="test-"><a id="APC_Test_2-KM" class="defined" href="#APC_Test_2-KM">Test FDP_APC_EXT.1:2</a>:
+                    </li><li class="test-"><a id="APC_Test_2-KM" class="defined" href="#APC_Test_2-KM">Test FDP_APC_EXT.1:2</a>:
       <br/><br/>
                       <b>Positive and Negative Keyboard and Mouse Data Flow Rules Testing</b><br/><br/>                      
                       This test verifies the functionality for correct data flows of a mouse and keyboard during different power
@@ -1079,9 +1070,7 @@ The following sections list Common Criteria and technology terms used in this do
                           that no results are observed on the selected computer and that no traffic is captured using the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                           analyzer.</li>
                       </ol>
-                    </li><br/><br/>
-                    
-                    <li class="test-"><a id="APC_Test_3-KM" class="defined" href="#APC_Test_3-KM">Test FDP_APC_EXT.1:3</a>:
+                    </li><li class="test-"><a id="APC_Test_3-KM" class="defined" href="#APC_Test_3-KM">Test FDP_APC_EXT.1:3</a>:
       <br/><br/>
                       <b>Flow Isolation and Unidirectional Rule</b><br/><br/>
                       This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> properly enforces unidirectional flow and
@@ -1134,9 +1123,7 @@ The following sections list Common Criteria and technology terms used in this do
                               the device enumeration.</li>
                           </ul></li>
                       </ol>
-                    </li><br/><br/>
-                    
-                    <li class="test-"><a id="APC_Test_4-KM" class="defined" href="#APC_Test_4-KM">Test FDP_APC_EXT.1:4</a>:
+                    </li><li class="test-"><a id="APC_Test_4-KM" class="defined" href="#APC_Test_4-KM">Test FDP_APC_EXT.1:4</a>:
       <br/><br/>
                       <b>No Flow between Computer Interfaces</b><br/><br/>
                           [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
@@ -1166,9 +1153,7 @@ The following sections list Common Criteria and technology terms used in this do
                           captured on all non‐selected computer <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzers.</li>
                         <li>Turn off the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr>. Verify that no new traffic is captured.</li>                                                
                       </ol>
-                    </li><br/><br/>
-                    
-                    <li class="test-"><a id="APC_Test_5-KM" class="defined" href="#APC_Test_5-KM">Test FDP_APC_EXT.1:5</a>:
+                    </li><li class="test-"><a id="APC_Test_5-KM" class="defined" href="#APC_Test_5-KM">Test FDP_APC_EXT.1:5</a>:
       <br/><br/>
                       <b>No Flow between Connected Computers over Time</b><br/><br/>
                       This test verifies that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> does not send data to different computers connected to the same interface
@@ -1196,8 +1181,7 @@ The following sections list Common Criteria and technology terms used in this do
                           that the expected results are observed on the selected computer and that the expected traffic is sent and
                           captured using the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> analyzer.</li>                        
                       </ol>
-                    </li>
-                  </ul></span>
+                    </li></ul></span>
                 </div></div></div></div></div>
           
           <div class="comp" id="FDP_PDC_EXT.1"><h4>FDP_PDC_EXT.1 Peripheral Device Connection</h4>
@@ -1230,8 +1214,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no additional <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul>
-                  <li class="test-"><a id="PDC_Test_1-KM" class="defined" href="#PDC_Test_1-KM">Test FDP_PDC_EXT.1:1</a>:
+                <span class="testlist-"><ul><li class="test-"><a id="PDC_Test_1-KM" class="defined" href="#PDC_Test_1-KM">Test FDP_PDC_EXT.1:1</a>:
       
                     The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports properly reject unauthorized devices and devices with
                     unauthorized protocols as per the unauthorized peripheral device connections.<br/><br/>
@@ -1265,8 +1248,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Repeat steps 1‐6 with a composite device with non‐<abbr class="dyn-abbr"><a href="#abbr_HID">HID</a></abbr> device classes and verify that the non‐<abbr class="dyn-abbr"><a href="#abbr_HID">HID</a></abbr>
                         functions are rejected or the entire device is rejected.</li>                      
                     </ol>
-                  </li>
-                  <li class="test-"><a id="PDC_Test_2-KM" class="defined" href="#PDC_Test_2-KM">Test FDP_PDC_EXT.1:2</a>:
+                  </li><li class="test-"><a id="PDC_Test_2-KM" class="defined" href="#PDC_Test_2-KM">Test FDP_PDC_EXT.1:2</a>:
       
                     The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> KM ports do not reject authorized devices and devices with
                     authorized protocols as per the authorized peripheral device connections.<br/><br/>
@@ -1290,8 +1272,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Send inputs using the authorized devices. Verify that the input is received into the text editor or
                         on the screen of the connected computer.</li>                      
                     </ol>
-                  </li>                  
-                </ul></span>
+                  </li></ul></span>
               </div></div></div></div></div> 
           
           <div class="comp" id="FDP_SWI_EXT.2"><h4>FDP_SWI_EXT.2 PSD Switching</h4>
@@ -1742,14 +1723,11 @@ The following sections list Common Criteria and technology terms used in this do
               and denylisting KM peripheral devices and the administrative privileges required to do this.
             </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-              <span class="testlist-"><ul>
-                <li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/KM:1</a>:
+              <span class="testlist-"><br/><br/><ul><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/KM:1</a>:
       
                   Perform the test steps in <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> with all devices on the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> KM denylist and verify that they are
                   rejected as expected.
-                </li><br/><br/>
-                
-                <li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/KM:2</a>:
+                </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/KM:2</a>:
       <br/><br/>
                   [Conditional: Perform this only if “configurable” is selected in <a href="#FDP_FIL_EXT.1.1/KM">FDP_FIL_EXT.1.1/KM</a>]<br/><br/>
                   In the following steps the evaluator shall verify that allowlisted and denylisted devices are treated
@@ -1766,8 +1744,7 @@ The following sections list Common Criteria and technology terms used in this do
                     <li>Verify that both the <abbr class="dyn-abbr"><a href="#abbr_HID">HID</a></abbr>‐class part and the non‐<abbr class="dyn-abbr"><a href="#abbr_HID">HID</a></abbr> class part is rejected through real‐time device
                   console and <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer capture.</li>
                   </ol>                  
-                </li>
-              </ul></span>
+                </li></ul></span>
             </div></div></div></div></div>
         
         <div class="comp" id="FDP_RDR_EXT.1"><h4>FDP_RDR_EXT.1 Re-Enumeration Device Rejection</h4><div class="statustag"><b><i>This component must be included in the <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> if the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> implements any of the following features:</i></b><br/><ul><li><b><i><a href="#rejectreenumeration">Rejection of Re-Enumeration</a></i></b></li></ul></div>
@@ -1802,8 +1779,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 The evaluator shall use a BadUSB, programmable keyboard, or <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> Rubber Ducky as a malicious <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                 device to perform the following test:
-                <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_RDR_EXT.1:1</a>:
+                <span class="testlist-"><ul><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_RDR_EXT.1:1</a>:
       <ol>
                   <li>Ensure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the Operational Environment are configured in accordance with the
                 operational guidance. Ensure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered off and connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer between the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and a
@@ -1821,20 +1797,17 @@ The following sections list Common Criteria and technology terms used in this do
                   <li>Verify device rejection per <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> guidance, the cessation of traffic passed in the <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer, and the
                 absence of the device and any new devices in the information console.</li>
                 </ol>
-                  </li>
-                </ul></span>
+                  </li></ul></span>
               </div></div></div></div></div>
       
     <h1 id="sel-sfrs" class="indexable" data-level="1">Appendix B -  Selection-based Requirements
     </h1>
       <h2 id="FDP" class="indexable" data-level="2">B.1 Class FDP: User Data Protection</h2>
         
-        <div class="comp" id="FDP_RIP.1/KM"><h4>FDP_RIP.1/KM Residual Information Protection (Keyboard Data)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FDP_PDC_EXT.3.1/KM">FDP_PDC_EXT.3.1/KM</a>
-             from <a href="https://commoncriteria.github.io/PSD/main/PSD-release.html">,
+        <div class="comp" id="FDP_RIP.1/KM"><h4>FDP_RIP.1/KM Residual Information Protection (Keyboard Data)</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FDP_PDC_EXT.3.1/KM">FDP_PDC_EXT.3.1/KM</a></i></b></li><li><b><i>
+					from <a href="https://commoncriteria.github.io/PSD/main/PSD-release.html">,
         version 
-        </a>.
-           </i></b></div>
+        </a></i></b></li></ul></div>
           
                     
           
@@ -1865,12 +1838,10 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea">
 			There are no test activities for this component.<br/></div></div></div></div>
         
-        <div class="comp" id="FDP_SWI_EXT.3"><h4>FDP_SWI_EXT.3 Tied Switching</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in
-           <a href="#FDP_PDC_EXT.3.1/KM">FDP_PDC_EXT.3.1/KM</a>
-             from <a href="https://commoncriteria.github.io/PSD/main/PSD-release.html">,
+        <div class="comp" id="FDP_SWI_EXT.3"><h4>FDP_SWI_EXT.3 Tied Switching</h4><div class="statustag"><b><i>The inclusion of this selection-based component depends upon selection in:</i></b><ul><li><b><i><a href="#FDP_PDC_EXT.3.1/KM">FDP_PDC_EXT.3.1/KM</a></i></b></li><li><b><i>
+					from <a href="https://commoncriteria.github.io/PSD/main/PSD-release.html">,
         version 
-        </a>.
-           </i></b></div>
+        </a></i></b></li></ul></div>
           
           
           

@@ -464,8 +464,7 @@ The following sections list Common Criteria and technology terms used in this do
                   payloads other than any expected traffic, as well as USB NAK transactions or system messages. To avoid
                   clutter during USB traffic capture, the evaluator may filter NAK transactions and system messages.<br/><br/>
                   The evaluator shall perform the following tests:
-                  <span class="testlist-"><ul>
-                    <li class="test-"><a id="APC_Test_1-KM" class="defined" href="#APC_Test_1-KM">Test FDP_APC_EXT.1:1</a>:
+                  <span class="testlist-"><br/><br/><br/><br/><br/><br/><br/><br/><ul><li class="test-"><a id="APC_Test_1-KM" class="defined" href="#APC_Test_1-KM">Test FDP_APC_EXT.1:1</a>:
       <br/><br/>
                       <b>KM Switching Methods</b><br/><br/>
                       [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
@@ -502,9 +501,7 @@ The following sections list Common Criteria and technology terms used in this do
                           to switch to other connected computers using the peripheral device and guard by only performing some
                           of the steps outlined in the operational user guidance, and verify that it does not succeed.</li>                        
                       </ol>                      
-                    </li><br/><br/>
-                    
-                    <li class="test-"><a id="APC_Test_2-KM" class="defined" href="#APC_Test_2-KM">Test FDP_APC_EXT.1:2</a>:
+                    </li><li class="test-"><a id="APC_Test_2-KM" class="defined" href="#APC_Test_2-KM">Test FDP_APC_EXT.1:2</a>:
       <br/><br/>
                       <b>Positive and Negative Keyboard and Mouse Data Flow Rules Testing</b><br/><br/>                      
                       This test verifies the functionality for correct data flows of a mouse and keyboard during different power
@@ -544,9 +541,7 @@ The following sections list Common Criteria and technology terms used in this do
                           that no results are observed on the selected computer and that no traffic is captured using the USB
                           analyzer.</li>
                       </ol>
-                    </li><br/><br/>
-                    
-                    <li class="test-"><a id="APC_Test_3-KM" class="defined" href="#APC_Test_3-KM">Test FDP_APC_EXT.1:3</a>:
+                    </li><li class="test-"><a id="APC_Test_3-KM" class="defined" href="#APC_Test_3-KM">Test FDP_APC_EXT.1:3</a>:
       <br/><br/>
                       <b>Flow Isolation and Unidirectional Rule</b><br/><br/>
                       This test verifies that the TOE properly enforces unidirectional flow and
@@ -599,9 +594,7 @@ The following sections list Common Criteria and technology terms used in this do
                               the device enumeration.</li>
                           </ul></li>
                       </ol>
-                    </li><br/><br/>
-                    
-                    <li class="test-"><a id="APC_Test_4-KM" class="defined" href="#APC_Test_4-KM">Test FDP_APC_EXT.1:4</a>:
+                    </li><li class="test-"><a id="APC_Test_4-KM" class="defined" href="#APC_Test_4-KM">Test FDP_APC_EXT.1:4</a>:
       <br/><br/>
                       <b>No Flow between Computer Interfaces</b><br/><br/>
                           [Conditional: Perform this test if “switching can be initiated only through express user action” is selected
@@ -631,9 +624,7 @@ The following sections list Common Criteria and technology terms used in this do
                           captured on all non‐selected computer USB analyzers.</li>
                         <li>Turn off the TOE. Verify that no new traffic is captured.</li>                                                
                       </ol>
-                    </li><br/><br/>
-                    
-                    <li class="test-"><a id="APC_Test_5-KM" class="defined" href="#APC_Test_5-KM">Test FDP_APC_EXT.1:5</a>:
+                    </li><li class="test-"><a id="APC_Test_5-KM" class="defined" href="#APC_Test_5-KM">Test FDP_APC_EXT.1:5</a>:
       <br/><br/>
                       <b>No Flow between Connected Computers over Time</b><br/><br/>
                       This test verifies that the TOE does not send data to different computers connected to the same interface
@@ -661,8 +652,7 @@ The following sections list Common Criteria and technology terms used in this do
                           that the expected results are observed on the selected computer and that the expected traffic is sent and
                           captured using the USB analyzer.</li>                        
                       </ol>
-                    </li>
-                  </ul></span>
+                    </li></ul></span>
                 </div></div></span></div><div class="comp" id=""><h4>FDP_PDC_EXT.1 Peripheral Device Connection</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_PDC_EXT.1</div>
               
                               
@@ -673,8 +663,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no additional TSS evaluation activities for this component.<br/></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component.<br/></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul>
-                  <li class="test-"><a id="PDC_Test_1-KM" class="defined" href="#PDC_Test_1-KM">Test FDP_PDC_EXT.1:1</a>:
+                <span class="testlist-"><ul><li class="test-"><a id="PDC_Test_1-KM" class="defined" href="#PDC_Test_1-KM">Test FDP_PDC_EXT.1:1</a>:
       
                     The evaluator shall verify that the TOE ports properly reject unauthorized devices and devices with
                     unauthorized protocols as per the unauthorized peripheral device connections.<br/><br/>
@@ -708,8 +697,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Repeat steps 1‐6 with a composite device with non‐HID device classes and verify that the non‐HID
                         functions are rejected or the entire device is rejected.</li>                      
                     </ol>
-                  </li>
-                  <li class="test-"><a id="PDC_Test_2-KM" class="defined" href="#PDC_Test_2-KM">Test FDP_PDC_EXT.1:2</a>:
+                  </li><li class="test-"><a id="PDC_Test_2-KM" class="defined" href="#PDC_Test_2-KM">Test FDP_PDC_EXT.1:2</a>:
       
                     The evaluator shall verify that the TOE KM ports do not reject authorized devices and devices with
                     authorized protocols as per the authorized peripheral device connections.<br/><br/>
@@ -733,8 +721,7 @@ The following sections list Common Criteria and technology terms used in this do
                       <li>Send inputs using the authorized devices. Verify that the input is received into the text editor or
                         on the screen of the connected computer.</li>                      
                     </ol>
-                  </li>                  
-                </ul></span>
+                  </li></ul></span>
               </div></div></span></div><div class="comp" id=""><h4>FDP_SWI_EXT.2 PSD Switching</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_SWI_EXT.2</div>
             
               
@@ -864,14 +851,11 @@ The following sections list Common Criteria and technology terms used in this do
               and denylisting KM peripheral devices and the administrative privileges required to do this.
             </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-              <span class="testlist-"><ul>
-                <li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/KM:1</a>:
+              <span class="testlist-"><br/><br/><ul><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/KM:1</a>:
       
                   Perform the test steps in FDP_PDC_EXT.1 with all devices on the PSD KM denylist and verify that they are
                   rejected as expected.
-                </li><br/><br/>
-                
-                <li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/KM:2</a>:
+                </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/KM:2</a>:
       <br/><br/>
                   [Conditional: Perform this only if “configurable” is selected in FDP_FIL_EXT.1.1/KM]<br/><br/>
                   In the following steps the evaluator shall verify that allowlisted and denylisted devices are treated
@@ -888,8 +872,7 @@ The following sections list Common Criteria and technology terms used in this do
                     <li>Verify that both the HID‐class part and the non‐HID class part is rejected through real‐time device
                   console and USB sniffer capture.</li>
                   </ol>                  
-                </li>
-              </ul></span>
+                </li></ul></span>
             </div></div></span></div><div class="comp" id=""><h4>FDP_RDR_EXT.1 Re-Enumeration Device Rejection</h4><span class="activity_pane_body"><div class="component-activity-header">FDP_RDR_EXT.1</div>
               
               
@@ -904,8 +887,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no Isolation evaluation activities for this component.<br/></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 The evaluator shall use a BadUSB, programmable keyboard, or USB Rubber Ducky as a malicious USB
                 device to perform the following test:
-                <span class="testlist-"><ul>
-                  <li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_RDR_EXT.1:1</a>:
+                <span class="testlist-"><ul><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_RDR_EXT.1:1</a>:
       <ol>
                   <li>Ensure the TOE and the Operational Environment are configured in accordance with the
                 operational guidance. Ensure the TOE is powered off and connect a USB sniffer between the TOE and a
@@ -923,8 +905,7 @@ The following sections list Common Criteria and technology terms used in this do
                   <li>Verify device rejection per TOE guidance, the cessation of traffic passed in the USB sniffer, and the
                 absence of the device and any new devices in the information console.</li>
                 </ol>
-                  </li>
-                </ul></span>
+                  </li></ul></span>
               </div></div></span></div><h1 id="sar_aas" class="indexable" data-level="0">3 Evaluation Activities for SARs</h1><p>The PP-Module does not define any SARs beyond those defined within the
     
 	base PSD PP to which it must claim conformance.
