@@ -210,10 +210,47 @@
       <cc-pt3-conf>conformant</cc-pt3-conf> 
       <cc-pp-conf/>
       <cc-pp-config-with>
-        <PP-cc-ref>Protection Profile for Peripheral Sharing Devices, Version 5.0</PP-cc-ref>
+        <PP-cc-ref>
+			<cc-doc-ref id="PSD">
+				<git>
+					<url>https://github.com/commoncriteria/PSD</url>
+					<branch>main</branch>
+				</git>
+				<url>https://commoncriteria.github.io/PSD/main/PSD-release.html</url>			
+			</cc-doc-ref>		
+		</PP-cc-ref>
+        <Mod-cc-ref>
+			<cc-doc-ref id="PSD-AO">
+				<git>
+					<url>https://github.com/commoncriteria/PSD-AO</url>
+					<branch>main</branch>
+				</git>
+				<url>https://commoncriteria.github.io/PSD-AO/main/PSD-AO.html</url>			
+			</cc-doc-ref>		
+		</Mod-cc-ref>
+        <Mod-cc-ref>			
+			<cc-doc-ref id="PSD-UA">
+				<git>
+					<url>https://github.com/commoncriteria/PSD-UA</url>
+					<branch>main</branch>
+				</git>
+				<url>https://commoncriteria.github.io/PSD-UA/main/PSD-UA.html</url>			
+			</cc-doc-ref>		
+		</Mod-cc-ref>
+        <Mod-cc-ref>			
+			<cc-doc-ref id="PSD-VI">
+				<git>
+					<url>https://github.com/commoncriteria/PSD-VI</url>
+					<branch>main</branch>
+				</git>
+				<url>https://commoncriteria.github.io/PSD-VI/main/PSD-VI.html</url>			
+			</cc-doc-ref>		
+		</Mod-cc-ref>
+ 	  
+  <!--      <PP-cc-ref>Protection Profile for Peripheral Sharing Devices, Version 5.0</PP-cc-ref>
         <Mod-cc-ref>PP-Module for Analog Audio Output Devices, Version 2.0</Mod-cc-ref>
         <Mod-cc-ref>PP-Module for User Authentication Devices, Version 2.0</Mod-cc-ref>
-        <Mod-cc-ref>PP-Module for Video/Display Devices, Version 2.0</Mod-cc-ref>
+        <Mod-cc-ref>PP-Module for Video/Display Devices, Version 2.0</Mod-cc-ref>  -->
       </cc-pp-config-with>        
       <cc-pkg-claim/>
     </CClaimsInfo>
