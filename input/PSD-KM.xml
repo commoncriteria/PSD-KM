@@ -229,7 +229,8 @@
 			</cc-doc-ref>		
 		</Mod-cc-ref>
         <Mod-cc-ref>			
-			<cc-doc-ref id="PSD-UA">
+			<cc-doc-ref id="PSD-UA" name="PP-Module for User Authentication Devices"
+									version="2.0">			
 				<git>
 					<url>https://github.com/commoncriteria/PSD-UA</url>
 					<branch>main</branch>
