@@ -1,0 +1,19 @@
+[cols="1,1,1,1,1,1,1,1"]
+|===
+8+|PSD-KM 
+| https://github.com/commoncriteria/PSD-KM/tree/cc-test[cc-test] 
+a| https://commoncriteria.github.io/PSD-KM/cc-test/PSD-KM-release.html[📄]
+a|[link=https://github.com/commoncriteria/PSD-KM/blob/gh-pages/cc-test/ValidationReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/PSD-KM/gh-pages/cc-test/validation.svg[Validation]
+a|[link=https://github.com/commoncriteria/PSD-KM/blob/gh-pages/cc-test/SanityChecksOutput.md]
+image::https://raw.githubusercontent.com/commoncriteria/PSD-KM/gh-pages/cc-test/warnings.svg[SanityChecks]
+a|[link=https://github.com/commoncriteria/PSD-KM/blob/gh-pages/cc-test/SpellCheckReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/PSD-KM/gh-pages/cc-test/spell-badge.svg[SpellCheck]
+a|[link=https://github.com/commoncriteria/PSD-KM/blob/gh-pages/cc-test/TDValidationReport.txt]
+image::https://raw.githubusercontent.com/commoncriteria/PSD-KM/gh-pages/cc-test/tds.svg[TDs]
+a|image::https://raw.githubusercontent.com/commoncriteria/PSD-KM/gh-pages/cc-test/transforms.svg[transforms,150]
+a| [link=https://github.com/commoncriteria/PSD-KM/blob/gh-pages/cc-test/HTMLs.adoc]
+image::https://raw.githubusercontent.com/commoncriteria/PSD-KM/gh-pages/cc-test/html_count.svg[HTML Count]
+[link=https://github.com/commoncriteria/PSD-KM/blob/gh-pages/cc-test/PDFs.adoc]
+image::https://raw.githubusercontent.com/commoncriteria/PSD-KM/gh-pages/cc-test/pdf_count.svg[PDF Count]
+|===
