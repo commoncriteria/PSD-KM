@@ -1,4 +1,8 @@
+compilation error: file transforms/xsl/boilerplates.xsl line 113 element apply-template
+xsltStylePreCompute: unknown xsl:apply-template
 * Warning: This document still has at least one comment.
+* Error: Detected multiple elements with an id of 'PSD'.
+* Error: Detected multiple elements with an id of 'PSD'.
 * Error: Detected multiple elements with an id of 'FDP'.
 * Error: Detected multiple elements with an id of 'FDP'.
 * Error: Detected multiple elements with an id of 'FDP'.

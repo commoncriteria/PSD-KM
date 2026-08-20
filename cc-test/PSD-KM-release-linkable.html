@@ -660,14 +660,14 @@ function showTarget(id){
       Functional Requirements (<abbr class="dyn-abbr"><a href="#abbr_SFR">SFRs</a></abbr>) for security functionality unique to a <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> that includes the ability to
       manipulate or assign human interface devices (HIDs) (e.g., keyboard and pointing device) to one or more
       computers connected to the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr><a id="period_3" href="#period_3">. </a><br><br>
-      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is intended for use with the following <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PPs</a></abbr>:<ul>
+      This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is intended for use with the following Base-PPs:<ul>
         <li id="PSD">Protection Profile for Peripheral Sharing Devices, Version 5.0</li>
       </ul>
     
     
     <div class="no-link"><h2 id="glossary" class="indexable" data-level="2">1.2 Terms</h2>
 The following sections list Common Criteria and technology terms used in this document<a id="period_4" href="#period_4">. </a>    <h3 id="cc-terms" class="indexable" data-level="3">1.2.1 Common Criteria Terms</h3><table><tr><td><div id="Assurance">Assurance</div></td><td>Grounds for confidence that a TOE meets the SFRs <a href="#bibCC">[CC]</a><a id="period_5" href="#period_5">. </a></td></tr>
-<tr><td><div id="Base_Protection_Profile">Base Protection Profile (Base-PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration<a id="period_6" href="#period_6">. </a></td></tr>
+<tr><td><div id="Base_Protection_Profile">Base Protection Profile (base PP)</div></td><td>Protection Profile used as a basis to build a PP-Configuration<a id="period_6" href="#period_6">. </a></td></tr>
 <tr><td><div id="Collaborative_Protection_Profile">Collaborative Protection Profile (cPP)</div></td><td>A Protection Profile developed by
     international technical communities and approved by multiple schemes<a id="period_7" href="#period_7">. </a></td></tr>
 <tr><td><div id="Common_Criteria">Common Criteria (CC)</div></td><td>Common Criteria for Information Technology Security Evaluation (International Standard ISO/IEC 15408)<a id="period_8" href="#period_8">. </a></td></tr>
@@ -687,8 +687,8 @@ The following sections list Common Criteria and technology terms used in this do
 	    or functionality<a id="period_16" href="#period_16">. </a></td></tr>
 <tr><td><div id="Operational_Environment">Operational Environment (OE)</div></td><td>Hardware and software that are outside the TOE boundary that support the TOE functionality and security policy<a id="period_17" href="#period_17">. </a></td></tr>
 <tr><td><div id="Protection_Profile">Protection Profile (PP)</div></td><td>An implementation-independent set of security requirements for a category of products<a id="period_18" href="#period_18">. </a></td></tr>
-<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one Base-PP and at least one PP-Module<a id="period_19" href="#period_19">. </a></td></tr>
-<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more Base-PPs<a id="period_20" href="#period_20">. </a></td></tr>
+<tr><td><div id="Protection_Profile_Configuration">Protection Profile Configuration (PP-Configuration)</div></td><td>A comprehensive set of security requirements for a product type that consists of at least one base PP and at least one PP-Module<a id="period_19" href="#period_19">. </a></td></tr>
+<tr><td><div id="Protection_Profile_Module">Protection Profile Module (PP-Module)</div></td><td>An implementation-independent statement of security needs for a TOE type complementary to one or more base PPs<a id="period_20" href="#period_20">. </a></td></tr>
 <tr><td><div id="Security_Assurance_Requirement">Security Assurance Requirement (SAR)</div></td><td>A requirement to assure the security of the TOE<a id="period_21" href="#period_21">. </a></td></tr>
 <tr><td><div id="Security_Functional_Requirement">Security Functional Requirement (SFR)</div></td><td>A requirement for security enforcement by the TOE<a id="period_22" href="#period_22">. </a></td></tr>
 <tr><td><div id="Security_Target">Security Target (ST)</div></td><td>A set of implementation-dependent security requirements for a specific product<a id="period_23" href="#period_23">. </a></td></tr>
@@ -825,7 +825,31 @@ The following sections list Common Criteria and technology terms used in this do
 					This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> does not claim conformance to 
 					any Protection Profile<a id="period_79" href="#period_79">. </a>				</dd><p></p><dd>The following <abbr class="dyn-abbr"><a href="#abbr_PP">PPs</a></abbr> and <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>-Modules are allowed to be specified in a 
 					<abbr class="dyn-abbr"><a href="#abbr_PP-Configuration">PP-Configuration</a></abbr> with this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>:
-					<ul><li>Protection Profile for Peripheral Sharing Devices, Version 5.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Analog Audio Output Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for User Authentication Devices, Version 2.0</li><li><abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> for Video/Display Devices, Version 2.0</li></ul></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is not conformant to any 
+					<ul><li>
+				
+					https://github.com/commoncriteria/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>
+					main
+				
+				https://commoncriteria.github.io/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>/main/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>-release.html			
+			</li><li>
+				
+					https://github.com/commoncriteria/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>-AO
+					main
+				
+				https://commoncriteria.github.io/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>-AO/main/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>-AO.html			
+			</li><li>
+				
+					https://github.com/commoncriteria/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>-UA
+					main
+				
+				https://commoncriteria.github.io/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>-UA/main/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>-UA.html			
+			</li><li>
+				
+					https://github.com/commoncriteria/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>-VI
+					main
+				
+				https://commoncriteria.github.io/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>-VI/main/<abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr>-VI.html			
+			</li></ul></dd><dt>Package Claim</dt><p></p><dd>This <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr> is not conformant to any 
 						Functional or Assurance Packages<a id="period_80" href="#period_80">. </a></dd></dl>
   <h1 class="indexable" data-level="1" id="Security_Problem_Definition">3 Security Problem Definition</h1>   
     This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Module describes the security problem in terms of the threats the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is expected to address,
@@ -849,7 +873,7 @@ The following sections list Common Criteria and technology terms used in this do
 	</dt><dd><span class="description">This threat from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> also applies to the functionality defined in this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr><a id="period_88" href="#period_88">. </a></span></dd></dl> 
     
     
-    <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Assumptions beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>(s)<a id="period_89" href="#period_89">. </a></p>
+    <h2 class="indexable" data-level="2" id="Assumptions">3.2 Assumptions</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Assumptions beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_base PP">base PP</a></abbr>(s)<a id="period_89" href="#period_89">. </a></p>
       This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>&#8208;Module defines no additional assumptions<a id="period_90" href="#period_90">. </a>Note however that the A.NO_TEMPEST assumption
       from the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> has the following additional interpretation when the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> claims conformance to
       this <abbr class="dyn-abbr"><a href="#abbr_PP-Module">PP-Module</a></abbr>:<ul>
@@ -861,7 +885,7 @@ The following sections list Common Criteria and technology terms used in this do
     
     
     
-    <h2 class="indexable" data-level="2" id="Organizational_Security_Policies">3.3 Organizational Security Policies</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Organizational Security Policies beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr>(s)<a id="period_93" href="#period_93">. </a></p>
+    <h2 class="indexable" data-level="2" id="Organizational_Security_Policies">3.3 Organizational Security Policies</h2><p>This <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr> defines no Organizational Security Policies beyond those defined in the claimed <abbr class="dyn-abbr"><a href="#abbr_base PP">base PP</a></abbr>(s)<a id="period_93" href="#period_93">. </a></p>
       
      
   <h1 class="indexable" data-level="1" id="Security_Objectives">4 Security Objectives</h1>
@@ -954,7 +978,7 @@ The following sections list Common Criteria and technology terms used in this do
                   payloads other than any expected traffic, as well as <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> NAK transactions or system messages<a id="period_123" href="#period_123">. </a>To avoid
                   clutter during <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> traffic capture, the evaluator may filter NAK transactions and system messages<a id="period_124" href="#period_124">. </a><br><br>
                   The evaluator shall perform the following tests:
-                  <span class="testlist-"><br><br><br><br><br><br><br><br><ul><li class="test-"><a id="APC_Test_1-KM" class="defined" href="#APC_Test_1-KM">Test FDP_APC_EXT.1:1</a>:
+                  :<span class="testlist-"><br><br><br><br><br><br><br><br><ul><li class="test-"><a id="APC_Test_1-KM" class="defined" href="#APC_Test_1-KM">Test FDP_APC_EXT.1:1</a>:
       <br><br>
                       <b>KM Switching Methods</b><br><br>
                       [Conditional: Perform this test if &#8220;switching can be initiated only through express user action&#8221; is selected
@@ -1167,7 +1191,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no additional <abbr class="dyn-abbr"><a href="#abbr_TSS">TSS</a></abbr> evaluation activities for this component<a id="period_225" href="#period_225">. </a><br></div><div class="eacategory">Guidance</div><div class="ea">
 			There are no additional Guidance evaluation activities for this component<a id="period_226" href="#period_226">. </a><br></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component<a id="period_227" href="#period_227">. </a><br></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-                <span class="testlist-"><ul><li class="test-"><a id="PDC_Test_1-KM" class="defined" href="#PDC_Test_1-KM">Test FDP_PDC_EXT.1:1</a>:
+                :<span class="testlist-"><ul><li class="test-"><a id="PDC_Test_1-KM" class="defined" href="#PDC_Test_1-KM">Test FDP_PDC_EXT.1:1</a>:
       
                     The evaluator shall verify that the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> ports properly reject unauthorized devices and devices with
                     unauthorized protocols as per the unauthorized peripheral device connections<a id="period_228" href="#period_228">. </a><br><br>
@@ -1621,7 +1645,7 @@ The following sections list Common Criteria and technology terms used in this do
               guidance documentation and verify that it describes the process of configuring the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> for allowlisting
               and denylisting KM peripheral devices and the administrative privileges required to do this<a id="period_400" href="#period_400">. </a>            </div></div><div class="ea"><div class="eacategory">Isolation</div>
 			There are no Isolation evaluation activities for this component<a id="period_401" href="#period_401">. </a><br></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
-              <span class="testlist-"><br><br><ul><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/KM:1</a>:
+              :<span class="testlist-"><br><br><ul><li class="test-"><a id="_t_8" class="defined" href="#_t_8">Test FDP_FIL_EXT.1/KM:1</a>:
       
                   Perform the test steps in <a href="#FDP_PDC_EXT.1">FDP_PDC_EXT.1</a> with all devices on the <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> KM denylist and verify that they are
                   rejected as expected<a id="period_402" href="#period_402">. </a>                </li><li class="test-"><a id="_t_9" class="defined" href="#_t_9">Test FDP_FIL_EXT.1/KM:2</a>:
@@ -1673,7 +1697,7 @@ The following sections list Common Criteria and technology terms used in this do
 			There are no Isolation evaluation activities for this component<a id="period_414" href="#period_414">. </a><br></div><div class="eacategory">Tests</div><div class="ea"><div class="ea">
                 The evaluator shall use a BadUSB, programmable keyboard, or <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> Rubber Ducky as a malicious <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr>
                 device to perform the following test:
-                <span class="testlist-"><ul><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_RDR_EXT.1:1</a>:
+                :<span class="testlist-"><ul><li class="test-"><a id="_t_10" class="defined" href="#_t_10">Test FDP_RDR_EXT.1:1</a>:
       <ol>
                   <li>Ensure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and the Operational Environment are configured in accordance with the
                 operational guidance<a id="period_415" href="#period_415">. </a>Ensure the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> is powered off and connect a <abbr class="dyn-abbr"><a href="#abbr_USB">USB</a></abbr> sniffer between the <abbr class="dyn-abbr"><a href="#abbr_TOE">TOE</a></abbr> and a
@@ -1932,7 +1956,7 @@ The following sections list Common Criteria and technology terms used in this do
       peripheral types<a id="period_502" href="#period_502">. </a>The <abbr class="dyn-abbr"><a href="#abbr_ST">ST</a></abbr> author should make two iterations of this <abbr class="dyn-abbr"><a href="#abbr_SFR">SFR</a></abbr>, <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/KM and
       <a href="#FDP_APC_EXT.1">FDP_APC_EXT.1</a>/VI, to show the different modifications made for each specific peripheral type<a id="period_503" href="#period_503">. </a>    
   <h1 id="acronyms" class="indexable" data-level="A">Appendix G -  Acronyms</h1><table><caption><span class="ctr" data-myid="t-acronyms" data-counter-type="ct-Table" id="t-acronyms">Table <span class="counter">5</span></span>: Acronyms
-		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_Base-PP" data-plural="Base-PPs"><abbr class="dyn-abbr"><a href="#abbr_Base-PP">Base-PP</a></abbr></span></td><td><span id="long_abbr_Base-PP">Base Protection Profile</span></td></tr>
+		</caption><tr class="header"><th>Acronym</th><th>Meaning</th></tr><tr><td><span class="term" id="abbr_base PP" data-plural="base PPs"><abbr class="dyn-abbr"><a href="#abbr_base PP">base PP</a></abbr></span></td><td><span id="long_abbr_base PP">Base Protection Profile</span></td></tr>
 <tr><td><span class="term" id="abbr_CC"><abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr></span></td><td><span id="long_abbr_CC">Common Criteria</span></td></tr>
 <tr><td><span class="term" id="abbr_CDF"><abbr class="dyn-abbr"><a href="#abbr_CDF">CDF</a></abbr></span></td><td><span id="long_abbr_CDF">Configurable Device Filtration</span></td></tr>
 <tr><td><span class="term" id="abbr_CEM"><abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr></span></td><td><span id="long_abbr_CEM">Common Evaluation Methodology</span></td></tr>
@@ -1971,5 +1995,7 @@ The following sections list Common Criteria and technology terms used in this do
           </ul></span></td></tr><tr><td><span id="bibCEM">[<abbr class="dyn-abbr"><a href="#abbr_CEM">CEM</a></abbr>]</span></td><td><span class="description">Common Methodology for Information Technology Security Evaluation - <ul>
             <li><a href="http://www.commoncriteriaportal.org/files/ccfiles/CEM2022R1.pdf">
                  Evaluation methodology</a>, CCMB-2022-11-006, <abbr class="dyn-abbr"><a href="#abbr_CC">CC</a></abbr>:2022, Revision 1, November 2022<a id="period_509" href="#period_509">. </a></li>
-          </ul></span></td></tr><tr><td><span id="base-pp">[PP_PSD_V5.0 or <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]</span></td><td><span class="description">Protection Profile for Peripheral Sharing Device, Version 5.0
+          </ul></span></td></tr><tr><td><span id="bibERRv12">[ERR]</span></td><td><span class="description"><a href="https://www.commoncriteriaportal.org/files/ccfiles/CCMB-2025-001-v1_2-Errata_Interpretation_CC_CEM_2022.pdf">
+              Errata and Interpretation for CC:2022 (Release 1) and CEM:2022 (Release 1), Version 1.2</a>, 
+			  CCMB-2025-02-001, 15 October 2025<a id="period_510" href="#period_510">. </a>        </span></td></tr><tr><td><span id="base-pp">[PP_PSD_V5.0 or <abbr class="dyn-abbr"><a href="#abbr_PSD">PSD</a></abbr> <abbr class="dyn-abbr"><a href="#abbr_PP">PP</a></abbr>]</span></td><td><span class="description">Protection Profile for Peripheral Sharing Device, Version 5.0
       </span></td></tr></table></body></html>
