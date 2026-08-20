@@ -2,4 +2,3 @@
 * https://commoncriteria.github.io/PSD-KM/cc-test/PSD-KM-release.html[PSD-KM-release.html]
 * https://commoncriteria.github.io/PSD-KM/cc-test/PSD-KM-sd.html[PSD-KM-sd.html]
 * https://commoncriteria.github.io/PSD-KM/cc-test/PSD-KM.html[PSD-KM.html]
-* https://commoncriteria.github.io/PSD-KM/cc-test/diff-pp-template-release.html[diff-pp-template-release.html]
