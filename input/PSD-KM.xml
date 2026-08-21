@@ -223,7 +223,7 @@
         <Mod-cc-ref>
 			<cc-doc-ref id="PSD-AO">
 				<git>
-					<url>https://github.com/commoncriteria/psd-ao</url>
+					<url>https://github.com/commoncriteria/PSD-AO</url>
 					<branch>main</branch>
 				</git>
 				<url>https://commoncriteria.github.io/PSD-AO/main/PSD-AO.html</url>			
