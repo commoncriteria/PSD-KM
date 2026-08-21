@@ -16,7 +16,8 @@
  
   <PPReference>
     <ReferenceTable>      
-      <PPVersion>2.0</PPVersion>
+		<PPTitle>PP-Module for Keyboard/Mouse Devices</PPTitle>
+		<PPVersion>2.0</PPVersion>
       <PPAuthor>National Information Assurance Partnership</PPAuthor>
       <PPPubDate>2025-07-11</PPPubDate>
       <Keywords>PSD, KM</Keywords>      
