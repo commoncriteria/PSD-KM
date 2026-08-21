@@ -219,15 +219,6 @@
 				<url>https://commoncriteria.github.io/PSD/main/PSD-release.html</url>			
 			</cc-doc-ref>		
 		</PP-cc-ref>
-        <PP-cc-ref>
-			<cc-doc-ref id="gpcp">
-				<git>
-					<url>https://github.com/commoncriteria/gpcp</url>
-					<branch>main</branch>
-				</git>
-				<url>https://commoncriteria.github.io/gpcp/main/gpcp-release.html</url>			
-			</cc-doc-ref>		
-		</PP-cc-ref>
         <Mod-cc-ref>
 			<cc-doc-ref id="PSD-AO">
 				<git>
