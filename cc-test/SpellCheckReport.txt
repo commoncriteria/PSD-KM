@@ -1,3 +1,4 @@
+output/PSD-KM-release-linkable.html: AO
 output/PSD-KM-release-linkable.html: BadUSB
 output/PSD-KM-release-linkable.html: Barcode
 output/PSD-KM-release-linkable.html: CDS
@@ -17,9 +18,11 @@ output/PSD-KM-release-linkable.html: allowlisted
 output/PSD-KM-release-linkable.html: denylist
 output/PSD-KM-release-linkable.html: denylisted
 output/PSD-KM-release-linkable.html: denylisting
+output/PSD-KM-release-linkable.html: html
 output/PSD-KM-release-linkable.html: reenumeration
 output/PSD-KM-release-linkable.html: trackpad
 output/PSD-KM-release-linkable.html: unidirectionally
+output/PSD-KM-release.html: AO
 output/PSD-KM-release.html: Assessment’
 output/PSD-KM-release.html: BadUSB
 output/PSD-KM-release.html: Barcode
@@ -38,6 +41,7 @@ output/PSD-KM-release.html: allowlisted
 output/PSD-KM-release.html: configurable’
 output/PSD-KM-release.html: denylist
 output/PSD-KM-release.html: denylisted
+output/PSD-KM-release.html: html
 output/PSD-KM-release.html: reenumeration
 output/PSD-KM-release.html: trackpad
 output/PSD-KM-release.html: unidirectionally
@@ -61,6 +65,7 @@ output/PSD-KM-sd.html: fail’
 output/PSD-KM-sd.html: pass’
 output/PSD-KM-sd.html: reenumeration
 output/PSD-KM-sd.html: ’
+output/PSD-KM.html: AO
 output/PSD-KM.html: Assessment’
 output/PSD-KM.html: BadUSB
 output/PSD-KM.html: Barcode
@@ -82,6 +87,7 @@ output/PSD-KM.html: configurable’
 output/PSD-KM.html: denylist
 output/PSD-KM.html: denylisted
 output/PSD-KM.html: denylisting
+output/PSD-KM.html: html
 output/PSD-KM.html: reenumeration
 output/PSD-KM.html: trackpad
 output/PSD-KM.html: unidirectionally
