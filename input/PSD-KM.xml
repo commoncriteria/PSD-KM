@@ -217,7 +217,13 @@
 					<url>https://github.com/commoncriteria/PSD</url>
 					<branch>main</branch>
 				</git>
-				<url>https://commoncriteria.github.io/PSD/main/PSD-release.html</url>			
+				<url>https://www.niap-ccevs.org/protectionprofiles/412</url>			
+			</cc-doc-ref>		
+		</PP-cc-ref>
+        <PP-cc-ref>
+			<cc-doc-ref id="FAKE" name="PP for Fake Products" version="2.3" short="FP" 
+				product="Fake Thing" plural="Fake Things">
+				<url>https://www.niap-ccevs.org/protectionprofiles/412</url>			
 			</cc-doc-ref>		
 		</PP-cc-ref>
         <Mod-cc-ref>
@@ -267,7 +273,7 @@
     <sec:Threats>      
       <threats>
         <threat name="T.DATA_LEAK">
-          <from base="bpp-psd"/>
+          <from base="PSD"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
            <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to leak data through the TOE.</rationale>
    <addressed-by>FDP_PDC_EXT.3/KM</addressed-by><rationale>Mitigates this threat by
@@ -281,7 +287,7 @@
           
         </threat>
         <threat name="T.LOGICAL_TAMPER">
-          <from base="bpp-psd"/>
+          <from base="FAKE"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to logically tamper with the TOE.</rationale>
         </threat>
@@ -294,7 +300,6 @@
         </threat>
         
         <threat name="T.SIGNAL_LEAK">
-          <from base="bpp-psd"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
            <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to leak data through the TOE via a signaling mechanism.</rationale>
    
@@ -304,7 +309,6 @@
             by blocking the use of untrusted devices that could be used to attempt data leakage.</rationale>
         </threat>
         <threat name="T.UNAUTHORIZED_DEVICES">
-          <from base="bpp-psd"/>          
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>  
           <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by enforcing the recognition of only authorized devices.</rationale>
           <addressed-by>FDP_PDC_EXT.3/KM</addressed-by><rationale>Mitigates this threat by
@@ -315,7 +319,6 @@
             this threat by preventing an unauthorized device from re-enumerating as an authorized one.</rationale>
         </threat>
         <threat name="T.UNINTENDED_USE">
-          <from base="bpp-psd"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_SWI_EXT.3 (selection‐based)</addressed-by><rationale>Mitigates this
             threat by ensuring all peripherals are switched to the same selected computer.</rationale>
@@ -350,13 +353,8 @@
   </sec:Security_Objectives>
 
   <sec:Security_Requirements>
-    <comment>Need to add URLs once created</comment>
-    <base-pp id="psd" name="Peripheral Sharing Devices" product="Device" short="PSD" version="5.0">
-      <git>
-        <url>https://github.com/commoncriteria/psd</url>
-        <branch>main</branch>
-      </git>
-      <url>https://commoncriteria.github.io/PSD/main/PSD-release.html</url>
+    <comment>Need to fix URLs once created</comment>
+    <base-pp ref="PSD">
       
       <sec-func-req-dir>
         When a TOE claims conformance to this PP‐Module, it is necessary to make claims in the PSD PP
