@@ -259,8 +259,12 @@
         <Mod-cc-ref>PP-Module for User Authentication Devices, Version 2.0</Mod-cc-ref>
         <Mod-cc-ref>PP-Module for Video/Display Devices, Version 2.0</Mod-cc-ref>  -->
       </cc-pp-config-with>        
-      <cc-pkg-claim/>
-    </CClaimsInfo>
+  <cc-pkg-claim>
+        <AP-cc-ref conf="conformant">Assurance Package for Flaw Remediation Version 1.0</AP-cc-ref>
+        <FP-cc-ref conf="conformant">Functional Package for Transport Layer Security Version 2.1</FP-cc-ref>
+        <FP-cc-ref conf="conformant">Functional Package for X.509 Version 1.0</FP-cc-ref>
+      </cc-pkg-claim>    
+	</CClaimsInfo>
   </section>
   
   <sec:Security_Problem_Definition>   
