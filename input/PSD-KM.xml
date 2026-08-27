@@ -260,9 +260,30 @@
         <Mod-cc-ref>PP-Module for Video/Display Devices, Version 2.0</Mod-cc-ref>  -->
       </cc-pp-config-with>        
   <cc-pkg-claim>
-        <AP-cc-ref conf="conformant">Assurance Package for Flaw Remediation Version 1.0</AP-cc-ref>
-        <FP-cc-ref conf="conformant">Functional Package for Transport Layer Security Version 2.1</FP-cc-ref>
-        <FP-cc-ref conf="conformant">Functional Package for X.509 Version 1.0</FP-cc-ref>
+        <AP-cc-ref conf="conformant">
+			<cc-doc-ref id="FR" name="Assurance Package for Flaw Remediation" version="1.0" short="FR" 
+				product="Flaw Remediation" plural="Flaw Remediations" doctype="AP">
+				<url>https://www.niap-ccevs.org/protectionprofiles/488</url>			
+			</cc-doc-ref>		
+		</AP-cc-ref>
+        <FP-cc-ref conf="conformant">
+			<cc-doc-ref id="tls">
+				<git>
+					<url>https://github.com/commoncriteria/tls</url>
+					<branch>release-2.1</branch>
+				</git>
+				<url>https://www.niap-ccevs.org/protectionprofiles/519</url>			
+			</cc-doc-ref>		
+		</FP-cc-ref>
+        <FP-cc-ref conf="conformant">
+			<cc-doc-ref id="X509">
+				<git>
+					<url>https://github.com/commoncriteria/X509</url>
+					<branch>release-1.0</branch>
+				</git>
+				<url>https://www.niap-ccevs.org/protectionprofiles/511</url>			
+			</cc-doc-ref>		
+		</FP-cc-ref>
       </cc-pkg-claim>    
 	</CClaimsInfo>
   </section>
