@@ -222,7 +222,7 @@
 		</PP-cc-ref>
         <PP-cc-ref>
 			<cc-doc-ref id="FAKE" name="PP for Fake Products" version="2.3" short="FP" 
-				product="Fake Thing" plural="Fake Things">
+				product="Fake Thing" plural="Fake Things" doctype="PP">
 				<url>https://www.niap-ccevs.org/protectionprofiles/412</url>			
 			</cc-doc-ref>		
 		</PP-cc-ref>
@@ -1144,7 +1144,7 @@
         <f-component cc-id="fdp_rip.1" name="Residual Information Protection (Keyboard Data)" iteration="KM" id="fdp-rip-1-km">
           <depends on-sel="keyboardsupport"/>
           <depends on="notisolator">
-            <external-doc ref="psd"/>
+            <external-doc ref="PSD"/>
           </depends>          
           
           <consistency-rationale>
@@ -1180,7 +1180,7 @@
           <depends on-sel="keyboardsupport"/>
           <depends on-sel="mousesupport"/>
           <depends on="notisolator">
-            <external-doc ref="psd"/>
+            <external-doc ref="PSD"/>
           </depends>
           
           <consistency-rationale>
