@@ -8,6 +8,7 @@ output/PSD-KM-release-linkable.html: HIDs
 output/PSD-KM-release-linkable.html: LEDs
 output/PSD-KM-release-linkable.html: NAK
 output/PSD-KM-release-linkable.html: Num
+output/PSD-KM-release-linkable.html: PSDPP
 output/PSD-KM-release-linkable.html: SPD
 output/PSD-KM-release-linkable.html: Trackpad
 output/PSD-KM-release-linkable.html: UAI
@@ -30,6 +31,7 @@ output/PSD-KM-release.html: DisplayPort
 output/PSD-KM-release.html: HIDs
 output/PSD-KM-release.html: LEDs
 output/PSD-KM-release.html: Num
+output/PSD-KM-release.html: PSDPP
 output/PSD-KM-release.html: SPD
 output/PSD-KM-release.html: UAI
 output/PSD-KM-release.html: V5
@@ -72,6 +74,7 @@ output/PSD-KM.html: HIDs
 output/PSD-KM.html: LEDs
 output/PSD-KM.html: NAK
 output/PSD-KM.html: Num
+output/PSD-KM.html: PSDPP
 output/PSD-KM.html: SPD
 output/PSD-KM.html: Trackpad
 output/PSD-KM.html: UAI
