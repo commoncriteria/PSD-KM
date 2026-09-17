@@ -55,7 +55,7 @@
       manipulate or assign human interface devices (HIDs) (e.g., keyboard and pointing device) to one or more
       computers connected to the PSD. <h:br/><h:br/>
       This PP-Module is intended for use with the following Base-PPs:<h:ul>
-        <h:li id="PSD">Protection Profile for Peripheral Sharing Devices, Version 5.0</h:li>
+        <h:li>Protection Profile for Peripheral Sharing Devices, Version 5.0</h:li>
       </h:ul>
     </section>
     
@@ -211,10 +211,42 @@
       <cc-pt3-conf>conformant</cc-pt3-conf> 
       <cc-pp-conf/>
       <cc-pp-config-with>
-        <PP-cc-ref>Protection Profile for Peripheral Sharing Devices, Version 5.0</PP-cc-ref>
-        <Mod-cc-ref>PP-Module for Analog Audio Output Devices, Version 2.0</Mod-cc-ref>
-        <Mod-cc-ref>PP-Module for User Authentication Devices, Version 2.0</Mod-cc-ref>
-        <Mod-cc-ref>PP-Module for Video/Display Devices, Version 2.0</Mod-cc-ref>
+        <PP-cc-ref>
+			<cc-doc-ref id="PSD">
+				<git>
+					<url>https://github.com/commoncriteria/PSD</url>
+					<branch>main</branch>
+				</git>
+				<url>https://niap-ccevs.org/protectionprofiles/412</url>			
+			</cc-doc-ref>		
+		</PP-cc-ref>
+        <Mod-cc-ref>
+			<cc-doc-ref id="PSD-AO">
+				<git>
+					<url>https://github.com/commoncriteria/PSD-AO</url>
+					<branch>main</branch>
+				</git>
+				<url>https://niap-ccevs.org/protectionprofiles/433</url>			
+			</cc-doc-ref>		
+		</Mod-cc-ref>
+        <Mod-cc-ref>
+			<cc-doc-ref id="PSD-UA">
+				<git>
+					<url>https://github.com/commoncriteria/PSD-UA</url>
+					<branch>main</branch>
+				</git>
+				<url>https://niap-ccevs.org/protectionprofiles/434</url>			
+			</cc-doc-ref>		
+		</Mod-cc-ref>
+        <Mod-cc-ref>
+			<cc-doc-ref id="PSD-VI">
+				<git>
+					<url>https://github.com/commoncriteria/PSD-VI</url>
+					<branch>main</branch>
+				</git>
+				<url>https://niap-ccevs.org/protectionprofiles/436</url>			
+			</cc-doc-ref>		
+		</Mod-cc-ref>
       </cc-pp-config-with>        
       <cc-pkg-claim/>
     </CClaimsInfo>
@@ -230,7 +262,7 @@
     <sec:Threats>      
       <threats>
         <threat name="T.DATA_LEAK">
-          <from base="bpp-psd"/>
+          <from base="PSD"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
            <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to leak data through the TOE.</rationale>
    <addressed-by>FDP_PDC_EXT.3/KM</addressed-by><rationale>Mitigates this threat by
@@ -244,12 +276,12 @@
           
         </threat>
         <threat name="T.LOGICAL_TAMPER">
-          <from base="bpp-psd"/>
+          <from base="PSD"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to logically tamper with the TOE.</rationale>
         </threat>
         <threat name="T.RESIDUAL_LEAK">
-          <from base="bpp-psd"/>
+          <from base="PSD"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_UDF_EXT.1/KM</addressed-by><rationale>Mitigates this threat by ensuring that data flow is unidirectional such that the TOE does not receive data from a connected computer.</rationale>
           <addressed-by>FDP_RIP.1/KM (selection‐based)</addressed-by><rationale>Mitigates this
@@ -257,7 +289,7 @@
         </threat>
         
         <threat name="T.SIGNAL_LEAK">
-          <from base="bpp-psd"/>
+          <from base="PSD"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
            <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by blocking the acceptance of devices that could be used to attempt to leak data through the TOE via a signaling mechanism.</rationale>
    
@@ -267,7 +299,7 @@
             by blocking the use of untrusted devices that could be used to attempt data leakage.</rationale>
         </threat>
         <threat name="T.UNAUTHORIZED_DEVICES">
-          <from base="bpp-psd"/>          
+          <from base="PSD"/>          
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>  
           <addressed-by>FDP_PDC_EXT.2/KM</addressed-by><rationale>Mitigates this threat by enforcing the recognition of only authorized devices.</rationale>
           <addressed-by>FDP_PDC_EXT.3/KM</addressed-by><rationale>Mitigates this threat by
@@ -278,7 +310,7 @@
             this threat by preventing an unauthorized device from re-enumerating as an authorized one.</rationale>
         </threat>
         <threat name="T.UNINTENDED_USE">
-          <from base="bpp-psd"/>
+          <from base="PSD"/>
           <description>This threat from the PSD PP also applies to the functionality defined in this PP-Module.</description>
           <addressed-by>FDP_SWI_EXT.3 (selection‐based)</addressed-by><rationale>Mitigates this
             threat by ensuring all peripherals are switched to the same selected computer.</rationale>
@@ -314,12 +346,7 @@
 
   <sec:Security_Requirements>
     <comment>Need to add URLs once created</comment>
-    <base-pp id="psd" name="Peripheral Sharing Devices" product="Device" short="PSD" version="5.0">
-      <git>
-        <url>https://github.com/commoncriteria/psd</url>
-        <branch>main</branch>
-      </git>
-      <url>https://commoncriteria.github.io/PSD/main/PSD-release.html</url>
+    <base-pp ref="PSD">
       
       <sec-func-req-dir>
         When a TOE claims conformance to this PP‐Module, it is necessary to make claims in the PSD PP
@@ -1109,7 +1136,7 @@
         <f-component cc-id="fdp_rip.1" name="Residual Information Protection (Keyboard Data)" iteration="KM" id="fdp-rip-1-km">
           <depends on-sel="keyboardsupport"/>
           <depends on="notisolator">
-            <external-doc ref="psd"/>
+            <external-doc ref="PSD"/>
           </depends>          
           
           <consistency-rationale>
@@ -1145,7 +1172,7 @@
           <depends on-sel="keyboardsupport"/>
           <depends on-sel="mousesupport"/>
           <depends on="notisolator">
-            <external-doc ref="psd"/>
+            <external-doc ref="PSD"/>
           </depends>
           
           <consistency-rationale>
